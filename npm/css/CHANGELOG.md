@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/pinanek/comfit/compare/css-v0.1.0...css-v0.1.1) (2026-11-12)
+
+
+### Bug Fixes
+
+* **css:** clarify class-based stylesheet usage ([0bc6ddc](https://github.com/pinanek/comfit/commit/0bc6ddca1ab3d19c9939ce8fc68b6d9a3231abc1))
+
 ## 0.1.0 (2026-11-12)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@comfit/wasm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Comfit WebAssembly bindings for browsers and Node.js",
   "repository": {
     "type": "git",

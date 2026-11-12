@@ -1,6 +1,6 @@
 {
   "name": "@comfit/wasm-grammars",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Comfit grammar assets and queries for WebAssembly",
   "repository": {
     "type": "git",

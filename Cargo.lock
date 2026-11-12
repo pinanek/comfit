@@ -265,7 +265,7 @@ dependencies = [
 
 [[package]]
 name = "comfit"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "comfit-core",
  "comfit-grammars",
@@ -277,7 +277,7 @@ dependencies = [
 
 [[package]]
 name = "comfit-cli"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "anyhow",
  "clap",
@@ -302,7 +302,7 @@ dependencies = [
 
 [[package]]
 name = "comfit-grammars"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "cc",
  "jobserver",
@@ -327,7 +327,7 @@ dependencies = [
 
 [[package]]
 name = "comfit-node"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "comfit",
  "comfit-themes",
@@ -338,7 +338,7 @@ dependencies = [
 
 [[package]]
 name = "comfit-python"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "comfit",
  "comfit-themes",
@@ -362,7 +362,7 @@ dependencies = [
 
 [[package]]
 name = "comfit-wasm"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "comfit-core",
  "js-sys",

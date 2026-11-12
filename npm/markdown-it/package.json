@@ -1,6 +1,6 @@
 {
   "name": "@comfit/markdown-it",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Comfit plugin for highlighting fenced code blocks with markdown-it",
   "repository": {
     "type": "git",

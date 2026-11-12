@@ -122,10 +122,8 @@ jobs:
         with:
           python-version: "3.15"
 
-      - uses: mlugg/setup-zig@v2.2.1
+      - uses: mlugg/setup-zig@v2
         if: runner.os == 'Linux'
-        with:
-          version: "0.15.2"
 
       - uses: taiki-e/install-action@v2.90.3
         if: runner.os == 'Linux'

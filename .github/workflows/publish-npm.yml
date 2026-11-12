@@ -131,10 +131,8 @@ jobs:
           target: ${{ matrix.target }}
           cache: false
 
-      - uses: mlugg/setup-zig@v2.2.1
+      - uses: mlugg/setup-zig@v2
         if: endsWith(matrix.target, '-musl')
-        with:
-          version: "0.15.2"
 
       - uses: taiki-e/install-action@v2.90.3
         if: endsWith(matrix.target, '-musl')
@@ -152,7 +150,7 @@ jobs:
 
           if [[ "$TARGET" == *-musl ]]; then
             pnpm --dir npm/node build:release --target "$TARGET" --cross-compile
-          elif [ "$RUNNER_OS" = 'Linux' ]; then
+          elif [ "$TARGET" = 'x86_64-unknown-linux-gnu' ]; then
             pnpm --dir npm/node build:release --target "$TARGET" --use-napi-cross
           else
             pnpm --dir npm/node build:release --target "$TARGET"
@@ -228,13 +226,20 @@ jobs:
           path: npm/node/dist
           merge-multiple: true
 
+      - uses: actions/download-artifact@v8.0.2
+        if: needs.prepare.outputs.component == 'node'
+        with:
+          name: native-inputs
+
       - name: Build package
         run: |
-          cargo notices build
-
-          if [ "$COMPONENT" != 'node' ]; then
+          if [ "$COMPONENT" = 'node' ]; then
+            tar -xzf native-inputs.tar.gz
+          else
             cargo grammars update
           fi
+
+          cargo notices build "$COMPONENT"
 
           case "$COMPONENT" in
             css)

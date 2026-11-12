@@ -275,6 +275,11 @@ fn compile_grammar(root: &Path, grammar: &Value, id: &str) {
     let mut build = cc::Build::new();
     build.include(&source).std("c11").warnings(false);
 
+    if id == "just" {
+        // Zig's optimized C mode disables assertions, but this scanner requires them.
+        build.flag("-UNDEBUG");
+    }
+
     if source.join("scanner.c").is_file() {
         // Keep cc from acquiring nested jobserver tokens inside our grammar workers.
         let objects = build

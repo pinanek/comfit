@@ -14,7 +14,10 @@
     ".": "./dist/index.js",
     "./package.json": "./package.json"
   },
-  "files": ["dist", "LICENSE"],
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "cargo notices build markdown-it && pnpm bundle",
     "bundle": "tsdown",

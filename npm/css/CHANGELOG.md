@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/pinanek/comfit/compare/css-v0.1.1...css-v0.1.2) (2026-11-12)
+
+
+### Bug Fixes
+
+* **npm:** add package homepage metadata ([ac592da](https://github.com/pinanek/comfit/commit/ac592daf9b49020972c9416f0ebc88cff9e667b1))
+
 ## [0.1.1](https://github.com/pinanek/comfit/compare/css-v0.1.0...css-v0.1.1) (2026-11-12)
 
 

@@ -4,11 +4,11 @@
   "crates/comfit_core": "0.1.0",
   "crates/comfit_grammars": "0.1.1",
   "crates/comfit_themes": "0.1.0",
-  "npm/css": "0.1.1",
-  "npm/markdown-it": "0.1.1",
-  "npm/node": "0.1.1",
-  "npm/rehype": "0.1.1",
-  "npm/wasm": "0.1.1",
-  "npm/wasm-grammars": "0.1.1",
+  "npm/css": "0.1.2",
+  "npm/markdown-it": "0.1.2",
+  "npm/node": "0.1.2",
+  "npm/rehype": "0.1.2",
+  "npm/wasm": "0.1.2",
+  "npm/wasm-grammars": "0.1.2",
   "python/comfit": "0.1.1"
 }

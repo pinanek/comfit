@@ -120,7 +120,7 @@ async function published(ecosystem, name, version) {
 }
 
 async function waitFor(ecosystem, dependencies) {
-  const deadline = Date.now() + 20 * 60_000;
+  const deadline = ecosystem === "node" ? Infinity : Date.now() + 20 * 60_000;
 
   for (const { name, version } of dependencies) {
     while (!await published(ecosystem, name, version)) {

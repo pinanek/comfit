@@ -121,7 +121,7 @@ Merging the release PR triggers publishing automatically. Each workflow validate
 - **npm:** Publishes the selected package. Node releases also publish eight native platform packages with the same version.
 - **Python:** Publishes one sdist and seven ABI3 wheels, built from that sdist and tested on Python 3.15. Wheels support CPython 3.11 or later.
 
-To retry, open the matching workflow in GitHub Actions, choose **Run workflow**, and enter the component `tag`, such as `node-v0.1.0`. Fix failed dependencies first; Rust and npm wait up to 20 minutes for them to appear in the registry.
+To retry, open the matching workflow in GitHub Actions, choose **Run workflow**, and enter the component `tag`, such as `node-v0.1.0`. Fix failed dependencies first. Rust waits up to 20 minutes for them to appear in the registry; npm waits until they appear or the publishing job times out.
 
 Publishers skip existing versions or files. npm and Python skip builds only when the entire release is already published, so partial uploads remain retryable.
 

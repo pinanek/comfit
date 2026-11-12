@@ -13,7 +13,7 @@ docs = [{ name = "griffe2md", specifier = ">=1.5.1" }]
 
 [[package]]
 name = "comfit-hl"
-version = "0.1.0"
+version = "0.1.1"
 source = { editable = "python/comfit" }
 
 [[package]]

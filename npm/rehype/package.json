@@ -1,6 +1,6 @@
 {
   "name": "@comfit/rehype",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Comfit plugin for highlighting code blocks with rehype",
   "homepage": "https://comfit.pinanek.me",
   "repository": {

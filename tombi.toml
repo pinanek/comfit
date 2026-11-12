@@ -1,0 +1,2 @@
+[files]
+exclude = ["target/**", ".grammars/**", "crates/comfit_grammars/data/**"]

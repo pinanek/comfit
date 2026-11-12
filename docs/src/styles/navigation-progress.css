@@ -1,0 +1,36 @@
+#nprogress {
+  --nprogress-color: var(--c-accent);
+  --nprogress-height: 2px;
+  --nprogress-position: -100%;
+
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  block-size: var(--nprogress-height);
+  background: var(--nprogress-color);
+  transform: translate3d(var(--nprogress-position), 0, 0);
+  transition: transform var(--nprogress-speed, var(--duration-fast))
+    var(--ease-default);
+}
+
+#nprogress .peg {
+  position: absolute;
+  inset-inline-end: 0;
+  inline-size: 4rem;
+  block-size: 100%;
+  box-shadow: 0 1px 6px var(--nprogress-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #nprogress .bar {
+    transition: none;
+  }
+}

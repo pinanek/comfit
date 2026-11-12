@@ -1,0 +1,27 @@
+{
+  "name": "@comfit/css",
+  "version": "0.1.0",
+  "description": "Comfit theme stylesheets for class-based HTML",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinanek/comfit.git",
+    "directory": "npm/css"
+  },
+  "license": "MIT",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "type": "module",
+  "exports": {
+    "./*.css": "./dist/*.css"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.txt"
+  ],
+  "scripts": {
+    "build": "cargo notices build css && cargo css build",
+    "prepack": "cargo notices check css"
+  }
+}

@@ -1,0 +1,600 @@
+[
+  {
+    "name": "empty source",
+    "language": "rust",
+    "source": "",
+    "highlightedLines": [],
+    "rainbow": true,
+    "tokens": [
+      []
+    ]
+  },
+  {
+    "name": "empty lines and trailing newline",
+    "language": "rust",
+    "source": "\n\n",
+    "highlightedLines": [
+      2
+    ],
+    "rainbow": true,
+    "tokens": [
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "name": "Unicode and nested brackets through an alias",
+    "language": "rs",
+    "source": "fn café() { let n = [1, (2)]; }\n",
+    "highlightedLines": [
+      1
+    ],
+    "rainbow": true,
+    "tokens": [
+      [
+        [
+          "fn",
+          "keyword.function",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "café",
+          "function",
+          null
+        ],
+        [
+          "(",
+          "punctuation.bracket",
+          0
+        ],
+        [
+          ")",
+          "punctuation.bracket",
+          0
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "{",
+          "punctuation.bracket",
+          0
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "let",
+          "keyword",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "n",
+          "variable",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "=",
+          "operator",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "[",
+          "punctuation.bracket",
+          1
+        ],
+        [
+          "1",
+          "number",
+          null
+        ],
+        [
+          ",",
+          "punctuation.delimiter",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "(",
+          "punctuation.bracket",
+          2
+        ],
+        [
+          "2",
+          "number",
+          null
+        ],
+        [
+          ")",
+          "punctuation.bracket",
+          2
+        ],
+        [
+          "]",
+          "punctuation.bracket",
+          1
+        ],
+        [
+          ";",
+          "punctuation.delimiter",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "}",
+          "punctuation.bracket",
+          0
+        ]
+      ],
+      []
+    ]
+  },
+  {
+    "name": "emoji and CRLF",
+    "language": "rust",
+    "source": "let emoji = \"😀\";\r\n\r\n",
+    "highlightedLines": [],
+    "rainbow": true,
+    "tokens": [
+      [
+        [
+          "let",
+          "keyword",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "emoji",
+          "variable",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "=",
+          "operator",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "\"😀\"",
+          "string",
+          null
+        ],
+        [
+          ";",
+          "punctuation.delimiter",
+          null
+        ],
+        [
+          "\r",
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          "\r",
+          null,
+          null
+        ]
+      ],
+      []
+    ]
+  },
+  {
+    "name": "malformed source",
+    "language": "rust",
+    "source": "fn main( { let x = [1;\n",
+    "highlightedLines": [],
+    "rainbow": true,
+    "tokens": [
+      [
+        [
+          "fn",
+          "keyword.function",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "main",
+          "variable",
+          null
+        ],
+        [
+          "(",
+          "punctuation.bracket",
+          0
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "{",
+          "punctuation.bracket",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "let",
+          "keyword",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "x",
+          "variable",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "=",
+          "operator",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "[",
+          "punctuation.bracket",
+          null
+        ],
+        [
+          "1",
+          "number",
+          null
+        ],
+        [
+          ";",
+          "punctuation.delimiter",
+          null
+        ]
+      ],
+      []
+    ]
+  },
+  {
+    "name": "disabled rainbow",
+    "language": "rust",
+    "source": "let x = [1, (2)];",
+    "rainbow": false,
+    "highlightedLines": [],
+    "tokens": [
+      [
+        [
+          "let",
+          "keyword",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "x",
+          "variable",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "=",
+          "operator",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "[",
+          "punctuation.bracket",
+          null
+        ],
+        [
+          "1",
+          "number",
+          null
+        ],
+        [
+          ",",
+          "punctuation.delimiter",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "(",
+          "punctuation.bracket",
+          null
+        ],
+        [
+          "2",
+          "number",
+          null
+        ],
+        [
+          ")",
+          "punctuation.bracket",
+          null
+        ],
+        [
+          "]",
+          "punctuation.bracket",
+          null
+        ],
+        [
+          ";",
+          "punctuation.delimiter",
+          null
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "JavaScript alias",
+    "language": "js",
+    "source": "const x = [1, (2)];\n",
+    "highlightedLines": [],
+    "rainbow": true,
+    "tokens": [
+      [
+        [
+          "const",
+          "keyword",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "x",
+          "variable",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "=",
+          "operator",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "[",
+          "punctuation.bracket",
+          0
+        ],
+        [
+          "1",
+          "number",
+          null
+        ],
+        [
+          ",",
+          "punctuation.delimiter",
+          null
+        ],
+        [
+          " ",
+          null,
+          null
+        ],
+        [
+          "(",
+          "punctuation.bracket",
+          1
+        ],
+        [
+          "2",
+          "number",
+          null
+        ],
+        [
+          ")",
+          "punctuation.bracket",
+          1
+        ],
+        [
+          "]",
+          "punctuation.bracket",
+          0
+        ],
+        [
+          ";",
+          "punctuation.delimiter",
+          null
+        ]
+      ],
+      []
+    ]
+  },
+  {
+    "name": "embedded Rust and unknown fenced language",
+    "language": "markdown",
+    "source": "😀\n```rust\nfn café() {}\n```\n```not-loaded\nfn unknown() {}\n```\n",
+    "highlightedLines": [
+      3
+    ],
+    "rainbow": true,
+    "tokens": [
+      [
+        [
+          "😀",
+          null,
+          null
+        ]
+      ],
+      [
+        [
+          "```",
+          "markup.raw.block",
+          null
+        ],
+        [
+          "rust",
+          "label",
+          null
+        ]
+      ],
+      [
+        [
+          "fn",
+          "keyword.function",
+          null
+        ],
+        [
+          " ",
+          "markup.raw.block",
+          null
+        ],
+        [
+          "café",
+          "function",
+          null
+        ],
+        [
+          "(",
+          "punctuation.bracket",
+          0
+        ],
+        [
+          ")",
+          "punctuation.bracket",
+          0
+        ],
+        [
+          " ",
+          "markup.raw.block",
+          null
+        ],
+        [
+          "{",
+          "punctuation.bracket",
+          0
+        ],
+        [
+          "}",
+          "punctuation.bracket",
+          0
+        ]
+      ],
+      [
+        [
+          "```",
+          "markup.raw.block",
+          null
+        ]
+      ],
+      [
+        [
+          "```",
+          "markup.raw.block",
+          null
+        ],
+        [
+          "not-loaded",
+          "label",
+          null
+        ]
+      ],
+      [
+        [
+          "fn unknown() {}",
+          "markup.raw.block",
+          null
+        ]
+      ],
+      [
+        [
+          "```",
+          "markup.raw.block",
+          null
+        ]
+      ],
+      []
+    ]
+  }
+]

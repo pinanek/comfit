@@ -1,0 +1,284 @@
+@import "../styles/media.css";
+
+.block {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  margin-block: 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  background: var(--c-bg);
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-block-size: 2rem;
+  padding: 0.375rem 1rem;
+  background: var(--c-bg-hover);
+  color: var(--c-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--code-label-size);
+}
+
+.title {
+  min-inline-size: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.language {
+  flex-shrink: 0;
+  margin-inline-start: auto;
+}
+
+.body {
+  position: relative;
+}
+
+.pre {
+  counter-reset: line;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-code-number) var(--c-bg-muted);
+  white-space: pre;
+  tab-size: 2;
+}
+
+.pre > code {
+  display: block;
+  inline-size: max-content;
+  min-inline-size: 100%;
+  padding-block: var(--code-padding-block);
+  font-size: var(--code-font-size);
+  line-height: var(--code-line-height);
+}
+
+.pre :global(.syntax-line) {
+  display: inline-block;
+  inline-size: 100%;
+  min-block-size: var(--code-line-height);
+  padding-inline: var(--code-padding-inline);
+  line-height: var(--code-line-height);
+}
+
+.pre :global(.syntax-line)::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  min-inline-size: var(--code-gutter-width);
+  margin-inline-end: var(--code-gutter-gap);
+  color: var(--c-code-number);
+  font-size: var(--code-label-size);
+  line-height: 1;
+  text-align: end;
+  user-select: none;
+  pointer-events: none;
+}
+
+.block :global(.syntax-line-highlight) {
+  background: var(--c-bg-muted);
+}
+
+.pre :global(.syntax-line-highlight)::before {
+  color: inherit;
+  font-weight: 700;
+}
+
+.copyButton {
+  position: absolute;
+  inset-block-start: 0.25rem;
+  inset-inline-end: 0.25rem;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  background: var(--c-button-bg);
+  color: var(--c-button-text);
+}
+
+.copyIcon {
+  display: grid;
+  grid-area: 1 / 1;
+  place-items: center;
+}
+
+.copyButton:hover {
+  background: var(--c-button-bg-hover);
+  color: var(--c-button-text-hover);
+}
+
+.copyButton:active {
+  background: var(--c-button-bg-active);
+}
+
+.copyButton:disabled {
+  cursor: progress;
+  opacity: 0.6;
+}
+
+.copyButton[data-copy-state="copied"] {
+  color: var(--c-cpn-green);
+}
+
+.copyButton[data-copy-state="error"] {
+  color: var(--c-cpn-red);
+}
+
+.copyButton:focus-visible,
+.pre:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: -2px;
+}
+
+.status {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.block :global(.syntax-variable) {
+  color: var(--c-code-variable);
+}
+.block :global(.syntax-type),
+.block :global(.syntax-attribute),
+.block :global(.syntax-module) {
+  color: var(--c-code-type);
+}
+.block :global(.syntax-keyword) {
+  color: var(--c-code-keyword);
+}
+.block :global(.syntax-constant),
+.block :global(.syntax-number),
+.block :global(.syntax-boolean) {
+  color: var(--c-code-constant);
+}
+.block :global(.syntax-string),
+.block :global(.syntax-character),
+.block :global(.syntax-markup-raw),
+.block :global(.syntax-diff-plus) {
+  color: var(--c-code-string);
+}
+.block :global(.syntax-function),
+.block :global(.syntax-tag),
+.block :global(.syntax-diff-delta) {
+  color: var(--c-code-function);
+}
+.block :global(.syntax-constructor),
+.block :global(.syntax-label) {
+  color: var(--c-code-label);
+}
+.block :global(.syntax-property),
+.block :global(.syntax-variable-member),
+.block :global(.syntax-tag-attribute) {
+  color: var(--c-code-property);
+}
+.block :global(.syntax-punctuation),
+.block :global(.syntax-comment) {
+  color: var(--c-code-comment);
+}
+.block :global(.syntax-comment) {
+  font-style: italic;
+}
+.block :global(.syntax-operator),
+.block :global(.syntax-punctuation-special) {
+  color: var(--c-code-operator);
+}
+.block :global(.syntax-type-builtin) {
+  color: var(--c-code-keyword);
+}
+.block :global(.syntax-string-regexp),
+.block :global(.syntax-string-escape),
+.block :global(.syntax-character-special),
+.block :global(.syntax-markup-quote) {
+  color: var(--c-code-escape);
+}
+.block :global(.syntax-variable-builtin),
+.block :global(.syntax-comment-error),
+.block :global(.syntax-error),
+.block :global(.syntax-diff-minus) {
+  color: var(--c-code-error);
+}
+.block :global(.syntax-variable-parameter) {
+  color: var(--c-code-parameter);
+  font-style: italic;
+}
+.block :global(.syntax-function-macro) {
+  color: var(--c-code-macro);
+}
+.block :global(.syntax-markup-heading) {
+  color: var(--c-code-heading);
+}
+.block :global(.syntax-markup-link) {
+  color: var(--c-code-function);
+  text-decoration: underline;
+}
+.block :global(.syntax-markup-strong) {
+  font-weight: 700;
+}
+.block :global(.syntax-markup-italic) {
+  font-style: italic;
+}
+.block :global(.syntax-markup-strikethrough) {
+  text-decoration: line-through;
+}
+.block :global(.syntax-rainbow-0) {
+  color: var(--c-cpn-red);
+}
+.block :global(.syntax-rainbow-1) {
+  color: var(--c-cpn-peach);
+}
+.block :global(.syntax-rainbow-2) {
+  color: var(--c-cpn-yellow);
+}
+.block :global(.syntax-rainbow-3) {
+  color: var(--c-cpn-green);
+}
+.block :global(.syntax-rainbow-4) {
+  color: var(--c-cpn-blue);
+}
+.block :global(.syntax-rainbow-5) {
+  color: var(--c-cpn-mauve);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .header {
+    min-block-size: 3rem;
+    padding-inline-end: 3.5rem;
+  }
+
+  .copyButton {
+    inset-block-start: -2.875rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .copyButton {
+    inline-size: 2rem;
+    block-size: 2rem;
+    opacity: 0;
+  }
+
+  .block:hover .copyButton,
+  .block:focus-within .copyButton {
+    opacity: 1;
+  }
+}
+
+@media (--motion-ok) {
+  .copyButton {
+    transition: opacity var(--duration-fast) ease-out;
+  }
+}

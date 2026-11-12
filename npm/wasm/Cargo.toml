@@ -1,0 +1,20 @@
+[package]
+name = "comfit-wasm"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+description = "Comfit WebAssembly bindings for browsers and Node.js"
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+comfit-core = { workspace = true, features = ["render-html"] }
+js-sys.workspace = true
+serde = { workspace = true, features = ["derive"] }
+serde_json.workspace = true
+wasm-bindgen.workspace = true
+wasm-bindgen-futures.workspace = true

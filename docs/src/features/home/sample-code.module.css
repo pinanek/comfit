@@ -1,0 +1,125 @@
+.example {
+  --code-font-size: clamp(0.9375rem, 1.2vw, 1.125rem);
+  --code-line-height: calc(var(--code-font-size) + 0.625rem);
+  --code-label-size: 0.8125rem;
+  --code-padding-block: 0.875rem;
+
+  position: relative;
+  min-inline-size: 0;
+  color: var(--c-text);
+}
+
+.example > figure {
+  margin: 0;
+}
+
+.example .code :global(.syntax-line) {
+  position: relative;
+}
+
+.example[data-output="ansi"] .code :global(.syntax-line)::before {
+  content: none;
+}
+
+.example[data-output="tokens"] .code > code {
+  inline-size: auto;
+  min-block-size: calc(
+    9 * var(--code-line-height) + 2 * var(--code-padding-block)
+  );
+  padding-inline: var(--code-padding-inline);
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.example .code :global(.syntax-line) > span {
+  color: color-mix(
+    in oklab,
+    var(--token-ink, var(--c-text)) var(--sample-ink, 100%),
+    var(--c-text)
+  );
+}
+
+.example[data-scene="source"] .code :global(.syntax-line) > span,
+.example[data-scene="injection"]
+  .code
+  :global(.syntax-line):not([data-embedded])
+  > span {
+  font-weight: inherit;
+}
+
+.example[data-scene="injection"]
+  .code
+  :global(.syntax-line):not([data-embedded]),
+.example .code [data-muted] {
+  --sample-ink: 0%;
+}
+
+.example[data-scene="injection"] [data-region="heading"] {
+  box-shadow: inset 0 0 0 1px var(--c-border-strong);
+}
+
+.example[data-scene="injection"] [data-region="fence"] {
+  box-shadow:
+    inset 1px 0 var(--c-border-strong),
+    inset -1px 0 var(--c-border-strong);
+}
+
+.example[data-scene="injection"] [data-region="fence-start"] {
+  box-shadow:
+    inset 1px 1px var(--c-border-strong),
+    inset -1px 0 var(--c-border-strong);
+}
+
+.example[data-scene="injection"] [data-region="fence-end"] {
+  box-shadow:
+    inset 1px -1px var(--c-border-strong),
+    inset -1px 0 var(--c-border-strong);
+}
+
+.example[data-rust-focus] [data-embedded] {
+  box-shadow: inset 1px 0 var(--c-accent), inset -1px 0 var(--c-border-strong);
+  background: var(--c-bg-subtle);
+}
+
+.example[data-scene="roles"] [data-focused] {
+  border-radius: var(--radius-xs);
+  background: var(--c-bg-muted);
+}
+
+.roleOverlay {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  color: var(--c-accent);
+  pointer-events: none;
+}
+
+.focusBox,
+.roleConnector {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.roleLabel {
+  position: absolute;
+  inset: 0 auto auto 0;
+  min-inline-size: 9.5rem;
+  max-inline-size: calc(100% - 3rem);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--c-accent);
+  border-radius: var(--radius-sm);
+  background: var(--c-bg);
+  color: var(--c-text);
+  font: 600 clamp(1rem, 1.5vw, 1.25rem) / 1.4 var(--font-sans);
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (width < 35rem) {
+  .example[data-scene="roles"] .code > code {
+    padding-block-end: 6.5rem;
+  }
+}

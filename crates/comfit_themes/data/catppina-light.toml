@@ -1,0 +1,82 @@
+name = "Catppina Light"
+default = { fg = "#303033", bg = "#f7f7f8" }
+
+[styles]
+attribute = { fg = "#bd6b32", modifiers = ["italic"] }
+"attribute.builtin" = { fg = "#8b6b22" }
+boolean = { fg = "#bd6b32" }
+character = { fg = "#398460" }
+comment = { fg = "#737378", modifiers = ["italic"] }
+"comment.documentation" = { fg = "#737378", modifiers = ["italic"] }
+"comment.error" = { fg = "#737378", modifiers = ["italic"] }
+"comment.note" = { fg = "#737378", modifiers = ["italic"] }
+"comment.todo" = { fg = "#737378", modifiers = ["italic"] }
+"comment.warning" = { fg = "#737378", modifiers = ["italic"] }
+constant = { fg = "#bd6b32" }
+"constant.builtin" = { fg = "#c94f55" }
+"constant.macro" = { fg = "#bd6b32" }
+constructor = { fg = "#8b6b22", modifiers = ["italic"] }
+"diff.delta" = { fg = "#bd6b32" }
+"diff.minus" = { fg = "#c94f55" }
+"diff.plus" = { fg = "#398460" }
+function = { fg = "#347aa5", modifiers = ["italic"] }
+"function.builtin" = { fg = "#c94f55", modifiers = ["italic"] }
+"function.call" = { fg = "#347aa5", modifiers = ["italic"] }
+"function.macro" = { fg = "#347aa5", modifiers = ["italic"] }
+"function.method" = { fg = "#347aa5", modifiers = ["italic"] }
+"function.method.call" = { fg = "#347aa5", modifiers = ["italic"] }
+keyword = { fg = "#647fc5", modifiers = [] }
+"keyword.conditional" = { fg = "#647fc5", modifiers = [] }
+"keyword.coroutine" = { fg = "#647fc5", modifiers = [] }
+"keyword.debug" = { fg = "#647fc5", modifiers = [] }
+"keyword.directive" = { fg = "#8b6b22", modifiers = [] }
+"keyword.exception" = { fg = "#647fc5", modifiers = [] }
+"keyword.function" = { fg = "#647fc5", modifiers = [] }
+"keyword.import" = { fg = "#647fc5", modifiers = [] }
+"keyword.modifier" = { fg = "#647fc5", modifiers = [] }
+"keyword.operator" = { fg = "#647fc5", modifiers = [] }
+"keyword.repeat" = { fg = "#647fc5", modifiers = [] }
+"keyword.return" = { fg = "#647fc5", modifiers = [] }
+"keyword.type" = { fg = "#647fc5", modifiers = [] }
+"markup.heading.1" = { fg = "#c94f55" }
+"markup.heading.2" = { fg = "#bd6b32" }
+"markup.heading.3" = { fg = "#8b6b22" }
+"markup.heading.4" = { fg = "#398460" }
+"markup.heading.5" = { fg = "#277c97" }
+"markup.heading.6" = { fg = "#6579ad" }
+"markup.italic" = { fg = "#c94f55", modifiers = ["italic"] }
+"markup.link" = { fg = "#6579ad" }
+"markup.link.label" = { fg = "#6579ad" }
+"markup.link.url" = { fg = "#347aa5" }
+"markup.list" = { fg = "#287f76" }
+"markup.quote" = { fg = "#b84f83" }
+"markup.raw" = { fg = "#398460" }
+"markup.raw.block" = { fg = "#398460" }
+"markup.strikethrough" = { fg = "#606064", modifiers = ["crossed_out"] }
+"markup.strong" = { fg = "#c94f55", modifiers = ["bold"] }
+module = { fg = "#8b6b22" }
+number = { fg = "#bd6b32" }
+"number.float" = { fg = "#bd6b32" }
+operator = { fg = "#287f76", modifiers = [] }
+property = { fg = "#347aa5", modifiers = [] }
+"punctuation.bracket" = { fg = "#737378", modifiers = [] }
+"punctuation.delimiter" = { fg = "#287f76", modifiers = [] }
+"punctuation.special" = { fg = "#737378", modifiers = [] }
+string = { fg = "#398460" }
+"string.documentation" = { fg = "#398460" }
+"string.escape" = { fg = "#b84f83" }
+"string.regexp" = { fg = "#398460" }
+"string.special" = { fg = "#398460" }
+"string.special.url" = { fg = "#347aa5" }
+tag = { fg = "#347aa5", modifiers = [] }
+"tag.attribute" = { fg = "#8b6b22" }
+"tag.builtin" = { fg = "#347aa5", modifiers = [] }
+"tag.delimiter" = { fg = "#287f76", modifiers = [] }
+type = { fg = "#8b6b22", modifiers = ["italic"] }
+"type.builtin" = { fg = "#647fc5", modifiers = [] }
+"type.definition" = { fg = "#8b6b22", modifiers = ["italic"] }
+variable = { fg = "#303033" }
+"variable.builtin" = { fg = "#c94f55" }
+"variable.member" = { fg = "#303033" }
+"variable.parameter" = { fg = "#bd6252", modifiers = ["italic"] }
+"variable.parameter.builtin" = { fg = "#bd6252", modifiers = ["italic"] }

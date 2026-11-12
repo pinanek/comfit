@@ -1,0 +1,8 @@
+[alias]
+lint = "clippy --all-targets --all-features"
+theme = "run --package xtask-theme --"
+css = "run --package xtask-css --"
+grammars = "run --package xtask-grammars --"
+wasm = "run --package xtask-wasm --"
+notices = "run --package xtask-notices --"
+docs = "run --package xtask-docs --"

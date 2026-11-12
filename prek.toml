@@ -1,0 +1,81 @@
+default_install_hook_types = ["pre-commit", "pre-push"]
+default_stages = ["pre-commit"]
+
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "fmt-check"
+name = "Check formatting"
+entry = "dprint check --allow-no-files"
+language = "system"
+priority = 0
+
+[[repos.hooks]]
+id = "toml-lint"
+name = "Lint TOML"
+entry = "tombi lint"
+language = "system"
+priority = 0
+types = ["toml"]
+
+[[repos.hooks]]
+id = "js-lint"
+name = "Lint JavaScript and TypeScript"
+entry = "pnpm exec oxlint"
+language = "system"
+priority = 0
+types_or = ["javascript", "jsx", "ts", "tsx"]
+exclude = "^docs/"
+
+[[repos.hooks]]
+id = "docs-lint"
+name = "Lint documentation JavaScript and TypeScript"
+entry = "pnpm exec oxlint -c docs/oxlint.config.ts"
+language = "system"
+priority = 0
+types_or = ["javascript", "jsx", "ts", "tsx"]
+files = "^docs/"
+
+[[repos.hooks]]
+id = "notices"
+name = "Check package notices"
+entry = "just notices-check"
+language = "system"
+priority = 0
+pass_filenames = false
+files = '(^|/)(Cargo\.(toml|lock)|package\.json|LICENSE[^/]*|THIRD_PARTY_NOTICES\.txt)$|^(registry/|queries/|xtask/(grammars|notices)/|crates/comfit_(grammars|internal)/|pnpm-lock\.yaml$|justfile$|prek\.toml$)'
+stages = ["pre-push"]
+
+[[repos.hooks]]
+id = "node-typecheck"
+name = "Check native npm types"
+entry = "just typecheck-node"
+language = "system"
+priority = 0
+pass_filenames = false
+files = '^(npm/(node|rehype|markdown-it)/|package\.json$|pnpm-(lock\.yaml|workspace\.yaml)$|justfile$|prek\.toml$)'
+exclude = '\.md$'
+stages = ["pre-push"]
+
+[[repos.hooks]]
+id = "wasm-typecheck"
+name = "Check WASM types"
+entry = "just typecheck-wasm"
+language = "system"
+priority = 0
+pass_filenames = false
+files = '^(npm/wasm(-grammars)?/|package\.json$|pnpm-(lock\.yaml|workspace\.yaml)$|justfile$|prek\.toml$)'
+exclude = '\.md$'
+stages = ["pre-push"]
+
+[[repos.hooks]]
+id = "docs-typecheck"
+name = "Check documentation types"
+entry = "just typecheck-docs"
+language = "system"
+priority = 0
+pass_filenames = false
+files = '^(docs/|npm/(node|rehype|markdown-it|wasm|wasm-grammars)/|package\.json$|pnpm-(lock\.yaml|workspace\.yaml)$|justfile$|prek\.toml$)'
+exclude = '\.md$'
+stages = ["pre-push"]

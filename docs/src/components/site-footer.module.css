@@ -1,0 +1,63 @@
+@import "../styles/media.css";
+
+.footer {
+  border-block-start: 1px solid var(--c-border);
+  color: var(--c-text-muted);
+  font-size: 0.8125rem;
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  max-inline-size: 90rem;
+  margin-inline: auto;
+  padding: 1.5rem;
+}
+
+.navigation {
+  margin-inline-start: auto;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links a {
+  display: grid;
+  place-items: center;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  border-radius: var(--radius-xs);
+}
+
+.links a:hover {
+  background: var(--c-bg-muted);
+  color: var(--c-text);
+}
+
+.links a:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .links a {
+    inline-size: 2rem;
+    block-size: 2rem;
+  }
+}
+
+@media (--viewport-sm) {
+  .inner {
+    padding-inline: 2rem;
+  }
+}

@@ -1,0 +1,24 @@
+[package]
+name = "comfit-cli"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+description = "Comfit command-line tool for highlighting and VS Code theme conversion"
+
+[[bin]]
+name = "comfit"
+path = "src/main.rs"
+doc = false
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+comfit = { path = "../comfit", version = "0.1.0", features = ["all-languages", "render-ansi", "render-html", "theme-toml"] }
+comfit-themes = { workspace = true, features = ["all-themes", "convert"] }
+json5.workspace = true
+serde.workspace = true
+terminal_size.workspace = true
+unicode-segmentation.workspace = true
+unicode-width.workspace = true

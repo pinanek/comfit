@@ -1,0 +1,116 @@
+[package]
+name = "comfit-themes"
+version = "0.1.0"
+edition.workspace = true
+description = "Comfit themes and VS Code theme conversion"
+homepage.workspace = true
+repository.workspace = true
+license.workspace = true
+include = ["THIRD_PARTY_NOTICES.txt", "LICENSE", "README.md", "build.rs", "src/**", "data/**"]
+
+[dependencies]
+comfit-core.workspace = true
+json5 = { workspace = true, optional = true }
+serde = { workspace = true, optional = true }
+toml_edit = { workspace = true, optional = true }
+
+[build-dependencies]
+anyhow.workspace = true
+comfit-core = { workspace = true, features = ["theme-toml"] }
+prettyplease.workspace = true
+quote.workspace = true
+syn.workspace = true
+
+[features]
+default = []
+all-themes = [
+  "ayu-dark",
+  "ayu-light",
+  "ayu-mirage",
+  "catppina-dark",
+  "catppina-light",
+  "catppuccin-frappe",
+  "catppuccin-latte",
+  "catppuccin-macchiato",
+  "catppuccin-mocha",
+  "dracula",
+  "dracula-soft",
+  "github-dark",
+  "github-dark-colorblind",
+  "github-dark-default",
+  "github-dark-dimmed",
+  "github-dark-high-contrast",
+  "github-light",
+  "github-light-colorblind",
+  "github-light-default",
+  "github-light-high-contrast",
+  "night-owl",
+  "night-owl-no-italics",
+  "nord",
+  "one-dark",
+  "one-dark-pro",
+  "one-dark-pro-darker",
+  "one-dark-pro-flat",
+  "one-dark-pro-mix",
+  "one-dark-pro-night-flat",
+  "one-light",
+  "rose-pine",
+  "rose-pine-dawn",
+  "rose-pine-dawn-no-italics",
+  "rose-pine-moon",
+  "rose-pine-moon-no-italics",
+  "rose-pine-no-italics",
+  "tokyo-night",
+  "tokyo-night-light",
+  "tokyo-night-storm",
+  "vitesse-black",
+  "vitesse-dark",
+  "vitesse-dark-soft",
+  "vitesse-light",
+  "vitesse-light-soft",
+]
+ayu-dark = []
+ayu-light = []
+ayu-mirage = []
+catppina-dark = []
+catppina-light = []
+catppuccin-frappe = []
+catppuccin-latte = []
+catppuccin-macchiato = []
+catppuccin-mocha = []
+convert = ["dep:json5", "dep:serde", "dep:toml_edit"]
+dracula = []
+dracula-soft = []
+github-dark = []
+github-dark-colorblind = []
+github-dark-default = []
+github-dark-dimmed = []
+github-dark-high-contrast = []
+github-light = []
+github-light-colorblind = []
+github-light-default = []
+github-light-high-contrast = []
+night-owl = []
+night-owl-no-italics = []
+nord = []
+one-dark = []
+one-dark-pro = []
+one-dark-pro-darker = []
+one-dark-pro-flat = []
+one-dark-pro-mix = []
+one-dark-pro-night-flat = []
+one-light = []
+rose-pine = []
+rose-pine-dawn = []
+rose-pine-dawn-no-italics = []
+rose-pine-moon = []
+rose-pine-moon-no-italics = []
+rose-pine-no-italics = []
+tokyo-night = []
+tokyo-night-light = []
+tokyo-night-storm = []
+vitesse-black = []
+vitesse-dark = []
+vitesse-dark-soft = []
+vitesse-light = []
+vitesse-light-soft = []

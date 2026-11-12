@@ -1,0 +1,30 @@
+.button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  inline-size: 2rem;
+  block-size: 2rem;
+  padding: 0.25rem;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--c-text-muted);
+}
+
+.button:hover {
+  background: var(--c-bg-muted);
+  color: var(--c-text);
+}
+
+.button:active {
+  background: var(--c-bg-active);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
+
+.rays {
+  transform-origin: center;
+}

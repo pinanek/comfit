@@ -1,0 +1,77 @@
+name = "Night Owl (No Italics)"
+default = { fg = "#d6deeb", bg = "#011627", modifiers = [] }
+
+[styles]
+attribute = { fg = "#82aaff", modifiers = [] }
+boolean = { fg = "#ff5874", modifiers = [] }
+character = { fg = "#82aaff", modifiers = [] }
+comment = { fg = "#637777", modifiers = [] }
+"comment.documentation" = { fg = "#637777", modifiers = [] }
+"comment.error" = { fg = "#637777", modifiers = [] }
+"comment.note" = { fg = "#637777", modifiers = [] }
+"comment.todo" = { fg = "#637777", modifiers = [] }
+"comment.warning" = { fg = "#637777", modifiers = [] }
+constant = { fg = "#82aaff", modifiers = [] }
+"constant.builtin" = { fg = "#82aaff", modifiers = [] }
+constructor = { fg = "#82aaff", modifiers = [] }
+"diff.delta" = { fg = "#a2bffc", modifiers = [] }
+"diff.minus" = { fg = "#87383e", modifiers = [] }
+"diff.plus" = { fg = "#c5e478", modifiers = [] }
+function = { fg = "#82aaff", modifiers = [] }
+"function.builtin" = { fg = "#c5e478", modifiers = [] }
+"function.call" = { fg = "#82aaff", modifiers = [] }
+"function.macro" = { fg = "#82aaff", modifiers = [] }
+"function.method" = { fg = "#82aaff", modifiers = [] }
+"function.method.call" = { fg = "#82aaff", modifiers = [] }
+keyword = { fg = "#c792ea", modifiers = [] }
+"keyword.conditional" = { fg = "#c792ea", modifiers = [] }
+"keyword.coroutine" = { fg = "#c792ea", modifiers = [] }
+"keyword.debug" = { fg = "#c792ea", modifiers = [] }
+"keyword.directive" = { fg = "#c792ea", modifiers = [] }
+"keyword.exception" = { fg = "#c792ea", modifiers = [] }
+"keyword.function" = { fg = "#c792ea", modifiers = [] }
+"keyword.import" = { fg = "#c792ea", modifiers = [] }
+"keyword.modifier" = { fg = "#c792ea", modifiers = [] }
+"keyword.operator" = { fg = "#7fdbca", modifiers = [] }
+"keyword.repeat" = { fg = "#c792ea", modifiers = [] }
+"keyword.return" = { fg = "#c792ea", modifiers = [] }
+"keyword.type" = { fg = "#c792ea", modifiers = [] }
+"markup.heading" = { fg = "#82b1ff", modifiers = [] }
+"markup.heading.1" = { fg = "#82b1ff", modifiers = [] }
+"markup.heading.2" = { fg = "#82b1ff", modifiers = [] }
+"markup.heading.3" = { fg = "#82b1ff", modifiers = [] }
+"markup.heading.4" = { fg = "#82b1ff", modifiers = [] }
+"markup.heading.5" = { fg = "#82b1ff", modifiers = [] }
+"markup.heading.6" = { fg = "#82b1ff", modifiers = [] }
+"markup.italic" = { fg = "#c792ea", modifiers = ["italic"] }
+"markup.link" = { modifiers = [] }
+"markup.link.url" = { fg = "#ff869a", modifiers = [] }
+"markup.list" = { fg = "#d9f5dd", modifiers = [] }
+"markup.quote" = { fg = "#697098", modifiers = [] }
+"markup.raw" = { fg = "#c5e478", modifiers = [] }
+"markup.strong" = { fg = "#c5e478", modifiers = ["bold"] }
+number = { fg = "#f78c6c", modifiers = [] }
+"number.float" = { fg = "#f78c6c", modifiers = [] }
+operator = { fg = "#7fdbca", modifiers = [] }
+property = { fg = "#80cbc4", modifiers = [] }
+"punctuation.bracket" = { modifiers = [] }
+"punctuation.delimiter" = { fg = "#c792ea", modifiers = [] }
+"punctuation.special" = { modifiers = [] }
+string = { fg = "#ecc48d", modifiers = [] }
+"string.documentation" = { fg = "#ecc48d", modifiers = [] }
+"string.escape" = { fg = "#f78c6c", modifiers = [] }
+"string.regexp" = { fg = "#5ca7e4", modifiers = [] }
+"string.special" = { fg = "#ecc48d", modifiers = [] }
+"string.special.symbol" = { fg = "#82aaff", modifiers = [] }
+"string.special.url" = { fg = "#ff869a", modifiers = [] }
+tag = { fg = "#caece6", modifiers = [] }
+"tag.attribute" = { fg = "#c5e478", modifiers = [] }
+"tag.builtin" = { fg = "#caece6", modifiers = [] }
+"tag.delimiter" = { fg = "#7fdbca", modifiers = [] }
+type = { fg = "#ffcb8b", modifiers = [] }
+"type.builtin" = { fg = "#c5e478", modifiers = [] }
+variable = { fg = "#c5e478", modifiers = [] }
+"variable.builtin" = { fg = "#7fdbca", modifiers = [] }
+"variable.member" = { fg = "#7fdbca", modifiers = [] }
+"variable.parameter" = { fg = "#d7dbe0", modifiers = [] }
+"variable.parameter.builtin" = { fg = "#d7dbe0", modifiers = [] }

@@ -1,0 +1,48 @@
+[project]
+name = "comfit"
+version = "0.1.0"
+description = "Comfit bindings for Python"
+readme = "README.md"
+authors = [{ name = "Ngo Duc Hoang Son", email = "hoangsonngo555@gmail.com" }]
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+
+[project.urls]
+Homepage = "https://comfit.pinanek.me"
+Repository = "https://github.com/pinanek/comfit"
+
+[build-system]
+requires = ["maturin>=1.16,<2"]
+build-backend = "maturin"
+
+[tool.uv]
+cache-keys = [
+    { file = "pyproject.toml" },
+    { file = "Cargo.toml" },
+    { file = "build.rs" },
+    { file = "src/**" },
+    { file = "comfit/**/*.py" },
+    { file = "comfit/**/*.pyi" },
+    { file = "comfit/py.typed" },
+    { file = "comfit/THIRD_PARTY_NOTICES.txt" },
+    { file = "README.md" },
+    { file = "LICENSE" },
+    { file = "../../Cargo.toml" },
+    { file = "../../Cargo.lock" },
+    { file = "../../.cargo/**" },
+    { file = "../../rust-toolchain*" },
+    { file = "../../crates/comfit/**" },
+    { file = "../../crates/comfit_core/**" },
+    { file = "../../crates/comfit_grammars/**" },
+    { file = "../../crates/comfit_themes/**" },
+    { env = "RUSTFLAGS" },
+    { env = "CARGO_ENCODED_RUSTFLAGS" },
+]
+
+[tool.maturin]
+profile = "dev"
+module-name = "comfit._native"
+python-source = "."
+features = ["pyo3/extension-module"]
+include = [{ path = "comfit/THIRD_PARTY_NOTICES.txt", format = ["sdist", "wheel"] }]

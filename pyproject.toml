@@ -1,0 +1,8 @@
+[tool.uv.workspace]
+members = ["python/comfit"]
+
+[dependency-groups]
+dev = ["maturin>=1.16,<2"]
+docs = [
+    "griffe2md>=1.5.1",
+]

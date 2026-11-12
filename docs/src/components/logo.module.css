@@ -1,0 +1,13 @@
+.root [fill],
+.root [stroke] {
+  transition:
+    fill var(--duration-normal) var(--ease-default),
+    stroke var(--duration-normal) var(--ease-default);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root [fill],
+  .root [stroke] {
+    transition: none;
+  }
+}

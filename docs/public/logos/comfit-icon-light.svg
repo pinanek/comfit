@@ -1,0 +1,194 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="240"
+  height="244"
+  viewBox="0 0 240 244"
+  role="img"
+  aria-labelledby="comfit-title comfit-desc"
+>
+  <title id="comfit-title">Comfit — candy jar logo</title>
+  <desc id="comfit-desc">A clean, flat glass candy jar containing colorful unwrapped comfit sweets. Catppina palette, no tree symbol or candy wrappers.</desc>
+  <style></style>
+  <defs>
+    <clipPath id="jar-interior">
+      <path d="M 66 67 L 174 67 C 176 81 188 85 196 98 C 203 108 204 125 204 148 L 204 179 C 204 203 192 216 168 216 L 72 216 C 48 216 36 202 36 179 L 36 145 C 36 122 37 108 44 98 C 52 85 64 81 66 67 Z" />
+    </clipPath>
+  </defs>
+  <g
+    id="candy-jar"
+    aria-label="Flat glass jar full of unwrapped rainbow comfit sweets"
+  >
+    <!-- Flat translucent glass, not a glossy gradient. -->
+    <path
+      d="M 66 67 L 174 67 C 176 81 188 85 196 98 C 203 108 204 125 204 148 L 204 179 C 204 203 192 216 168 216 L 72 216 C 48 216 36 202 36 179 L 36 145 C 36 122 37 108 44 98 C 52 85 64 81 66 67 Z"
+      fill="#eeeeef"
+      fill-opacity="0.72"
+    />
+    <g id="sweets" clip-path="url(#jar-interior)">
+      <path
+        id="comfit-01"
+        fill="#b84f83"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(85 113) rotate(-25) scale(0.94)"
+      />
+      <path
+        id="comfit-02"
+        fill="#8b6b22"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(113 103) rotate(15) scale(0.92)"
+      />
+      <path
+        id="comfit-03"
+        fill="#398460"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(141 107) rotate(-18) scale(0.98)"
+      />
+      <path
+        id="comfit-04"
+        fill="#bd6b32"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(164 119) rotate(52) scale(0.94)"
+      />
+      <path
+        id="comfit-05"
+        fill="#647fc5"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(72 136) rotate(60) scale(0.95)"
+      />
+      <path
+        id="comfit-06"
+        fill="#c94f55"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(99 130) rotate(-24) scale(0.95)"
+      />
+      <path
+        id="comfit-07"
+        fill="#287f76"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(128 130) rotate(12) scale(1.0)"
+      />
+      <path
+        id="comfit-08"
+        fill="#6579ad"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(157 137) rotate(-45) scale(1.05)"
+      />
+      <path
+        id="comfit-09"
+        fill="#8b6b22"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(177 146) rotate(80) scale(0.92)"
+      />
+      <path
+        id="comfit-10"
+        fill="#398460"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(67 164) rotate(-45) scale(1.04)"
+      />
+      <path
+        id="comfit-11"
+        fill="#367fa3"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(91 159) rotate(15) scale(1.02)"
+      />
+      <path
+        id="comfit-12"
+        fill="#c66a5e"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(119 153) rotate(-35) scale(1.05)"
+      />
+      <path
+        id="comfit-13"
+        fill="#b84f83"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(147 163) rotate(36) scale(1.0)"
+      />
+      <path
+        id="comfit-14"
+        fill="#347aa5"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(174 167) rotate(-18) scale(1.0)"
+      />
+      <path
+        id="comfit-15"
+        fill="#8b6b22"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(70 189) rotate(32) scale(0.97)"
+      />
+      <path
+        id="comfit-16"
+        fill="#bd6b32"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(99 184) rotate(-35) scale(1.0)"
+      />
+      <path
+        id="comfit-17"
+        fill="#647fc5"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(126 184) rotate(12) scale(1.07)"
+      />
+      <path
+        id="comfit-18"
+        fill="#c94f55"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(153 190) rotate(-30) scale(1.05)"
+      />
+      <path
+        id="comfit-19"
+        fill="#287f76"
+        d="M -13.5 -8 C -20.5 -5 -19.5 4.8 -12.5 8.5 C -4 12.5 8 11.5 13 6.5 C 20 1.5 17.5 -7.5 9 -9.5 C 0 -11.8 -8 -11.5 -13.5 -8 Z"
+        transform="translate(176 188) rotate(46) scale(0.92)"
+      />
+    </g>
+    <!-- Simple two-stroke glass rim and inner shine. -->
+    <path
+      d="M 66 67 L 174 67 C 176 81 188 85 196 98 C 203 108 204 125 204 148 L 204 179 C 204 203 192 216 168 216 L 72 216 C 48 216 36 202 36 179 L 36 145 C 36 122 37 108 44 98 C 52 85 64 81 66 67 Z"
+      fill="none"
+      stroke="#303033"
+      stroke-width="6.5"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M 50 120 Q 48 143 49 174"
+      fill="none"
+      stroke="#f7f7f8"
+      stroke-width="5"
+      stroke-linecap="round"
+      opacity=".86"
+    />
+    <path
+      d="M 190 120 Q 192 149 190 168"
+      fill="none"
+      stroke="#f7f7f8"
+      stroke-width="3"
+      stroke-linecap="round"
+      opacity=".58"
+    />
+    <!-- Soft rim below the solid candy-jar lid. -->
+    <rect
+      x="60"
+      y="61"
+      width="120"
+      height="14"
+      rx="6"
+      fill="#d8d8da"
+      stroke="#303033"
+      stroke-width="4"
+    />
+    <!-- Decorated, chunky retro sweet-jar lid. -->
+    <path
+      d="M 60 28 H 180 Q 192 28 192 40 V 53 Q 192 65 180 65 H 60 Q 48 65 48 53 V 40 Q 48 28 60 28 Z"
+      fill="#647fc5"
+      stroke="#303033"
+      stroke-width="6"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M 65 40 H 175"
+      stroke="#f7f7f8"
+      stroke-opacity=".66"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+  </g>
+</svg>

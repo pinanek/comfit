@@ -1,0 +1,225 @@
+@import "../../styles/media.css";
+
+.root {
+  display: none;
+  inline-size: calc(100% - 4rem);
+  min-inline-size: 0;
+  max-inline-size: calc(72ch - 4rem);
+  margin: 1.5rem auto 0;
+  color: var(--c-text-muted);
+}
+
+.title,
+.trigger,
+.list {
+  font-size: 0.8125rem;
+}
+
+.desktop {
+  display: none;
+}
+
+.title {
+  margin-block-end: 0.75rem;
+  font-weight: 700;
+  color: var(--c-text);
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  inline-size: 100%;
+  min-block-size: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--c-text);
+  font-weight: 600;
+  text-align: start;
+}
+
+.trigger:hover {
+  background: var(--c-bg-muted);
+}
+
+.chevron {
+  flex-shrink: 0;
+}
+
+.trigger[data-panel-open] .chevron {
+  rotate: 180deg;
+}
+
+.body {
+  position: relative;
+  max-block-size: 20rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-code-number) transparent;
+}
+
+.mobile .body {
+  margin-block-start: 0.75rem;
+}
+
+.list {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 1rem;
+  list-style: none;
+}
+
+.list li[data-depth="3"] {
+  padding-inline-start: 0.75rem;
+}
+
+.list li[data-depth="4"] {
+  padding-inline-start: 1.5rem;
+}
+
+.list a {
+  display: block;
+  padding: 0.375rem 0.25rem;
+  overflow-wrap: anywhere;
+  color: var(--c-text-muted);
+}
+
+@media (pointer: coarse) {
+  .list a {
+    min-block-size: 2.75rem;
+    padding-block: 0.625rem;
+  }
+}
+
+.list a:hover,
+.list li[data-active] a {
+  color: var(--c-text);
+}
+
+.list a[aria-current="location"] {
+  color: var(--c-accent);
+}
+
+.list a:focus-visible,
+.trigger:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+.indicator {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  pointer-events: none;
+}
+
+.path {
+  fill: none;
+  stroke: var(--c-accent);
+  stroke-width: 2px;
+  stroke-linejoin: round;
+}
+
+@media (--motion-ok) {
+  .path {
+    transition:
+      stroke-dasharray var(--duration-fast) ease-out,
+      opacity var(--duration-fast) ease-out;
+  }
+
+  .chevron {
+    transition: rotate var(--duration-fast) ease-out;
+  }
+}
+
+.compactTrigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  min-block-size: 2.75rem;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: var(--radius-xs);
+  background: transparent;
+  color: var(--c-text-muted);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  white-space: nowrap;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.compactTrigger:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
+
+.compactTrigger:active {
+  background: var(--c-bg-active);
+}
+
+.compactTrigger[data-popup-open] .chevron {
+  rotate: 180deg;
+}
+
+.positioner {
+  z-index: 30;
+  max-inline-size: calc(100vw - 1.5rem);
+}
+
+.popup {
+  inline-size: min(22rem, calc(100vw - 1.5rem));
+  max-block-size: var(--available-height);
+  overflow-y: auto;
+  padding: 1rem;
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--c-bg);
+  color: var(--c-text);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .compactTrigger:hover {
+    background: var(--c-bg-muted);
+    color: var(--c-text);
+  }
+}
+
+@media (--docs-sidebar) {
+  .root {
+    display: block;
+  }
+}
+
+@media (--viewport-md) {
+  .root {
+    position: sticky;
+    inset-block-start: 2rem;
+    grid-column: 2;
+    grid-row: 1;
+    inline-size: auto;
+    max-inline-size: none;
+    margin: 2rem 0;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .body {
+    max-block-size: calc(100svh - 7rem);
+  }
+}

@@ -1,0 +1,625 @@
+{
+  "sidebar": [
+    {
+      "label": "JavaScript",
+      "items": [
+        {
+          "label": "Node.js",
+          "items": [
+            {
+              "label": "Overview",
+              "href": "/api-references/javascript/node"
+            },
+            {
+              "label": "Enumerations",
+              "items": [
+                {
+                  "label": "RenderHtmlStyle",
+                  "href": "/api-references/javascript/node/enumerations/RenderHtmlStyle"
+                }
+              ]
+            },
+            {
+              "label": "Classes",
+              "items": [
+                {
+                  "label": "Document",
+                  "href": "/api-references/javascript/node/classes/Document"
+                },
+                {
+                  "label": "HighlightConfig",
+                  "href": "/api-references/javascript/node/classes/HighlightConfig"
+                },
+                {
+                  "label": "HighlightResult",
+                  "href": "/api-references/javascript/node/classes/HighlightResult"
+                },
+                {
+                  "label": "RenderHtmlConfig",
+                  "href": "/api-references/javascript/node/classes/RenderHtmlConfig"
+                }
+              ]
+            },
+            {
+              "label": "Interfaces",
+              "items": [
+                {
+                  "label": "DocumentOptions",
+                  "href": "/api-references/javascript/node/interfaces/DocumentOptions"
+                },
+                {
+                  "label": "Line",
+                  "href": "/api-references/javascript/node/interfaces/Line"
+                },
+                {
+                  "label": "NamedTheme",
+                  "href": "/api-references/javascript/node/interfaces/NamedTheme"
+                },
+                {
+                  "label": "Token",
+                  "href": "/api-references/javascript/node/interfaces/Token"
+                }
+              ]
+            },
+            {
+              "label": "Variables",
+              "items": [
+                {
+                  "label": "napiBindingTarget",
+                  "href": "/api-references/javascript/node/variables/napiBindingTarget"
+                }
+              ]
+            },
+            {
+              "label": "Functions",
+              "items": [
+                {
+                  "label": "containsLanguage",
+                  "href": "/api-references/javascript/node/functions/containsLanguage"
+                },
+                {
+                  "label": "createDocument",
+                  "href": "/api-references/javascript/node/functions/createDocument"
+                },
+                {
+                  "label": "highlight",
+                  "href": "/api-references/javascript/node/functions/highlight"
+                },
+                {
+                  "label": "languages",
+                  "href": "/api-references/javascript/node/functions/languages"
+                },
+                {
+                  "label": "renderAnsi",
+                  "href": "/api-references/javascript/node/functions/renderAnsi"
+                },
+                {
+                  "label": "renderHtml",
+                  "href": "/api-references/javascript/node/functions/renderHtml"
+                },
+                {
+                  "label": "renderHtmlClasses",
+                  "href": "/api-references/javascript/node/functions/renderHtmlClasses"
+                },
+                {
+                  "label": "renderHtmlThemes",
+                  "href": "/api-references/javascript/node/functions/renderHtmlThemes"
+                },
+                {
+                  "label": "themes",
+                  "href": "/api-references/javascript/node/functions/themes"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "WebAssembly",
+          "items": [
+            {
+              "label": "Overview",
+              "href": "/api-references/javascript/wasm"
+            },
+            {
+              "label": "Interfaces",
+              "items": [
+                {
+                  "label": "CreateDocumentOptions",
+                  "href": "/api-references/javascript/wasm/interfaces/CreateDocumentOptions"
+                },
+                {
+                  "label": "CreateHighlighterOptions",
+                  "href": "/api-references/javascript/wasm/interfaces/CreateHighlighterOptions"
+                },
+                {
+                  "label": "Document",
+                  "href": "/api-references/javascript/wasm/interfaces/Document"
+                },
+                {
+                  "label": "HighlightOptions",
+                  "href": "/api-references/javascript/wasm/interfaces/HighlightOptions"
+                },
+                {
+                  "label": "HighlightResult",
+                  "href": "/api-references/javascript/wasm/interfaces/HighlightResult"
+                },
+                {
+                  "label": "Highlighter",
+                  "href": "/api-references/javascript/wasm/interfaces/Highlighter"
+                },
+                {
+                  "label": "HtmlOptions",
+                  "href": "/api-references/javascript/wasm/interfaces/HtmlOptions"
+                },
+                {
+                  "label": "InitializeOptions",
+                  "href": "/api-references/javascript/wasm/interfaces/InitializeOptions"
+                },
+                {
+                  "label": "Language",
+                  "href": "/api-references/javascript/wasm/interfaces/Language"
+                },
+                {
+                  "label": "Line",
+                  "href": "/api-references/javascript/wasm/interfaces/Line"
+                },
+                {
+                  "label": "Theme",
+                  "href": "/api-references/javascript/wasm/interfaces/Theme"
+                },
+                {
+                  "label": "ThemeStyle",
+                  "href": "/api-references/javascript/wasm/interfaces/ThemeStyle"
+                },
+                {
+                  "label": "Token",
+                  "href": "/api-references/javascript/wasm/interfaces/Token"
+                }
+              ]
+            },
+            {
+              "label": "Type aliases",
+              "items": [
+                {
+                  "label": "RenderHtmlOptions",
+                  "href": "/api-references/javascript/wasm/type-aliases/RenderHtmlOptions"
+                },
+                {
+                  "label": "ThemeColor",
+                  "href": "/api-references/javascript/wasm/type-aliases/ThemeColor"
+                },
+                {
+                  "label": "ThemeModifier",
+                  "href": "/api-references/javascript/wasm/type-aliases/ThemeModifier"
+                },
+                {
+                  "label": "WasmSource",
+                  "href": "/api-references/javascript/wasm/type-aliases/WasmSource"
+                }
+              ]
+            },
+            {
+              "label": "Functions",
+              "items": [
+                {
+                  "label": "createHighlighter",
+                  "href": "/api-references/javascript/wasm/functions/createHighlighter"
+                },
+                {
+                  "label": "initialize",
+                  "href": "/api-references/javascript/wasm/functions/initialize"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "rehype",
+          "items": [
+            {
+              "label": "Overview",
+              "href": "/api-references/javascript/rehype"
+            },
+            {
+              "label": "Interfaces",
+              "items": [
+                {
+                  "label": "Options",
+                  "href": "/api-references/javascript/rehype/interfaces/Options"
+                }
+              ]
+            },
+            {
+              "label": "Functions",
+              "items": [
+                {
+                  "label": "default",
+                  "href": "/api-references/javascript/rehype/functions/default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "WASM grammars",
+          "items": [
+            {
+              "label": "Overview",
+              "href": "/api-references/javascript/wasm-grammars"
+            },
+            {
+              "label": "Interfaces",
+              "items": [
+                {
+                  "label": "Language",
+                  "href": "/api-references/javascript/wasm-grammars/interfaces/Language"
+                }
+              ]
+            },
+            {
+              "label": "Type aliases",
+              "items": [
+                {
+                  "label": "WasmSource",
+                  "href": "/api-references/javascript/wasm-grammars/type-aliases/WasmSource"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "markdown-it",
+          "items": [
+            {
+              "label": "Overview",
+              "href": "/api-references/javascript/markdown-it"
+            },
+            {
+              "label": "Interfaces",
+              "items": [
+                {
+                  "label": "Options",
+                  "href": "/api-references/javascript/markdown-it/interfaces/Options"
+                }
+              ]
+            },
+            {
+              "label": "Functions",
+              "items": [
+                {
+                  "label": "default",
+                  "href": "/api-references/javascript/markdown-it/functions/default"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Python",
+      "items": [
+        {
+          "label": "Overview",
+          "href": "/api-references/python"
+        },
+        {
+          "label": "Classes",
+          "items": [
+            {
+              "label": "Document",
+              "href": "/api-references/python/classes/Document"
+            },
+            {
+              "label": "HighlightConfig",
+              "href": "/api-references/python/classes/HighlightConfig"
+            },
+            {
+              "label": "HighlightResult",
+              "href": "/api-references/python/classes/HighlightResult"
+            },
+            {
+              "label": "Line",
+              "href": "/api-references/python/classes/Line"
+            },
+            {
+              "label": "RenderHtmlConfig",
+              "href": "/api-references/python/classes/RenderHtmlConfig"
+            },
+            {
+              "label": "RenderHtmlStyle",
+              "href": "/api-references/python/classes/RenderHtmlStyle"
+            },
+            {
+              "label": "Token",
+              "href": "/api-references/python/classes/Token"
+            }
+          ]
+        },
+        {
+          "label": "Functions",
+          "items": [
+            {
+              "label": "create_document",
+              "href": "/api-references/python/functions/create_document"
+            },
+            {
+              "label": "highlight",
+              "href": "/api-references/python/functions/highlight"
+            },
+            {
+              "label": "languages",
+              "href": "/api-references/python/functions/languages"
+            },
+            {
+              "label": "render_ansi",
+              "href": "/api-references/python/functions/render_ansi"
+            },
+            {
+              "label": "render_html",
+              "href": "/api-references/python/functions/render_html"
+            },
+            {
+              "label": "themes",
+              "href": "/api-references/python/functions/themes"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pages": {
+    "/api-references/javascript/markdown-it": {
+      "title": "@comfit/markdown-it",
+      "description": "@comfit/markdown-it: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/markdown-it/functions/default": {
+      "title": "Function: default()",
+      "description": "Function: default(): Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/markdown-it/interfaces/Options": {
+      "title": "Interface: Options",
+      "description": "Interface: Options: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node": {
+      "title": "@comfit/node",
+      "description": "@comfit/node: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/classes/Document": {
+      "title": "Class: Document",
+      "description": "Class: Document: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/classes/HighlightConfig": {
+      "title": "Class: HighlightConfig",
+      "description": "Class: HighlightConfig: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/classes/HighlightResult": {
+      "title": "Class: HighlightResult",
+      "description": "Class: HighlightResult: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/classes/RenderHtmlConfig": {
+      "title": "Class: RenderHtmlConfig",
+      "description": "Class: RenderHtmlConfig: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/enumerations/RenderHtmlStyle": {
+      "title": "Enumeration: RenderHtmlStyle",
+      "description": "Enumeration: RenderHtmlStyle: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/functions/containsLanguage": {
+      "title": "Function: containsLanguage()",
+      "description": "Function: containsLanguage(): Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/functions/createDocument": {
+      "title": "Function: createDocument()",
+      "description": "Function: createDocument(): Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/functions/highlight": {
+      "title": "Function: highlight()",
+      "description": "Function: highlight(): Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/functions/languages": {
+      "title": "Function: languages()",
+      "description": "Function: languages(): Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/functions/renderAnsi": {
+      "title": "Function: renderAnsi()",
+      "description": "Function: renderAnsi(): Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/functions/renderHtml": {
+      "title": "Function: renderHtml()",
+      "description": "Function: renderHtml(): Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/functions/renderHtmlClasses": {
+      "title": "Function: renderHtmlClasses()",
+      "description": "Function: renderHtmlClasses(): Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/functions/renderHtmlThemes": {
+      "title": "Function: renderHtmlThemes()",
+      "description": "Function: renderHtmlThemes(): Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/functions/themes": {
+      "title": "Function: themes()",
+      "description": "Function: themes(): Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/interfaces/DocumentOptions": {
+      "title": "Interface: DocumentOptions",
+      "description": "Interface: DocumentOptions: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/interfaces/Line": {
+      "title": "Interface: Line",
+      "description": "Interface: Line: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/interfaces/NamedTheme": {
+      "title": "Interface: NamedTheme",
+      "description": "Interface: NamedTheme: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/interfaces/Token": {
+      "title": "Interface: Token",
+      "description": "Interface: Token: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/node/variables/napiBindingTarget": {
+      "title": "Variable: \\_\\_napiBindingTarget",
+      "description": "Variable: \\_\\_napiBindingTarget: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/rehype": {
+      "title": "@comfit/rehype",
+      "description": "@comfit/rehype: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/rehype/functions/default": {
+      "title": "Function: default()",
+      "description": "Function: default(): Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/rehype/interfaces/Options": {
+      "title": "Interface: Options",
+      "description": "Interface: Options: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm": {
+      "title": "@comfit/wasm",
+      "description": "@comfit/wasm: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm-grammars": {
+      "title": "@comfit/wasm-grammars",
+      "description": "@comfit/wasm-grammars: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm-grammars/interfaces/Language": {
+      "title": "Interface: Language",
+      "description": "Interface: Language: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm-grammars/type-aliases/WasmSource": {
+      "title": "Type Alias: WasmSource",
+      "description": "Type Alias: WasmSource: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/functions/createHighlighter": {
+      "title": "Function: createHighlighter()",
+      "description": "Function: createHighlighter(): Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/functions/initialize": {
+      "title": "Function: initialize()",
+      "description": "Function: initialize(): Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/interfaces/CreateDocumentOptions": {
+      "title": "Interface: CreateDocumentOptions",
+      "description": "Interface: CreateDocumentOptions: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/interfaces/CreateHighlighterOptions": {
+      "title": "Interface: CreateHighlighterOptions",
+      "description": "Interface: CreateHighlighterOptions: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/interfaces/Document": {
+      "title": "Interface: Document",
+      "description": "Interface: Document: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/interfaces/HighlightOptions": {
+      "title": "Interface: HighlightOptions",
+      "description": "Interface: HighlightOptions: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/interfaces/HighlightResult": {
+      "title": "Interface: HighlightResult",
+      "description": "Interface: HighlightResult: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/interfaces/Highlighter": {
+      "title": "Interface: Highlighter",
+      "description": "Interface: Highlighter: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/interfaces/HtmlOptions": {
+      "title": "Interface: HtmlOptions",
+      "description": "Interface: HtmlOptions: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/interfaces/InitializeOptions": {
+      "title": "Interface: InitializeOptions",
+      "description": "Interface: InitializeOptions: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/interfaces/Language": {
+      "title": "Interface: Language",
+      "description": "Interface: Language: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/interfaces/Line": {
+      "title": "Interface: Line",
+      "description": "Interface: Line: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/interfaces/Theme": {
+      "title": "Interface: Theme",
+      "description": "Interface: Theme: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/interfaces/ThemeStyle": {
+      "title": "Interface: ThemeStyle",
+      "description": "Interface: ThemeStyle: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/interfaces/Token": {
+      "title": "Interface: Token",
+      "description": "Interface: Token: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/type-aliases/RenderHtmlOptions": {
+      "title": "Type Alias: RenderHtmlOptions",
+      "description": "Type Alias: RenderHtmlOptions: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/type-aliases/ThemeColor": {
+      "title": "Type Alias: ThemeColor",
+      "description": "Type Alias: ThemeColor: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/type-aliases/ThemeModifier": {
+      "title": "Type Alias: ThemeModifier",
+      "description": "Type Alias: ThemeModifier: Comfit JavaScript API reference."
+    },
+    "/api-references/javascript/wasm/type-aliases/WasmSource": {
+      "title": "Type Alias: WasmSource",
+      "description": "Type Alias: WasmSource: Comfit JavaScript API reference."
+    },
+    "/api-references/python": {
+      "title": "comfit",
+      "description": "comfit: Comfit Python API reference."
+    },
+    "/api-references/python/classes/Document": {
+      "title": "comfit.Document",
+      "description": "comfit.Document: Comfit Python API reference."
+    },
+    "/api-references/python/classes/HighlightConfig": {
+      "title": "comfit.HighlightConfig",
+      "description": "comfit.HighlightConfig: Comfit Python API reference."
+    },
+    "/api-references/python/classes/HighlightResult": {
+      "title": "comfit.HighlightResult",
+      "description": "comfit.HighlightResult: Comfit Python API reference."
+    },
+    "/api-references/python/classes/Line": {
+      "title": "comfit.Line",
+      "description": "comfit.Line: Comfit Python API reference."
+    },
+    "/api-references/python/classes/RenderHtmlConfig": {
+      "title": "comfit.RenderHtmlConfig",
+      "description": "comfit.RenderHtmlConfig: Comfit Python API reference."
+    },
+    "/api-references/python/classes/RenderHtmlStyle": {
+      "title": "comfit.RenderHtmlStyle",
+      "description": "comfit.RenderHtmlStyle: Comfit Python API reference."
+    },
+    "/api-references/python/classes/Token": {
+      "title": "comfit.Token",
+      "description": "comfit.Token: Comfit Python API reference."
+    },
+    "/api-references/python/functions/create_document": {
+      "title": "comfit.create_document",
+      "description": "comfit.create_document: Comfit Python API reference."
+    },
+    "/api-references/python/functions/highlight": {
+      "title": "comfit.highlight",
+      "description": "comfit.highlight: Comfit Python API reference."
+    },
+    "/api-references/python/functions/languages": {
+      "title": "comfit.languages",
+      "description": "comfit.languages: Comfit Python API reference."
+    },
+    "/api-references/python/functions/render_ansi": {
+      "title": "comfit.render_ansi",
+      "description": "comfit.render_ansi: Comfit Python API reference."
+    },
+    "/api-references/python/functions/render_html": {
+      "title": "comfit.render_html",
+      "description": "comfit.render_html: Comfit Python API reference."
+    },
+    "/api-references/python/functions/themes": {
+      "title": "comfit.themes",
+      "description": "comfit.themes: Comfit Python API reference."
+    }
+  }
+}

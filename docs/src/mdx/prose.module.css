@@ -1,0 +1,336 @@
+@import "../styles/media.css";
+
+.prose {
+  --prose-space-xs: 0.375rem;
+  --prose-space-sm: 0.75rem;
+  --prose-space-md: 1.25rem;
+  --prose-space-lg: 1.75rem;
+  --prose-space-xl: 2.75rem;
+}
+
+.prose.prose > * {
+  margin-block: 0;
+}
+
+.prose.prose > :where(:not(a:empty)) ~ :where(:not(a:empty)) {
+  margin-block-start: var(--prose-space-md);
+}
+
+.prose.prose > h2 {
+  margin-block-start: var(--prose-space-xl);
+}
+
+.prose.prose > h3 {
+  margin-block-start: 2.25rem;
+}
+
+.prose.prose > :where(h4, h5, h6) {
+  margin-block-start: var(--prose-space-lg);
+}
+
+.prose.prose > :where(figure, aside, blockquote, details, section:has(> table)),
+.prose.prose
+  > :where(figure, aside, blockquote, details, section:has(> table))
+  + :where(:not(a:empty)) {
+  margin-block-start: var(--prose-space-lg);
+}
+
+.prose.prose > :where(h1, h2, h3, h4, h5, h6) + :where(:not(a:empty)) {
+  margin-block-start: var(--prose-space-sm);
+}
+
+.prose.prose > :nth-child(1 of :not(a:empty)) {
+  margin-block-start: 0;
+}
+
+.prose :where(h1) {
+  font-size: clamp(1.75rem, 1.35rem + 1.5vw, 2.25rem);
+}
+
+.prose :where(h2) {
+  font-size: 1.5rem;
+}
+
+.prose :where(h3) {
+  font-size: 1.25rem;
+}
+
+.prose :where(h4, h5, h6) {
+  font-size: 1rem;
+}
+
+.heading {
+  position: relative;
+  overflow: visible;
+}
+
+.headingAnchor {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 1.5rem;
+  block-size: 1lh;
+  color: var(--c-text-muted);
+  opacity: 0;
+}
+
+.heading:hover .headingAnchor,
+.heading:focus-within .headingAnchor {
+  opacity: 1;
+}
+
+.headingAnchor:hover {
+  color: var(--c-text);
+}
+
+.headingAnchor:focus-visible,
+.link:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+.link {
+  color: var(--c-accent);
+}
+
+.linkLabel {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+.link:hover .linkLabel {
+  text-decoration: none;
+}
+
+.externalIcon {
+  display: inline;
+  margin-inline-start: 0.15em;
+  vertical-align: 0.1em;
+}
+
+.link:has(img) .externalIcon {
+  display: none;
+}
+
+.prose :where(code:not(pre code)) {
+  padding: 0.25em 0.5em;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-xs);
+  background: var(--c-surface);
+  color: var(--c-code-type);
+  font-size: 0.8em;
+  overflow-wrap: anywhere;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.prose :where(ul, ol) {
+  padding-inline-start: 1.5em;
+}
+
+.prose li + li {
+  margin-block-start: var(--prose-space-xs);
+}
+
+.prose li > p + p {
+  margin-block-start: var(--prose-space-sm);
+}
+
+.prose li > :where(ul, ol) {
+  margin-block-start: var(--prose-space-md);
+}
+
+.prose :where(blockquote) {
+  margin-inline: 1rem;
+  padding-inline-start: 1.5rem;
+  border-inline-start: 3px solid var(--c-border-strong);
+  color: var(--c-text-muted);
+}
+
+.prose blockquote > * + * {
+  margin-block-start: var(--prose-space-sm);
+}
+
+.prose
+  li:has(> input[type="checkbox"], > p:first-child > input[type="checkbox"]) {
+  position: relative;
+  padding-inline-start: 1.75em;
+  list-style: none;
+}
+
+.prose :where(li, li > p:first-child) > input[type="checkbox"] {
+  appearance: none;
+  position: absolute;
+  inset-block-start: 0.25rem;
+  inset-inline-start: 0;
+  display: inline-grid;
+  place-content: center;
+  inline-size: 1em;
+  block-size: 1em;
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--radius-xs);
+  background: var(--c-bg);
+  color: var(--c-bg);
+  opacity: 1;
+}
+
+.prose :where(li, li > p:first-child) > input[type="checkbox"]:checked {
+  border-color: var(--c-accent);
+  background: var(--c-accent);
+}
+
+.prose :where(li, li > p:first-child) > input[type="checkbox"]:checked::before {
+  content: "";
+  inline-size: 0.3em;
+  block-size: 0.55em;
+  border: solid currentColor;
+  border-width: 0 0.125em 0.125em 0;
+  transform: translateY(-0.05em) rotate(45deg);
+}
+
+.prose :where(details) {
+  overflow: hidden;
+  padding: 1rem;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+}
+
+.prose details > summary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin: -1rem;
+  padding: 0.75rem 1rem;
+  border-radius: inherit;
+  background: var(--c-bg-muted);
+  font-weight: 600;
+  list-style: none;
+  cursor: pointer;
+}
+
+.prose details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.prose details > summary::before {
+  content: "";
+  flex: none;
+  align-self: center;
+  inline-size: 0.4rem;
+  block-size: 0.4rem;
+  border-inline-end: 1.5px solid currentColor;
+  border-block-end: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+  color: var(--c-text-muted);
+}
+
+.prose details > summary:hover {
+  background: var(--c-bg-hover);
+}
+
+.prose details > summary:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: -2px;
+}
+
+.prose details[open] > summary {
+  margin-block-end: 1rem;
+  border-block-end: 1px solid var(--c-border);
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+}
+
+.prose details[open] > summary::before {
+  transform: rotate(45deg);
+}
+
+.prose details > :not(summary) + :not(summary) {
+  margin-block-start: var(--prose-space-sm);
+}
+
+.image {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+  margin-inline: auto;
+  border-radius: var(--radius-lg);
+}
+
+.prose figure[data-image-figure] figcaption {
+  margin-block-start: 0.5rem;
+  color: var(--c-text-muted);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.prose :where(dt) {
+  font-weight: 700;
+}
+
+.prose dd + dt {
+  margin-block-start: var(--prose-space-sm);
+}
+
+.prose :where(dd) {
+  margin-block-start: 0.25rem;
+  margin-inline-start: 1.5em;
+}
+
+.prose :where(kbd) {
+  padding: 0.125em 0.375em;
+  border: 1px solid var(--c-border-strong);
+  border-block-end-width: 2px;
+  border-radius: var(--radius-xs);
+  background: var(--c-bg-subtle);
+  font-size: 0.8em;
+}
+
+.prose :where(mark) {
+  padding-inline: 0.15em;
+  border-radius: var(--radius-xs);
+  background: var(--c-cpn-yellow);
+  color: var(--c-bg);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.prose.prose > hr {
+  margin-block: var(--prose-space-xl);
+  border: 0;
+  border-block-start: 1px solid var(--c-border);
+}
+
+.prose :global(.katex-display) {
+  max-inline-size: 100%;
+  overflow-x: auto;
+  padding-block: 0.5em;
+}
+
+@media (--motion-ok) {
+  .headingAnchor {
+    transition:
+      opacity var(--duration-fast) ease-out,
+      color var(--duration-fast) ease-out;
+  }
+}
+
+@media (hover: none) {
+  .headingAnchor {
+    opacity: 1;
+  }
+}
+
+@media (forced-colors: active) {
+  .prose :where(li, li > p:first-child) > input[type="checkbox"] {
+    appearance: auto;
+  }
+
+  .prose :where(li, li > p:first-child) > input[type="checkbox"]::before {
+    display: none;
+  }
+}

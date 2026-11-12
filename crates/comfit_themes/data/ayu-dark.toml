@@ -1,0 +1,80 @@
+name = "Ayu Dark"
+default = { fg = "#bfbdb6", bg = "#10141c", modifiers = [] }
+
+[styles]
+attribute = { fg = "#ffb454", modifiers = [] }
+boolean = { fg = "#d2a6ff", modifiers = [] }
+character = { fg = "#95e6cb", modifiers = [] }
+comment = { fg = "#5a6673", modifiers = ["italic"] }
+"comment.documentation" = { fg = "#5a6673", modifiers = ["italic"] }
+"comment.error" = { fg = "#5a6673", modifiers = ["italic"] }
+"comment.note" = { fg = "#5a6673", modifiers = ["italic"] }
+"comment.todo" = { fg = "#5a6673", modifiers = ["italic"] }
+"comment.warning" = { fg = "#5a6673", modifiers = ["italic"] }
+constant = { fg = "#95e6cb", modifiers = [] }
+"constant.builtin" = { fg = "#d2a6ff", modifiers = [] }
+"constant.macro" = { fg = "#59c2ff", modifiers = [] }
+constructor = { fg = "#59c2ff", modifiers = [] }
+"diff.delta" = { fg = "#73b8ff", modifiers = [] }
+"diff.minus" = { fg = "#f26d78", modifiers = [] }
+"diff.plus" = { fg = "#70bf56", modifiers = [] }
+function = { fg = "#ffb454", modifiers = [] }
+"function.builtin" = { fg = "#f07178", modifiers = [] }
+"function.call" = { fg = "#ffb454", modifiers = [] }
+"function.macro" = { fg = "#f07178", modifiers = [] }
+"function.method" = { fg = "#ffb454", modifiers = [] }
+"function.method.call" = { fg = "#ffb454", modifiers = [] }
+keyword = { fg = "#ff8f40", modifiers = [] }
+"keyword.conditional" = { fg = "#ff8f40", modifiers = [] }
+"keyword.coroutine" = { fg = "#ff8f40", modifiers = [] }
+"keyword.debug" = { fg = "#ff8f40", modifiers = [] }
+"keyword.directive" = { fg = "#ff8f40", modifiers = [] }
+"keyword.exception" = { fg = "#ff8f40", modifiers = [] }
+"keyword.function" = { fg = "#ff8f40", modifiers = [] }
+"keyword.import" = { fg = "#ff8f40", modifiers = [] }
+"keyword.modifier" = { fg = "#ff8f40", modifiers = [] }
+"keyword.operator" = { fg = "#f29668", modifiers = [] }
+"keyword.repeat" = { fg = "#ff8f40", modifiers = [] }
+"keyword.return" = { fg = "#ff8f40", modifiers = [] }
+"keyword.type" = { fg = "#ff8f40", modifiers = [] }
+label = { fg = "#59c2ff", modifiers = [] }
+"markup.heading" = { fg = "#aad94c", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "#aad94c", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "#aad94c", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "#aad94c", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "#aad94c", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "#aad94c", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "#aad94c", modifiers = ["bold"] }
+"markup.italic" = { fg = "#f07178", modifiers = ["italic"] }
+"markup.link.url" = { fg = "#39bae6", modifiers = [], underline = { style = "line" } }
+"markup.quote" = { fg = "#95e6cb", modifiers = ["italic"] }
+"markup.strong" = { fg = "#f07178", modifiers = ["bold"] }
+"markup.underline" = { modifiers = [], underline = { style = "line" } }
+module = { fg = "#59c2ff", modifiers = [] }
+number = { fg = "#d2a6ff", modifiers = [] }
+"number.float" = { fg = "#d2a6ff", modifiers = [] }
+operator = { fg = "#f29668", modifiers = [] }
+property = { fg = "#39bae6", modifiers = [] }
+"punctuation.bracket" = { fg = "#bfbdb6", modifiers = [] }
+"punctuation.delimiter" = { fg = "#8a8a88", modifiers = [] }
+"punctuation.special" = { fg = "#ff8f40", modifiers = [] }
+string = { fg = "#aad94c", modifiers = [] }
+"string.documentation" = { fg = "#aad94c", modifiers = [] }
+"string.escape" = { fg = "#95e6cb", modifiers = [] }
+"string.regexp" = { fg = "#95e6cb", modifiers = [] }
+"string.special" = { fg = "#aad94c", modifiers = [] }
+"string.special.path" = { fg = "#59c2ff", modifiers = [] }
+"string.special.symbol" = { fg = "#aad94c", modifiers = [] }
+"string.special.url" = { fg = "#39bae6", modifiers = [], underline = { style = "line" } }
+tag = { fg = "#39bae6", modifiers = [] }
+"tag.attribute" = { fg = "#ffb454", modifiers = [] }
+"tag.builtin" = { fg = "#39bae6", modifiers = [] }
+"tag.delimiter" = { fg = "#256781", modifiers = [] }
+type = { fg = "#39bae6", modifiers = [] }
+"type.builtin" = { fg = "#39bae6", modifiers = [] }
+"type.definition" = { fg = "#59c2ff", modifiers = [] }
+variable = { fg = "#bfbdb6", modifiers = [] }
+"variable.builtin" = { fg = "#39bae6", modifiers = ["italic"] }
+"variable.member" = { fg = "#bfbdb6", modifiers = [] }
+"variable.parameter" = { fg = "#d2a6ff", modifiers = [] }
+"variable.parameter.builtin" = { fg = "#d2a6ff", modifiers = [] }

@@ -1,0 +1,241 @@
+[package]
+name = "comfit-grammars"
+version = "0.1.0"
+edition.workspace = true
+description = "Comfit parsers and queries for Rust"
+homepage.workspace = true
+repository.workspace = true
+license.workspace = true
+include = ["LICENSE", "THIRD_PARTY_NOTICES.txt", "README.md", "build.rs", "src/**", "data/languages.toml", "data/queries/**", "data/grammars/**"]
+
+[dependencies]
+tree-sitter-language.workspace = true
+
+[dev-dependencies]
+streaming-iterator.workspace = true
+tree-sitter.workspace = true
+
+[build-dependencies]
+cc.workspace = true
+jobserver = "0.1"
+prettyplease.workspace = true
+quote.workspace = true
+syn.workspace = true
+toml.workspace = true
+tree-sitter-generate.workspace = true
+zstd.workspace = true
+
+[features]
+default = []
+all-languages = [
+  "angular",
+  "asm",
+  "astro",
+  "bash",
+  "bibtex",
+  "c",
+  "c_sharp",
+  "c3",
+  "cmake",
+  "comment",
+  "cpp",
+  "css",
+  "csv",
+  "cuda",
+  "dart",
+  "diff",
+  "dockerfile",
+  "doxygen",
+  "dtd",
+  "eex",
+  "elixir",
+  "erlang",
+  "fish",
+  "fortran",
+  "fsharp",
+  "gdscript",
+  "git_config",
+  "gitattributes",
+  "gleam",
+  "glimmer",
+  "go",
+  "graphql",
+  "groq",
+  "haskell",
+  "haskell_persistent",
+  "hcl",
+  "heex",
+  "html",
+  "http",
+  "ini",
+  "java",
+  "javadoc",
+  "javascript",
+  "jinja",
+  "jinja_inline",
+  "jsdoc",
+  "json",
+  "json5",
+  "jsx",
+  "julia",
+  "just",
+  "kdl",
+  "kotlin",
+  "latex",
+  "lua",
+  "luadoc",
+  "luap",
+  "make",
+  "markdown",
+  "markdown_inline",
+  "nasm",
+  "nix",
+  "nu",
+  "ocaml",
+  "ocaml_interface",
+  "odin",
+  "passwd",
+  "perl",
+  "php",
+  "phpdoc",
+  "pod",
+  "powershell",
+  "printf",
+  "prisma",
+  "promql",
+  "proto",
+  "pug",
+  "python",
+  "query",
+  "r",
+  "rbs",
+  "re2c",
+  "readline",
+  "regex",
+  "ruby",
+  "rust",
+  "scala",
+  "scss",
+  "slint",
+  "sql",
+  "styled",
+  "surface",
+  "svelte",
+  "swift",
+  "terraform",
+  "toml",
+  "tsx",
+  "typescript",
+  "typst",
+  "vim",
+  "vue",
+  "wgsl",
+  "xml",
+  "yaml",
+  "zig",
+]
+angular = []
+asm = []
+astro = []
+bash = []
+bibtex = []
+c = []
+c_sharp = []
+c3 = []
+cmake = []
+comment = []
+cpp = []
+css = []
+csv = []
+cuda = []
+dart = []
+diff = []
+dockerfile = []
+doxygen = []
+dtd = []
+eex = []
+elixir = []
+erlang = []
+fish = []
+fortran = []
+fsharp = []
+gdscript = []
+git_config = []
+gitattributes = []
+gleam = []
+glimmer = []
+go = []
+graphql = []
+groq = []
+haskell = []
+haskell_persistent = []
+hcl = []
+heex = []
+html = []
+http = []
+ini = []
+java = []
+javadoc = []
+javascript = []
+jinja = ["jinja_inline"]
+jinja_inline = []
+jsdoc = []
+json = []
+json5 = []
+jsx = []
+julia = []
+just = []
+kdl = []
+kotlin = []
+latex = []
+lua = []
+luadoc = []
+luap = []
+make = []
+markdown = ["markdown_inline"]
+markdown_inline = []
+nasm = []
+nix = []
+nu = []
+ocaml = ["ocaml_interface"]
+ocaml_interface = []
+odin = []
+passwd = []
+perl = []
+php = []
+phpdoc = []
+pod = []
+powershell = []
+printf = []
+prisma = []
+promql = []
+proto = []
+pug = []
+python = []
+query = []
+r = []
+rbs = []
+re2c = []
+readline = []
+regex = []
+ruby = []
+rust = []
+scala = []
+scss = []
+slint = []
+sql = []
+styled = []
+surface = []
+svelte = []
+swift = []
+terraform = []
+toml = []
+tsx = []
+typescript = []
+typst = []
+vim = []
+vue = []
+wgsl = []
+xml = ["dtd"]
+yaml = []
+zig = []

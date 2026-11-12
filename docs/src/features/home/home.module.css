@@ -1,0 +1,252 @@
+.home {
+  --home-heading-size: clamp(1.5rem, 1.125rem + 1vw, 2.125rem);
+
+  max-inline-size: 100rem;
+  margin-inline: auto;
+  padding: clamp(3rem, 5.8vw, 5.75rem) clamp(1.25rem, 3.4vw, 3.375rem) 4rem;
+}
+
+.intro {
+  margin-block-end: clamp(2.75rem, 5.35vw, 5.3125rem);
+  text-align: center;
+}
+
+.intro h1 {
+  margin-block-end: clamp(1rem, 1.35vw, 1.375rem);
+  font-size: clamp(2.125rem, 1.25rem + 2vw, 3.375rem);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.intro p {
+  margin-inline: auto;
+  max-inline-size: 64ch;
+  color: var(--c-text-muted);
+  font-size: clamp(1.0625rem, 0.875rem + 0.45vw, 1.375rem);
+  line-height: 1.4;
+}
+
+.intro p + p {
+  margin-block-start: 0.65rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem clamp(1.25rem, 2.75vw, 2.75rem);
+  margin-block-start: clamp(1.25rem, 2.8vw, 2.75rem);
+  font-size: clamp(1rem, 0.875rem + 0.3vw, 1.125rem);
+  font-weight: 600;
+}
+
+.home a {
+  color: var(--c-link-text);
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.12em;
+}
+
+.home a:hover {
+  color: var(--c-accent-hover);
+}
+
+.home a:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 3px;
+}
+
+.story {
+  display: grid;
+  align-items: start;
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+.chapter h2,
+.resources h2,
+.closing h2 {
+  margin-block-end: 0.75rem;
+  font-size: var(--home-heading-size);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.chapter p,
+.resources header p,
+.closing p {
+  max-inline-size: 52ch;
+  color: var(--c-text-muted);
+  font-size: clamp(1rem, 0.9375rem + 0.25vw, 1.1875rem);
+  line-height: 1.5;
+}
+
+.chapters,
+.stage {
+  min-inline-size: 0;
+}
+
+.chapter + .chapter {
+  margin-block-start: clamp(2.75rem, 6vw, 5rem);
+}
+
+.chapter p + p {
+  margin-block-start: 0.75rem;
+}
+
+.chapter p code {
+  font-size: 0.85em;
+}
+
+.inlineSample {
+  margin-block-start: 1.25rem;
+}
+
+.chapterMarker {
+  display: none;
+}
+
+.control {
+  margin-block-start: 1.25rem;
+}
+
+.resources > section,
+.closing {
+  margin-block-start: clamp(3.5rem, 7vw, 7rem);
+  padding-block-start: clamp(2rem, 4vw, 3.75rem);
+  border-block-start: 1px solid var(--c-border);
+}
+
+.resources [data-layout="split"] {
+  display: grid;
+  align-items: start;
+  gap: clamp(1.25rem, 3vw, 3rem);
+}
+
+.resources [data-layout="split"] > :last-child {
+  margin-block: 0;
+  min-inline-size: 0;
+}
+
+.resources [role="tabpanel"] > p {
+  padding: 0.75rem 1rem;
+  border-block-start: 1px solid var(--c-border);
+  color: var(--c-text-muted);
+}
+
+.resources dl {
+  margin-block-start: 1.75rem;
+}
+
+.resources dl > div {
+  display: grid;
+  gap: 0.5rem 2rem;
+  padding-block: 1.25rem;
+  border-block-start: 1px solid var(--c-border);
+}
+
+.resources dl > div:last-child {
+  padding-block-end: 0;
+}
+
+.resources dt {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.resources dd {
+  min-inline-size: 0;
+  color: var(--c-text-muted);
+}
+
+.resources dd figure {
+  margin-block: 0.75rem 0;
+  color: var(--c-text);
+}
+
+@media (width >= 56rem) {
+  .resources [data-layout="split"],
+  .resources dl > div {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
+  }
+}
+
+.closing > a,
+.references {
+  display: flex;
+  inline-size: fit-content;
+  margin-block-start: 1rem;
+  font-size: 1rem;
+}
+
+.references {
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+@media (width >= 62rem) and (height < 48rem) {
+  .home {
+    padding-block-start: clamp(2.5rem, 4vw, 3.5rem);
+  }
+
+  .intro {
+    margin-block-end: clamp(2.5rem, 3.5vw, 3.25rem);
+  }
+
+  .actions {
+    margin-block-start: clamp(1.25rem, 2vw, 2rem);
+  }
+}
+
+@media (width >= 62rem) and (height >= 48rem) {
+  .intro {
+    margin-block-end: clamp(3.25rem, 6vw, 6rem);
+  }
+
+  .intro h1 {
+    margin-block-end: clamp(1.75rem, 2.15vw, 2.125rem);
+  }
+
+  .actions {
+    column-gap: clamp(2.75rem, 5vw, 4.5rem);
+    margin-block-start: clamp(2rem, 3.4vw, 3.375rem);
+  }
+}
+
+@media (width >= 62rem) and (height >= 37rem) and
+    (prefers-reduced-motion: no-preference) {
+  .story {
+    grid-template-columns: minmax(0, 2.04fr) minmax(0, 1fr);
+  }
+
+  .chapter {
+    position: relative;
+    min-block-size: clamp(26rem, 72svh, 48rem);
+    padding-block-start: clamp(0.75rem, 1.15vw, 1.125rem);
+  }
+
+  .chapter + .chapter {
+    margin-block-start: 0;
+  }
+
+  .stage,
+  .chapterContent {
+    position: sticky;
+    inset-block-start: clamp(1rem, 4svh, 2.5rem);
+  }
+
+  .chapterMarker {
+    position: absolute;
+    inset-block-start: 0.125rem;
+    inset-inline-start: -0.875rem;
+    display: block;
+    inline-size: 2px;
+    block-size: var(--home-heading-size);
+    border-radius: var(--radius-xs);
+    background: var(--c-accent);
+    transform-origin: top;
+  }
+
+  .inlineSample {
+    display: none;
+  }
+}

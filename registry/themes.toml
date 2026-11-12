@@ -1,0 +1,274 @@
+[[themes]]
+id = "catppina-dark"
+name = "Catppina Dark"
+type = "json"
+url = "https://raw.githubusercontent.com/pinanek/catppina/main/dist/vscode/catppina_dark.json"
+
+[[themes]]
+id = "catppina-light"
+name = "Catppina Light"
+type = "json"
+url = "https://raw.githubusercontent.com/pinanek/catppina/main/dist/vscode/catppina_light.json"
+
+[[themes]]
+id = "catppuccin-latte"
+name = "Catppuccin Latte"
+type = "json"
+url = "https://esm.sh/@catppuccin/vscode/themes/latte.json"
+
+[[themes]]
+id = "catppuccin-frappe"
+name = "Catppuccin Frappé"
+type = "json"
+url = "https://esm.sh/@catppuccin/vscode/themes/frappe.json"
+
+[[themes]]
+id = "catppuccin-macchiato"
+name = "Catppuccin Macchiato"
+type = "json"
+url = "https://esm.sh/@catppuccin/vscode/themes/macchiato.json"
+
+[[themes]]
+id = "catppuccin-mocha"
+name = "Catppuccin Mocha"
+type = "json"
+url = "https://esm.sh/@catppuccin/vscode/themes/mocha.json"
+
+[[themes]]
+id = "github-light-default"
+name = "GitHub Light Default"
+type = "extension"
+url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/github-vscode-theme/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+path = "extension/themes/light-default.json"
+
+[[themes]]
+id = "github-light-high-contrast"
+name = "GitHub Light High Contrast"
+type = "extension"
+url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/github-vscode-theme/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+path = "extension/themes/light-high-contrast.json"
+
+[[themes]]
+id = "github-light-colorblind"
+name = "GitHub Light Colorblind"
+type = "extension"
+url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/github-vscode-theme/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+path = "extension/themes/light-colorblind.json"
+
+[[themes]]
+id = "github-dark-default"
+name = "GitHub Dark Default"
+type = "extension"
+url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/github-vscode-theme/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+path = "extension/themes/dark-default.json"
+
+[[themes]]
+id = "github-dark-high-contrast"
+name = "GitHub Dark High Contrast"
+type = "extension"
+url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/github-vscode-theme/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+path = "extension/themes/dark-high-contrast.json"
+
+[[themes]]
+id = "github-dark-colorblind"
+name = "GitHub Dark Colorblind"
+type = "extension"
+url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/github-vscode-theme/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+path = "extension/themes/dark-colorblind.json"
+
+[[themes]]
+id = "github-dark-dimmed"
+name = "GitHub Dark Dimmed"
+type = "extension"
+url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/github-vscode-theme/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+path = "extension/themes/dark-dimmed.json"
+
+[[themes]]
+id = "github-light"
+name = "GitHub Light"
+type = "extension"
+url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/github-vscode-theme/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+path = "extension/themes/light.json"
+
+[[themes]]
+id = "github-dark"
+name = "GitHub Dark"
+type = "extension"
+url = "https://GitHub.gallery.vsassets.io/_apis/public/gallery/publisher/GitHub/extension/github-vscode-theme/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+path = "extension/themes/dark.json"
+
+[[themes]]
+id = "dracula"
+name = "Dracula"
+type = "extension"
+url = "https://dracula-theme.gallery.vsassets.io/_apis/public/gallery/publisher/dracula-theme/extension/theme-dracula/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+path = "extension/theme/dracula.json"
+
+[[themes]]
+id = "dracula-soft"
+name = "Dracula Soft"
+type = "extension"
+url = "https://dracula-theme.gallery.vsassets.io/_apis/public/gallery/publisher/dracula-theme/extension/theme-dracula/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+path = "extension/theme/dracula-soft.json"
+
+[[themes]]
+id = "one-dark-pro"
+name = "One Dark Pro"
+type = "json"
+url = "https://raw.githubusercontent.com/Binaryify/OneDark-Pro/75c80ab18d90655e05ad837bb8d89f5e68d5ce53/themes/OneDark-Pro.json"
+
+[[themes]]
+id = "one-dark-pro-flat"
+name = "One Dark Pro Flat"
+type = "json"
+url = "https://raw.githubusercontent.com/Binaryify/OneDark-Pro/75c80ab18d90655e05ad837bb8d89f5e68d5ce53/themes/OneDark-Pro-flat.json"
+
+[[themes]]
+id = "one-dark-pro-darker"
+name = "One Dark Pro Darker"
+type = "json"
+url = "https://raw.githubusercontent.com/Binaryify/OneDark-Pro/75c80ab18d90655e05ad837bb8d89f5e68d5ce53/themes/OneDark-Pro-darker.json"
+
+[[themes]]
+id = "one-dark-pro-mix"
+name = "One Dark Pro Mix"
+type = "json"
+url = "https://raw.githubusercontent.com/Binaryify/OneDark-Pro/75c80ab18d90655e05ad837bb8d89f5e68d5ce53/themes/OneDark-Pro-mix.json"
+
+[[themes]]
+id = "one-dark-pro-night-flat"
+name = "One Dark Pro Night Flat"
+type = "json"
+url = "https://raw.githubusercontent.com/Binaryify/OneDark-Pro/75c80ab18d90655e05ad837bb8d89f5e68d5ce53/themes/OneDark-Pro-night-flat.json"
+
+[[themes]]
+id = "one-light"
+name = "Atom One Light"
+type = "json"
+url = "https://raw.githubusercontent.com/akamud/vscode-theme-onelight/5866e900db932d580e978a58db42f65cde07998b/themes/OneLight.json"
+
+[[themes]]
+id = "one-dark"
+name = "Atom One Dark"
+type = "json"
+url = "https://raw.githubusercontent.com/akamud/vscode-theme-onedark/a8be970644982221f9b61fb1c4b3da74b4beab79/themes/OneDark.json"
+
+[[themes]]
+id = "tokyo-night"
+name = "Tokyo Night"
+type = "json"
+url = "https://raw.githubusercontent.com/tokyo-night/tokyo-night-vscode-theme/7c0f11eaef322f293621ca7befe462214b7ea468/themes/tokyo-night-color-theme.json"
+
+[[themes]]
+id = "tokyo-night-storm"
+name = "Tokyo Night Storm"
+type = "json"
+url = "https://raw.githubusercontent.com/tokyo-night/tokyo-night-vscode-theme/7c0f11eaef322f293621ca7befe462214b7ea468/themes/tokyo-night-storm-color-theme.json"
+
+[[themes]]
+id = "tokyo-night-light"
+name = "Tokyo Night Light"
+type = "json"
+url = "https://raw.githubusercontent.com/tokyo-night/tokyo-night-vscode-theme/7c0f11eaef322f293621ca7befe462214b7ea468/themes/tokyo-night-light-color-theme.json"
+
+[[themes]]
+id = "night-owl"
+name = "Night Owl"
+type = "json"
+url = "https://raw.githubusercontent.com/sdras/night-owl-vscode-theme/cc291eba7976b20d7c66bde6883c27b902196b07/themes/Night%20Owl-color-theme.json"
+
+[[themes]]
+id = "night-owl-no-italics"
+name = "Night Owl (No Italics)"
+type = "json"
+url = "https://raw.githubusercontent.com/sdras/night-owl-vscode-theme/cc291eba7976b20d7c66bde6883c27b902196b07/themes/Night%20Owl-color-theme-noitalic.json"
+
+[[themes]]
+id = "nord"
+name = "Nord"
+type = "json"
+url = "https://raw.githubusercontent.com/nordtheme/visual-studio-code/8ead09822c02d0d49d0f764104505e5a34d3689f/themes/nord-color-theme.json"
+
+[[themes]]
+id = "ayu-light"
+name = "Ayu Light"
+type = "json"
+url = "https://raw.githubusercontent.com/ayu-theme/vscode-ayu/605c9c8504682854d77adc0b630742182a86676b/ayu-light.json"
+
+[[themes]]
+id = "ayu-mirage"
+name = "Ayu Mirage"
+type = "json"
+url = "https://raw.githubusercontent.com/ayu-theme/vscode-ayu/605c9c8504682854d77adc0b630742182a86676b/ayu-mirage.json"
+
+[[themes]]
+id = "ayu-dark"
+name = "Ayu Dark"
+type = "json"
+url = "https://raw.githubusercontent.com/ayu-theme/vscode-ayu/605c9c8504682854d77adc0b630742182a86676b/ayu-dark.json"
+
+[[themes]]
+id = "rose-pine"
+name = "Rosé Pine"
+type = "json"
+url = "https://raw.githubusercontent.com/rose-pine/vscode/d8f5ebe8e096fa833e997c07eb7685ee1677a4ba/themes/rose-pine-color-theme.json"
+
+[[themes]]
+id = "rose-pine-no-italics"
+name = "Rosé Pine (no italics)"
+type = "json"
+url = "https://raw.githubusercontent.com/rose-pine/vscode/d8f5ebe8e096fa833e997c07eb7685ee1677a4ba/themes/rose-pine-no-italics-color-theme.json"
+
+[[themes]]
+id = "rose-pine-moon"
+name = "Rosé Pine Moon"
+type = "json"
+url = "https://raw.githubusercontent.com/rose-pine/vscode/d8f5ebe8e096fa833e997c07eb7685ee1677a4ba/themes/rose-pine-moon-color-theme.json"
+
+[[themes]]
+id = "rose-pine-moon-no-italics"
+name = "Rosé Pine Moon (no italics)"
+type = "json"
+url = "https://raw.githubusercontent.com/rose-pine/vscode/d8f5ebe8e096fa833e997c07eb7685ee1677a4ba/themes/rose-pine-moon-no-italics-color-theme.json"
+
+[[themes]]
+id = "rose-pine-dawn"
+name = "Rosé Pine Dawn"
+type = "json"
+url = "https://raw.githubusercontent.com/rose-pine/vscode/d8f5ebe8e096fa833e997c07eb7685ee1677a4ba/themes/rose-pine-dawn-color-theme.json"
+
+[[themes]]
+id = "rose-pine-dawn-no-italics"
+name = "Rosé Pine Dawn (no italics)"
+type = "json"
+url = "https://raw.githubusercontent.com/rose-pine/vscode/d8f5ebe8e096fa833e997c07eb7685ee1677a4ba/themes/rose-pine-dawn-no-italics-color-theme.json"
+
+[[themes]]
+id = "vitesse-light"
+name = "Vitesse Light"
+type = "json"
+url = "https://raw.githubusercontent.com/antfu/vscode-theme-vitesse/2862595c3d5d05fabfd5aeb50bcbb79ea2f8d85f/themes/vitesse-light.json"
+
+[[themes]]
+id = "vitesse-dark"
+name = "Vitesse Dark"
+type = "json"
+url = "https://raw.githubusercontent.com/antfu/vscode-theme-vitesse/2862595c3d5d05fabfd5aeb50bcbb79ea2f8d85f/themes/vitesse-dark.json"
+
+[[themes]]
+id = "vitesse-black"
+name = "Vitesse Black"
+type = "json"
+url = "https://raw.githubusercontent.com/antfu/vscode-theme-vitesse/2862595c3d5d05fabfd5aeb50bcbb79ea2f8d85f/themes/vitesse-black.json"
+
+[[themes]]
+id = "vitesse-light-soft"
+name = "Vitesse Light Soft"
+type = "json"
+url = "https://raw.githubusercontent.com/antfu/vscode-theme-vitesse/2862595c3d5d05fabfd5aeb50bcbb79ea2f8d85f/themes/vitesse-light-soft.json"
+
+[[themes]]
+id = "vitesse-dark-soft"
+name = "Vitesse Dark Soft"
+type = "json"
+url = "https://raw.githubusercontent.com/antfu/vscode-theme-vitesse/2862595c3d5d05fabfd5aeb50bcbb79ea2f8d85f/themes/vitesse-dark-soft.json"

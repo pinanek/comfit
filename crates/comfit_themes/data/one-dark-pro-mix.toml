@@ -1,0 +1,76 @@
+name = "One Dark Pro Mix"
+default = { fg = "#abb2bf", bg = "#282c34", modifiers = [] }
+rainbow = ["#d19a66", "#c678dd", "#56b6c2"]
+
+[styles]
+attribute = { fg = "#61afef", modifiers = ["bold"] }
+boolean = { fg = "#d19a66", modifiers = [] }
+character = { fg = "#98c379", modifiers = [] }
+comment = { fg = "#7f848e", modifiers = [] }
+"comment.documentation" = { fg = "#7f848e", modifiers = [] }
+"comment.error" = { fg = "#7f848e", modifiers = [] }
+"comment.note" = { fg = "#7f848e", modifiers = [] }
+"comment.todo" = { fg = "#7f848e", modifiers = [] }
+"comment.warning" = { fg = "#7f848e", modifiers = [] }
+constant = { fg = "#e5c07b", modifiers = [] }
+"constant.builtin" = { fg = "#d19a66", modifiers = [] }
+constructor = { fg = "#e5c07b", modifiers = [] }
+"diff.delta" = { fg = "#e5c07b", modifiers = [] }
+"diff.minus" = { fg = "#e06c75", modifiers = [] }
+"diff.plus" = { fg = "#98c379", modifiers = [] }
+function = { fg = "#61afef", modifiers = ["bold"] }
+"function.builtin" = { fg = "#56b6c2", modifiers = [] }
+"function.call" = { fg = "#61afef", modifiers = ["bold"] }
+"function.macro" = { fg = "#61afef", modifiers = ["bold"] }
+"function.method" = { fg = "#61afef", modifiers = ["bold"] }
+"function.method.call" = { fg = "#61afef", modifiers = ["bold"] }
+keyword = { fg = "#c678dd", modifiers = [] }
+"keyword.conditional" = { fg = "#c678dd", modifiers = [] }
+"keyword.coroutine" = { fg = "#c678dd", modifiers = [] }
+"keyword.debug" = { fg = "#c678dd", modifiers = [] }
+"keyword.directive" = { fg = "#c678dd", modifiers = [] }
+"keyword.exception" = { fg = "#c678dd", modifiers = [] }
+"keyword.function" = { fg = "#c678dd", modifiers = [] }
+"keyword.import" = { fg = "#c678dd", modifiers = [] }
+"keyword.modifier" = { fg = "#c678dd", modifiers = [] }
+"keyword.operator" = { fg = "#c678dd", modifiers = [] }
+"keyword.repeat" = { fg = "#c678dd", modifiers = [] }
+"keyword.return" = { fg = "#c678dd", modifiers = [] }
+"keyword.type" = { fg = "#c678dd", modifiers = [] }
+label = { fg = "#e06c75", modifiers = [] }
+"markup.heading" = { fg = "#e06c75", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "#e06c75", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "#e06c75", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "#e06c75", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "#e06c75", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "#e06c75", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "#e06c75", modifiers = ["bold"] }
+"markup.italic" = { fg = "#c678dd", modifiers = [] }
+"markup.link.url" = { modifiers = [], underline = { style = "line" } }
+"markup.list" = { fg = "#e5c07b", modifiers = [] }
+"markup.raw" = { fg = "#98c379", modifiers = [] }
+"markup.strong" = { fg = "#d19a66", modifiers = ["bold"] }
+"markup.underline" = { modifiers = [], underline = { style = "line" } }
+module = { fg = "#e5c07b", modifiers = [] }
+number = { fg = "#d19a66", modifiers = [] }
+"number.float" = { fg = "#d19a66", modifiers = [] }
+operator = { fg = "#abb2bf", modifiers = [] }
+property = { fg = "#e06c75", modifiers = [] }
+string = { fg = "#98c379", modifiers = [] }
+"string.documentation" = { fg = "#98c379", modifiers = [] }
+"string.escape" = { fg = "#56b6c2", modifiers = [] }
+"string.regexp" = { fg = "#e06c75", modifiers = [] }
+"string.special" = { fg = "#98c379", modifiers = [] }
+"string.special.symbol" = { fg = "#56b6c2", modifiers = [] }
+"string.special.url" = { modifiers = [], underline = { style = "line" } }
+tag = { fg = "#e06c75", modifiers = [] }
+"tag.attribute" = { fg = "#d19a66", modifiers = [] }
+"tag.builtin" = { fg = "#e06c75", modifiers = [] }
+type = { fg = "#e5c07b", modifiers = [] }
+"type.builtin" = { fg = "#e5c07b", modifiers = [] }
+"type.definition" = { fg = "#e5c07b", modifiers = [] }
+variable = { fg = "#e06c75", modifiers = [] }
+"variable.builtin" = { fg = "#e5c07b", modifiers = [] }
+"variable.member" = { fg = "#e06c75", modifiers = [] }
+"variable.parameter" = { fg = "#e06c75", modifiers = [] }
+"variable.parameter.builtin" = { fg = "#e06c75", modifiers = [] }

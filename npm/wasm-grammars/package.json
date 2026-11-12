@@ -1,0 +1,35 @@
+{
+  "name": "@comfit/wasm-grammars",
+  "version": "0.1.0",
+  "description": "Comfit grammar assets and queries for WebAssembly",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinanek/comfit.git",
+    "directory": "npm/wasm-grammars"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./*.wasm": "./dist/*.wasm",
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.txt"
+  ],
+  "scripts": {
+    "build": "cargo wasm build grammars && pnpm bundle",
+    "bundle": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "prepack": "cargo notices check wasm-grammars"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:"
+  }
+}

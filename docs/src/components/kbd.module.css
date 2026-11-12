@@ -1,0 +1,16 @@
+.keys {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--c-text-muted);
+}
+
+.key {
+  min-inline-size: 1.25rem;
+  padding-inline: 0.25rem;
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-align: center;
+}

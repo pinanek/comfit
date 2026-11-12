@@ -1,0 +1,20 @@
+[package]
+name = "comfit-core"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+description = "Comfit highlighting engine, theme model, and renderers"
+
+[features]
+default = []
+render-ansi = []
+render-html = []
+theme-toml = ["dep:toml"]
+
+[dependencies]
+rgb.workspace = true
+smol_str.workspace = true
+thiserror.workspace = true
+toml = { workspace = true, optional = true }

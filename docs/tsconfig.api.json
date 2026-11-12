@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": [],
+    "paths": {
+      "@comfit/node": ["../npm/node/dist/index.d.ts"]
+    }
+  },
+  "include": [
+    "../npm/node/dist/index.d.ts",
+    "../npm/rehype/src/**/*.ts",
+    "../npm/markdown-it/src/**/*.ts",
+    "../npm/wasm/js/**/*.ts",
+    "../npm/wasm-grammars/src/**/*.ts"
+  ]
+}

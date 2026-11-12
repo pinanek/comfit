@@ -1,0 +1,3 @@
+# Preserve upstream license and notice text verbatim.
+**/THIRD_PARTY_NOTICES.txt -whitespace
+registry/licenses/** -whitespace

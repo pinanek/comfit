@@ -1,0 +1,49 @@
+{
+  "name": "@comfit/node",
+  "version": "0.1.0",
+  "description": "Comfit bindings for Node.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinanek/comfit.git",
+    "directory": "npm/node"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "THIRD_PARTY_NOTICES.txt",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "cargo notices build node && napi build --platform --esm --output-dir dist",
+    "build:release": "cargo notices build node && napi build --platform --esm --release --output-dir dist",
+    "prepack": "cargo notices check node",
+    "test": "node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "catalog:"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "napi": {
+    "binaryName": "comfit",
+    "packageName": "@comfit/node",
+    "targets": [
+      "aarch64-apple-darwin",
+      "x86_64-apple-darwin",
+      "x86_64-unknown-linux-gnu",
+      "aarch64-unknown-linux-gnu",
+      "x86_64-pc-windows-msvc",
+      "aarch64-pc-windows-msvc"
+    ]
+  }
+}

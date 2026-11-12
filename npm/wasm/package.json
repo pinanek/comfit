@@ -1,0 +1,41 @@
+{
+  "name": "@comfit/wasm",
+  "version": "0.1.0",
+  "description": "Comfit WebAssembly bindings for browsers and Node.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinanek/comfit.git",
+    "directory": "npm/wasm"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./*.wasm": "./dist/*.wasm"
+  },
+  "files": [
+    "dist",
+    "examples",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.txt"
+  ],
+  "scripts": {
+    "build": "cargo wasm build engine && pnpm bundle",
+    "bundle": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "prepack": "cargo notices check wasm",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "web-tree-sitter": "catalog:"
+  },
+  "devDependencies": {
+    "@comfit/wasm-grammars": "workspace:^",
+    "@types/node": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:"
+  }
+}

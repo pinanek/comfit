@@ -1,0 +1,81 @@
+name = "GitHub Light"
+default = { fg = "#24292e", bg = "#fff" }
+
+[styles]
+attribute = { fg = "#e36209" }
+"attribute.builtin" = { fg = "#005cc5" }
+boolean = { fg = "#005cc5" }
+character = { fg = "#032f62" }
+comment = { fg = "#6a737d" }
+"comment.documentation" = { fg = "#6a737d" }
+"comment.error" = { fg = "#6a737d" }
+"comment.note" = { fg = "#6a737d" }
+"comment.todo" = { fg = "#6a737d" }
+"comment.warning" = { fg = "#6a737d" }
+constant = { fg = "#005cc5" }
+"constant.builtin" = { fg = "#005cc5" }
+"constant.macro" = { fg = "#005cc5" }
+constructor = { fg = "#6f42c1" }
+"diff.delta" = { fg = "#e36209", bg = "#ffebda" }
+"diff.minus" = { fg = "#b31d28", bg = "#ffeef0" }
+"diff.plus" = { fg = "#22863a", bg = "#f0fff4" }
+function = { fg = "#6f42c1" }
+"function.builtin" = { fg = "#005cc5" }
+"function.call" = { fg = "#6f42c1" }
+"function.macro" = { fg = "#6f42c1" }
+"function.method" = { fg = "#6f42c1" }
+"function.method.call" = { fg = "#6f42c1" }
+keyword = { fg = "#d73a49" }
+"keyword.conditional" = { fg = "#d73a49" }
+"keyword.coroutine" = { fg = "#d73a49" }
+"keyword.debug" = { fg = "#d73a49" }
+"keyword.directive" = { fg = "#d73a49" }
+"keyword.exception" = { fg = "#d73a49" }
+"keyword.function" = { fg = "#d73a49" }
+"keyword.import" = { fg = "#d73a49" }
+"keyword.modifier" = { fg = "#d73a49" }
+"keyword.operator" = { fg = "#d73a49" }
+"keyword.repeat" = { fg = "#d73a49" }
+"keyword.return" = { fg = "#d73a49" }
+"keyword.type" = { fg = "#d73a49" }
+label = { fg = "#6f42c1" }
+"markup.heading" = { fg = "#005cc5", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "#005cc5", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "#005cc5", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "#005cc5", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "#005cc5", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "#005cc5", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "#005cc5", modifiers = ["bold"] }
+"markup.italic" = { fg = "#24292e", modifiers = ["italic"] }
+"markup.link.url" = { modifiers = [], underline = { style = "line" } }
+"markup.list" = { fg = "#e36209" }
+"markup.quote" = { fg = "#22863a" }
+"markup.raw" = { fg = "#005cc5" }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.strong" = { fg = "#24292e", modifiers = ["bold"] }
+"markup.underline" = { modifiers = [], underline = { style = "line" } }
+module = { fg = "#6f42c1" }
+"module.builtin" = { fg = "#005cc5" }
+number = { fg = "#005cc5" }
+"number.float" = { fg = "#005cc5" }
+operator = { fg = "#d73a49" }
+property = { fg = "#005cc5" }
+string = { fg = "#032f62" }
+"string.documentation" = { fg = "#032f62" }
+"string.escape" = { fg = "#005cc5" }
+"string.regexp" = { fg = "#032f62" }
+"string.special" = { fg = "#032f62" }
+"string.special.path" = { fg = "#6f42c1" }
+"string.special.symbol" = { fg = "#005cc5" }
+"string.special.url" = { modifiers = [], underline = { style = "line" } }
+tag = { fg = "#22863a" }
+"tag.attribute" = { fg = "#6f42c1" }
+"tag.builtin" = { fg = "#22863a" }
+type = { fg = "#6f42c1" }
+"type.builtin" = { fg = "#005cc5" }
+"type.definition" = { fg = "#6f42c1" }
+variable = { fg = "#24292e" }
+"variable.builtin" = { fg = "#005cc5" }
+"variable.member" = { fg = "#24292e" }
+"variable.parameter" = { fg = "#24292e" }
+"variable.parameter.builtin" = { fg = "#e36209" }

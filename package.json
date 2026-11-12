@@ -1,0 +1,17 @@
+{
+  "name": "comfit-workspace",
+  "private": true,
+  "description": "Tree-sitter syntax highlighting for Rust, JavaScript, and Python",
+  "homepage": "https://comfit.pinanek.me",
+  "repository": "https://github.com/pinanek/comfit",
+  "license": "MIT",
+  "author": "Ngo Duc Hoang Son <hoangsonngo555@gmail.com>",
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "catalog:",
+    "oxfmt": "catalog:",
+    "oxlint": "catalog:",
+    "typedoc": "catalog:",
+    "typedoc-plugin-markdown": "catalog:"
+  }
+}

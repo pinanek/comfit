@@ -1,0 +1,275 @@
+# SPDX identifiers for prepared grammar sources in registry/languages.toml.
+[grammar-licenses]
+angular = "MIT"
+asm = "MIT"
+astro = "MIT"
+bash = "MIT"
+bibtex = "MIT"
+c = "MIT"
+c3 = "MIT"
+c_sharp = "MIT"
+cmake = "MIT"
+comment = "MIT"
+containerfile = "MIT"
+cpp = "MIT"
+css = "MIT"
+csv = "MIT"
+cuda = "MIT"
+dart = "MIT"
+diff = "MIT"
+doxygen = "MIT"
+dtd = "MIT"
+eex = "MIT"
+elixir = "Apache-2.0"
+erlang = "Apache-2.0"
+fish = "Unlicense"
+fortran = "MIT"
+fsharp = "MIT"
+gdscript = "MIT"
+git_config = "MIT"
+gitattributes = "MIT"
+gleam = "Apache-2.0"
+glimmer = "MIT"
+go = "MIT"
+graphql = "MIT"
+groq = "MIT"
+haskell = "MIT"
+haskell_persistent = "MIT"
+hcl = "Apache-2.0"
+heex = "MIT"
+html = "MIT"
+http = "MIT"
+ini = "Apache-2.0"
+java = "MIT"
+javadoc = "MIT"
+javascript = "MIT"
+jinja = "Apache-2.0"
+jinja_inline = "Apache-2.0"
+jsdoc = "MIT"
+json = "MIT"
+json5 = "MIT"
+julia = "MIT"
+just = "Apache-2.0"
+kdl = "MIT"
+kotlin = "MIT"
+latex = "MIT"
+lua = "MIT"
+luadoc = "MIT"
+luap = "MIT"
+make = "MIT"
+markdown = "MIT"
+markdown_inline = "MIT"
+nasm = "MIT"
+nix = "MIT"
+nu = "MIT"
+ocaml = "MIT"
+ocaml_interface = "MIT"
+odin = "MIT"
+passwd = "Unlicense"
+perl = "MIT"
+php = "MIT"
+phpdoc = "MIT"
+pod = "Artistic-2.0"
+powershell = "MIT"
+printf = "ISC"
+prisma = "MIT"
+promql = "Apache-2.0"
+proto = "MIT"
+pug = "MIT"
+python = "MIT"
+query = "Apache-2.0"
+r = "MIT"
+rbs = "MIT"
+re2c = "MIT"
+readline = "MIT"
+regex = "MIT"
+ruby = "MIT"
+rust = "MIT"
+scala = "MIT"
+scss = "MIT"
+slint = "MIT"
+sql = "MIT"
+styled = "ISC"
+surface = "MIT"
+svelte = "MIT"
+swift = "MIT"
+terraform = "Apache-2.0"
+toml = "MIT"
+tsx = "MIT"
+typescript = "MIT"
+typst = "MIT"
+vim = "MIT"
+vue = "MIT"
+wgsl = "(MIT OR Apache-2.0) AND W3C-20230101"
+xml = "MIT"
+yaml = "MIT"
+zig = "MIT"
+
+[[components]]
+name = "nvim-treesitter"
+source = "https://github.com/nvim-treesitter/nvim-treesitter"
+license = "Apache-2.0"
+material = "Adapted highlight, injection, and local-binding queries. Per-query source references follow below."
+files = ["registry/licenses/nvim-treesitter/LICENSE"]
+
+[[components]]
+name = "tree-sitter"
+source = "https://github.com/tree-sitter/tree-sitter"
+version = "0.27.2"
+license = "MIT"
+material = "Parsing runtime."
+files = ["registry/licenses/tree-sitter/LICENSE"]
+
+[[components]]
+name = "web-tree-sitter"
+source = "https://github.com/tree-sitter/tree-sitter"
+version = "0.27.2"
+license = "MIT"
+material = "JavaScript parsing runtime and runtime WASM."
+files = ["registry/licenses/tree-sitter/LICENSE"]
+
+[[components]]
+name = "ast-grep/tree-sitter-wasm"
+source = "https://github.com/ast-grep/tree-sitter-wasm"
+revision = "5a18d45612fdb6868ee8cd6de1e5335ce588493c"
+license = "Apache-2.0 WITH LLVM-exception"
+material = "Adapted web-tree-sitter bindings."
+files = ["registry/licenses/ast-grep-tree-sitter-wasm/LICENSE"]
+
+[[components]]
+name = "One Dark Pro"
+source = "https://github.com/Binaryify/OneDark-Pro"
+revision = "75c80ab18d90655e05ad837bb8d89f5e68d5ce53"
+license = "MIT"
+material = "Converted VS Code color themes."
+files = ["registry/licenses/themes/one-dark-pro/LICENSE.txt"]
+
+[[components]]
+name = "Atom One Light"
+source = "https://github.com/akamud/vscode-theme-onelight"
+revision = "5866e900db932d580e978a58db42f65cde07998b"
+license = "MIT"
+material = "Converted VS Code color themes."
+files = ["registry/licenses/themes/one-light/LICENSE"]
+
+[[components]]
+name = "Atom One Dark"
+source = "https://github.com/akamud/vscode-theme-onedark"
+revision = "a8be970644982221f9b61fb1c4b3da74b4beab79"
+license = "MIT"
+material = "Converted VS Code color themes."
+files = ["registry/licenses/themes/one-dark/LICENSE"]
+
+[[components]]
+name = "Tokyo Night"
+source = "https://github.com/tokyo-night/tokyo-night-vscode-theme"
+revision = "7c0f11eaef322f293621ca7befe462214b7ea468"
+license = "MIT"
+material = "Converted VS Code color themes."
+files = ["registry/licenses/themes/tokyo-night/LICENSE.txt"]
+
+[[components]]
+name = "Night Owl"
+source = "https://github.com/sdras/night-owl-vscode-theme"
+revision = "cc291eba7976b20d7c66bde6883c27b902196b07"
+license = "MIT"
+material = "Converted VS Code color themes."
+files = ["registry/licenses/themes/night-owl/LICENSE.md"]
+
+[[components]]
+name = "Nord"
+source = "https://github.com/nordtheme/visual-studio-code"
+revision = "8ead09822c02d0d49d0f764104505e5a34d3689f"
+license = "MIT"
+material = "Converted VS Code color themes."
+files = ["registry/licenses/themes/nord/license"]
+
+[[components]]
+name = "Ayu"
+source = "https://github.com/ayu-theme/vscode-ayu"
+revision = "605c9c8504682854d77adc0b630742182a86676b"
+license = "MIT"
+material = "Converted VS Code color themes."
+files = ["registry/licenses/themes/ayu/LICENSE"]
+
+[[components]]
+name = "Rosé Pine"
+source = "https://github.com/rose-pine/vscode"
+revision = "d8f5ebe8e096fa833e997c07eb7685ee1677a4ba"
+license = "MIT"
+material = "Converted VS Code color themes."
+files = ["registry/licenses/themes/rose-pine/LICENSE"]
+
+[[components]]
+name = "Vitesse"
+source = "https://github.com/antfu/vscode-theme-vitesse"
+revision = "2862595c3d5d05fabfd5aeb50bcbb79ea2f8d85f"
+license = "MIT"
+material = "Converted VS Code color themes."
+files = ["registry/licenses/themes/vitesse/LICENSE"]
+
+[[packages]]
+name = "comfit"
+directory = "crates/comfit"
+components = []
+
+[[packages]]
+name = "comfit-cli"
+directory = "crates/comfit_cli"
+components = ["grammars", "queries", "tree-sitter", "Atom One Dark", "Atom One Light", "Ayu", "Night Owl", "Nord", "One Dark Pro", "Rosé Pine", "Tokyo Night", "Vitesse"]
+
+[[packages]]
+name = "comfit-core"
+directory = "crates/comfit_core"
+components = []
+
+[[packages]]
+name = "comfit-grammars"
+directory = "crates/comfit_grammars"
+components = ["grammars", "queries"]
+
+[[packages]]
+name = "comfit-themes"
+directory = "crates/comfit_themes"
+components = ["Atom One Dark", "Atom One Light", "Ayu", "Night Owl", "Nord", "One Dark Pro", "Rosé Pine", "Tokyo Night", "Vitesse"]
+
+[[packages]]
+name = "css"
+directory = "npm/css"
+components = ["Atom One Dark", "Atom One Light", "Ayu", "Night Owl", "Nord", "One Dark Pro", "Rosé Pine", "Tokyo Night", "Vitesse"]
+
+[[packages]]
+name = "node"
+directory = "npm/node"
+components = ["grammars", "queries", "tree-sitter", "Atom One Dark", "Atom One Light", "Ayu", "Night Owl", "Nord", "One Dark Pro", "Rosé Pine", "Tokyo Night", "Vitesse"]
+
+[[packages]]
+name = "markdown-it"
+directory = "npm/markdown-it"
+components = []
+
+[[packages]]
+name = "rehype"
+directory = "npm/rehype"
+components = []
+
+[[packages]]
+name = "python"
+directory = "python/comfit"
+notices = "comfit/THIRD_PARTY_NOTICES.txt"
+components = ["grammars", "queries", "tree-sitter", "Atom One Dark", "Atom One Light", "Ayu", "Night Owl", "Nord", "One Dark Pro", "Rosé Pine", "Tokyo Night", "Vitesse"]
+
+[[packages]]
+name = "docs"
+directory = "docs/public"
+components = ["Atom One Dark", "Atom One Light", "Ayu", "Night Owl", "Nord", "One Dark Pro", "Rosé Pine", "Tokyo Night", "Vitesse"]
+
+[[packages]]
+name = "wasm"
+directory = "npm/wasm"
+components = ["ast-grep/tree-sitter-wasm", "web-tree-sitter"]
+
+[[packages]]
+name = "wasm-grammars"
+directory = "npm/wasm-grammars"
+components = ["grammars", "queries"]

@@ -1,0 +1,66 @@
+@import "../../styles/media.css";
+
+.layout {
+  max-inline-size: 90rem;
+  min-block-size: 100svh;
+  margin-inline: auto;
+}
+
+.document {
+  min-inline-size: 0;
+}
+
+.content {
+  --c-code-number: color-mix(in oklab, var(--c-text-muted) 85%, var(--c-text));
+
+  inline-size: 100%;
+  min-inline-size: 0;
+  max-inline-size: 88ch;
+  margin-inline: auto;
+  padding: 1.5rem;
+}
+
+.content :where(h2, h3, h4, h5, h6) {
+  scroll-margin-block-start: 5rem;
+}
+
+.content :where(p, li, dd) {
+  line-height: 1.65;
+}
+
+.content :where(pre) {
+  max-inline-size: 100%;
+  overflow-x: auto;
+}
+
+@media (--viewport-sm) {
+  .content {
+    padding: 2rem;
+  }
+}
+
+@media (--docs-sidebar) {
+  .layout {
+    display: grid;
+    grid-template-columns: 15rem minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .content :where(h2, h3, h4, h5, h6) {
+    scroll-margin-block-start: 2rem;
+  }
+}
+
+@media (--viewport-md) {
+  .document[data-has-toc] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 13rem;
+    align-items: start;
+    padding-inline-end: 1.5rem;
+  }
+
+  .content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}

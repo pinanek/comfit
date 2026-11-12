@@ -1,0 +1,224 @@
+@import "../../styles/media.css";
+
+.trigger,
+.close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-inline-size: 2.75rem;
+  min-block-size: 2.75rem;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--c-text-muted);
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.triggerLabel,
+.triggerKeys {
+  display: none;
+}
+
+.trigger:active,
+.close:active {
+  background: var(--c-bg-active);
+}
+
+.trigger:focus-visible,
+.close:focus-visible,
+.retry:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  background: color-mix(in oklab, var(--c-bg-subtle) 75%, transparent);
+}
+
+.popup {
+  position: fixed;
+  z-index: 101;
+  inset-block-start: max(1rem, env(safe-area-inset-top));
+  inset-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-block-size: calc(
+    100dvh - 2rem - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+  );
+  overflow: hidden;
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--c-bg);
+  color: var(--c-text);
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem 0.5rem 1rem;
+  border-block-end: 1px solid var(--c-border);
+  color: var(--c-text-muted);
+}
+
+.input {
+  inline-size: 100%;
+  min-inline-size: 0;
+  min-block-size: 2.75rem;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--c-text);
+  caret-color: var(--c-accent);
+  font-size: 1rem;
+}
+
+.input::placeholder {
+  color: var(--c-text-muted);
+  opacity: 1;
+}
+
+.results {
+  min-block-size: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.5rem;
+}
+
+.results:empty {
+  padding: 0;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.875rem;
+  border-radius: var(--radius-sm);
+  color: var(--c-text);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  touch-action: manipulation;
+}
+
+.result[data-highlighted],
+.result:active {
+  background: var(--c-bg-muted);
+}
+
+.result:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: -2px;
+}
+
+.resultTitle {
+  font-weight: 700;
+}
+
+.excerpt {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: var(--c-text-muted);
+  font-size: 0.875rem;
+}
+
+.status {
+  padding: 2rem 1.5rem;
+  color: var(--c-text-muted);
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.retry {
+  align-self: center;
+  min-block-size: 2.75rem;
+  margin-block-end: 1rem;
+  padding-inline: 1rem;
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--c-bg-muted);
+  color: var(--c-text);
+  touch-action: manipulation;
+}
+
+.footer {
+  display: none;
+}
+
+.srOnly {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .trigger:hover,
+  .close:hover,
+  .retry:hover {
+    background: var(--c-bg-muted);
+    color: var(--c-text);
+  }
+}
+
+@media (--viewport-sm) {
+  .trigger {
+    gap: 0.5rem;
+    min-block-size: 2.25rem;
+    padding-inline: 0.75rem;
+    border: 1px solid var(--c-border);
+    font-size: 0.875rem;
+  }
+
+  .triggerLabel,
+  .triggerKeys {
+    display: inline-flex;
+  }
+
+  .triggerKeys {
+    margin-inline-start: 1.5rem;
+  }
+
+  .popup {
+    inset-block-start: min(15svh, 8rem);
+    inset-inline: 0;
+    inline-size: min(38rem, calc(100% - 3rem));
+    max-block-size: min(36rem, 75dvh);
+    margin-inline: auto;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    border-block-start: 1px solid var(--c-border);
+    color: var(--c-text-muted);
+    font-size: 0.75rem;
+  }
+
+  .footer > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .escape {
+    margin-inline-start: auto;
+  }
+}

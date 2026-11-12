@@ -1,0 +1,44 @@
+.alert {
+  --alert-color: var(--c-accent);
+
+  min-inline-size: 0;
+  margin-block: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  background: color-mix(in oklab, var(--alert-color) 10%, var(--c-bg));
+  overflow-wrap: anywhere;
+}
+
+.header {
+  margin-block-end: 0.5rem;
+  color: var(--alert-color);
+  font-weight: 700;
+}
+
+.alert[data-kind="note"] {
+  --alert-color: var(--c-cpn-blue);
+}
+
+.alert[data-kind="tip"] {
+  --alert-color: var(--c-cpn-green);
+}
+
+.alert[data-kind="important"] {
+  --alert-color: var(--c-cpn-mauve);
+}
+
+.alert[data-kind="warning"] {
+  --alert-color: var(--c-cpn-yellow);
+}
+
+.alert[data-kind="caution"] {
+  --alert-color: var(--c-cpn-red);
+}
+
+.content > :where(p, ul, ol, blockquote) + :where(p, ul, ol, blockquote) {
+  margin-block-start: 0.75rem;
+}
+
+.content :where(ul, ol) {
+  padding-inline-start: 1.25rem;
+}

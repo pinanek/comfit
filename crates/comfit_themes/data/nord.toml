@@ -1,0 +1,73 @@
+name = "Nord"
+default = { fg = "#d8dee9", bg = "#2e3440", modifiers = [] }
+rainbow = ["#8fbcbb", "#88c0d0", "#81a1c1", "#5e81ac", "#8fbcbb", "#88c0d0"]
+
+[styles]
+attribute = { fg = "#eceff4", modifiers = [] }
+boolean = { fg = "#81a1c1", modifiers = [] }
+character = { fg = "#ebcb8b", modifiers = [] }
+comment = { fg = "#616e88", modifiers = [] }
+"comment.documentation" = { fg = "#616e88", modifiers = [] }
+"comment.error" = { fg = "#616e88", modifiers = [] }
+"comment.note" = { fg = "#616e88", modifiers = [] }
+"comment.todo" = { fg = "#616e88", modifiers = [] }
+"comment.warning" = { fg = "#616e88", modifiers = [] }
+constant = { fg = "#d8dee9", modifiers = [] }
+"constant.builtin" = { fg = "#81a1c1", modifiers = [] }
+"diff.delta" = { fg = "#ebcb8b", modifiers = [] }
+"diff.minus" = { fg = "#bf616a", modifiers = [] }
+"diff.plus" = { fg = "#a3be8c", modifiers = [] }
+function = { fg = "#88c0d0", modifiers = [] }
+"function.builtin" = { fg = "#88c0d0", modifiers = [] }
+"function.call" = { fg = "#88c0d0", modifiers = [] }
+"function.macro" = { fg = "#88c0d0", modifiers = [] }
+"function.method" = { fg = "#88c0d0", modifiers = [] }
+"function.method.call" = { fg = "#88c0d0", modifiers = [] }
+keyword = { fg = "#81a1c1", modifiers = [] }
+"keyword.conditional" = { fg = "#81a1c1", modifiers = [] }
+"keyword.coroutine" = { fg = "#81a1c1", modifiers = [] }
+"keyword.debug" = { fg = "#81a1c1", modifiers = [] }
+"keyword.directive" = { fg = "#81a1c1", modifiers = [] }
+"keyword.exception" = { fg = "#81a1c1", modifiers = [] }
+"keyword.function" = { fg = "#81a1c1", modifiers = [] }
+"keyword.import" = { fg = "#81a1c1", modifiers = [] }
+"keyword.modifier" = { fg = "#81a1c1", modifiers = [] }
+"keyword.operator" = { fg = "#81a1c1", modifiers = [] }
+"keyword.repeat" = { fg = "#81a1c1", modifiers = [] }
+"keyword.return" = { fg = "#81a1c1", modifiers = [] }
+"keyword.type" = { fg = "#81a1c1", modifiers = [] }
+"markup.heading" = { fg = "#88c0d0", modifiers = [] }
+"markup.heading.1" = { fg = "#88c0d0", modifiers = [] }
+"markup.heading.2" = { fg = "#88c0d0", modifiers = [] }
+"markup.heading.3" = { fg = "#88c0d0", modifiers = [] }
+"markup.heading.4" = { fg = "#88c0d0", modifiers = [] }
+"markup.heading.5" = { fg = "#88c0d0", modifiers = [] }
+"markup.heading.6" = { fg = "#88c0d0", modifiers = [] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.link" = { fg = "#eceff4", modifiers = [] }
+"markup.list" = { fg = "#eceff4", modifiers = [] }
+"markup.quote" = { fg = "#eceff4", modifiers = [] }
+"markup.strong" = { modifiers = ["bold"] }
+number = { fg = "#b48ead", modifiers = [] }
+"number.float" = { fg = "#b48ead", modifiers = [] }
+operator = { fg = "#81a1c1", modifiers = [] }
+property = { fg = "#8fbcbb", modifiers = [] }
+"punctuation.bracket" = { fg = "#eceff4", modifiers = [] }
+"punctuation.delimiter" = { fg = "#81a1c1", modifiers = [] }
+"punctuation.special" = { fg = "#eceff4", modifiers = [] }
+string = { fg = "#a3be8c", modifiers = [] }
+"string.documentation" = { fg = "#a3be8c", modifiers = [] }
+"string.escape" = { fg = "#ebcb8b", modifiers = [] }
+"string.regexp" = { fg = "#ebcb8b", modifiers = [] }
+"string.special" = { fg = "#a3be8c", modifiers = [] }
+tag = { fg = "#81a1c1", modifiers = [] }
+"tag.attribute" = { fg = "#8fbcbb", modifiers = [] }
+"tag.builtin" = { fg = "#81a1c1", modifiers = [] }
+"tag.delimiter" = { fg = "#81a1c1", modifiers = [] }
+type = { fg = "#8fbcbb", modifiers = [] }
+"type.builtin" = { fg = "#8fbcbb", modifiers = [] }
+variable = { fg = "#d8dee9", modifiers = [] }
+"variable.builtin" = { fg = "#81a1c1", modifiers = [] }
+"variable.member" = { fg = "#d8dee9", modifiers = [] }
+"variable.parameter" = { fg = "#d8dee9", modifiers = [] }
+"variable.parameter.builtin" = { fg = "#d8dee9", modifiers = [] }

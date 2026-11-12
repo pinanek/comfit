@@ -48,7 +48,7 @@ jobs:
           tool: |
             just@1.59.0
             dprint@0.64.3
-            tombi@1.11.2
+            tombi@1.10.0
             tree-sitter-cli@0.27.2
             wasm-bindgen-cli@0.2.130
 

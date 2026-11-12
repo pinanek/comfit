@@ -1,6 +1,6 @@
 [project]
 name = "comfit-hl"
-version = "0.1.0"
+version = "0.1.1"
 description = "Comfit bindings for Python"
 readme = "README.md"
 authors = [{ name = "Ngo Duc Hoang Son", email = "hoangsonngo555@gmail.com" }]

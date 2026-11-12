@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/pinanek/comfit/compare/comfit-v0.1.0...comfit-v0.1.1) (2026-11-12)
+
+
+### Bug Fixes
+
+* **build:** correct release preparation and Linux builds ([25858dc](https://github.com/pinanek/comfit/commit/25858dcd12eceba0b897927a8cd54ed33684275a))
+
 ## 0.1.0 (2026-11-12)
 
 

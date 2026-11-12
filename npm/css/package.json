@@ -1,6 +1,6 @@
 {
   "name": "@comfit/css",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Comfit theme stylesheets for class-based HTML",
   "repository": {
     "type": "git",

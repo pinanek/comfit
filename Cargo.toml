@@ -17,7 +17,7 @@ serde = { version = "1.0.229", features = ["derive"] }
 smol_str = "0.3.7"
 comfit-internal = { path = "crates/comfit_internal" }
 comfit-core = { path = "crates/comfit_core", version = "0.1.0" }
-comfit-grammars = { path = "crates/comfit_grammars", version = "0.1.0" }
+comfit-grammars = { path = "crates/comfit_grammars", version = "0.1.1" }
 comfit-themes = { path = "crates/comfit_themes", version = "0.1.0" }
 rgb = { version = "0.8", default-features = false }
 js-sys = "0.3"

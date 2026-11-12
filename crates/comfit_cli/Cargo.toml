@@ -1,6 +1,6 @@
 [package]
 name = "comfit-cli"
-version = "0.1.0"
+version = "0.1.1"
 edition.workspace = true
 license.workspace = true
 homepage.workspace = true
@@ -15,7 +15,7 @@ doc = false
 [dependencies]
 anyhow.workspace = true
 clap.workspace = true
-comfit = { path = "../comfit", version = "0.1.0", features = ["all-languages", "render-ansi", "render-html", "theme-toml"] }
+comfit = { path = "../comfit", version = "0.1.1", features = ["all-languages", "render-ansi", "render-html", "theme-toml"] }
 comfit-themes = { workspace = true, features = ["all-themes", "convert"] }
 json5.workspace = true
 serde.workspace = true

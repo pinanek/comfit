@@ -115,17 +115,15 @@ Configure trusted publishers with this repository, the exact workflow filename, 
 
 ### Publishing
 
-Workflows check out the exact component tag and verify its version against the package and release manifests. Publishing runs once after builds and checks complete, never from matrix jobs.
+Merging the release PR triggers publishing automatically. Each workflow validates the component tag and publishes only after its builds and checks pass. Approve the deployment if its environment requires review.
 
-CLI releases build eight binaries: macOS and Windows on x86_64 and ARM64, plus glibc 2.28+ and static musl Linux on both architectures. Each archive includes the executable, README, license, and third-party notices. The packaging script extracts and checks each archive; musl binaries also run in Alpine. After all builds pass, the upload job uses the `github-release` environment to attach ZIP archives for Windows, tarballs for macOS/Linux, and `SHA256SUMS` to the matching `comfit-cli-v*` release. It uses `GITHUB_TOKEN`, independently of crates.io publishing, and replaces assets with the same names on retries.
+- **CLI:** Uploads eight platform archives, bundled licenses and notices, and `SHA256SUMS` to the GitHub release.
+- **npm:** Publishes the selected package. Node releases also publish eight native platform packages with the same version.
+- **Python:** Publishes one sdist and seven ABI3 wheels, built from that sdist and tested on Python 3.15. Wheels support CPython 3.11 or later.
 
-Node's eight-target matrix covers macOS, Windows, and glibc/musl Linux on x86_64 and ARM64. Generated `@comfit/node-{platform}` packages share the wrapper's version, declare OS/CPU/libc restrictions, and are exact-version optional dependencies of `@comfit/node`. The NAPI loader selects the installed binary; the wrapper ships only the loader and types. Platform packages do not need separate release PR entries. Musl builds use Zig and cargo-zigbuild, with installed-package checks in Alpine on both architectures.
+To retry, open the matching workflow in GitHub Actions, choose **Run workflow**, and enter the component `tag`, such as `node-v0.1.0`. Fix failed dependencies first; Rust and npm wait up to 20 minutes for them to appear in the registry.
 
-Python wheels are built from the release sdist and tested on Python 3.15. The ABI3 wheels support CPython 3.11 or later. Wheels cover Linux and macOS on x86_64 and ARM64, plus Windows x86_64. Linux baselines are manylinux 2.28 and musllinux 1.2; macOS targets 11.0 or later. Musllinux wheels are tested in Alpine. The sdist includes prepared grammars, so installation does not require grammar-generation tools.
-
-Publishing jobs cache Rust dependencies by job and target; Python wheel builds use sccache.
-
-Each workflow accepts a `tag` input for manual retries. Rust and npm wait up to 20 minutes for local dependencies to appear in the registry; fix failed prerequisites before retrying. npm skips builds only when all packages for that release exist, including Node platform packages. Python skips builds only when its sdist and all seven wheel targets exist. Partial uploads remain retryable; publishers skip existing versions or files.
+Publishers skip existing versions or files. npm and Python skip builds only when the entire release is already published, so partial uploads remain retryable.
 
 ## Git hooks
 

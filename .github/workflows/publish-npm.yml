@@ -224,6 +224,21 @@ jobs:
         with:
           tool: wasm-bindgen-cli@0.2.130
 
+      - name: Install WASM optimizer
+        if: needs.prepare.outputs.component == 'wasm'
+        run: |
+          version=$(gh api repos/WebAssembly/binaryen/releases/latest --jq '.tag_name')
+          directory="$RUNNER_TEMP/binaryen"
+          archive="binaryen-$version-x86_64-linux.tar.gz"
+          mkdir -p "$directory"
+          gh release download "$version" --repo WebAssembly/binaryen --dir "$directory" \
+            --pattern "$archive" --pattern "$archive.sha256"
+          (cd "$directory" && sha256sum --check "$archive.sha256")
+          tar -xzf "$directory/$archive" -C "$directory"
+          echo "$directory/binaryen-$version/bin" >> "$GITHUB_PATH"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 

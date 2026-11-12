@@ -155,7 +155,7 @@ jobs:
       - uses: PyO3/maturin-action@v1.51.0
         with:
           maturin-version: "1.16.0"
-          sccache: true
+          sccache: ${{ !endsWith(matrix.target, '-musl') }}
           rust-toolchain: stable
           working-directory: target/python-source
           target: ${{ matrix.target }}

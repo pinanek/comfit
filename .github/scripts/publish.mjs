@@ -193,6 +193,7 @@ function stageNpm(selected) {
             name,
             version: selected.version,
             description: `${manifest.description} (${suffix})`,
+            homepage: manifest.homepage,
             repository: manifest.repository,
             license: manifest.license,
             engines: manifest.engines,

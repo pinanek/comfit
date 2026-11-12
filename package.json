@@ -14,5 +14,6 @@
     "release-please": "catalog:",
     "typedoc": "catalog:",
     "typedoc-plugin-markdown": "catalog:"
-  }
+  },
+  "packageManager": "pnpm@12.18.0"
 }

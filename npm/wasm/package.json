@@ -2,6 +2,7 @@
   "name": "@comfit/wasm",
   "version": "0.1.1",
   "description": "Comfit WebAssembly bindings for browsers and Node.js",
+  "homepage": "https://comfit.pinanek.me",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pinanek/comfit.git",

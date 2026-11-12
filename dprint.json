@@ -3,6 +3,7 @@
     "**/node_modules",
     "**/target",
     "**/dist",
+    "**/CHANGELOG.md",
     ".grammars",
     "crates/comfit_grammars/data",
     "crates/comfit_themes/data",

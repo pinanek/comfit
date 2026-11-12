@@ -33,12 +33,18 @@ hooks:
 build-grammars:
     cargo grammars build
 
-# Build npm packages after preparing grammars.
-[parallel]
-build: build-native build-wasm
+# Prepare native and WASM assets serially, then bundle packages concurrently.
+build: _prepare-native
+    cargo wasm build
+    pnpm --filter @comfit/rehype --filter @comfit/markdown-it --filter @comfit/wasm --filter @comfit/wasm-grammars -r bundle
 
-build-native:
-    pnpm --filter @comfit/node --filter @comfit/rehype --filter @comfit/markdown-it --filter @comfit/css -r build
+_prepare-native:
+    pnpm --filter @comfit/node --filter @comfit/css --workspace-concurrency=1 -r build
+    cargo notices build rehype
+    cargo notices build markdown-it
+
+build-native: _prepare-native
+    pnpm --filter @comfit/rehype --filter @comfit/markdown-it -r bundle
 
 # Generate WASM assets concurrently, then bundle both packages.
 build-wasm:

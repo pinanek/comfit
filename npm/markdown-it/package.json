@@ -16,7 +16,8 @@
   },
   "files": ["dist", "LICENSE"],
   "scripts": {
-    "build": "cargo notices build markdown-it && tsdown",
+    "build": "cargo notices build markdown-it && pnpm bundle",
+    "bundle": "tsdown",
     "typecheck": "tsc --noEmit",
     "prepack": "cargo notices check markdown-it"
   },

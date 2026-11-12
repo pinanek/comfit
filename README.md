@@ -36,7 +36,7 @@
 | [@comfit/wasm](npm/wasm/README.md)                   | [![npm](https://img.shields.io/npm/v/@comfit/wasm.svg)](https://www.npmjs.com/package/@comfit/wasm)                   | Comfit WebAssembly bindings for browsers and Node.js                   |
 | [@comfit/wasm-grammars](npm/wasm-grammars/README.md) | [![npm](https://img.shields.io/npm/v/@comfit/wasm-grammars.svg)](https://www.npmjs.com/package/@comfit/wasm-grammars) | Comfit grammar assets and queries for WebAssembly                      |
 | [@comfit/css](npm/css/README.md)                     | [![npm](https://img.shields.io/npm/v/@comfit/css.svg)](https://www.npmjs.com/package/@comfit/css)                     | Comfit theme stylesheets for class-based HTML                          |
-| [comfit-hl for Python](python/comfit/README.md)      | [![PyPI](https://img.shields.io/pypi/v/comfit-hl.svg)](https://pypi.org/project/comfit-hl/)                           | Comfit bindings for Python                                             |
+| [comfit-hl](python/comfit/README.md)                 | [![PyPI](https://img.shields.io/pypi/v/comfit-hl.svg)](https://pypi.org/project/comfit-hl/)                           | Comfit bindings for Python                                             |
 
 ## Contributing
 
@@ -48,4 +48,4 @@ To build and install packages, see [Build from source](https://comfit.pinanek.me
 
 Licensed under the [MIT License](LICENSE).
 
-Bundled components retain their own licenses. See the [grammar and query notices](npm/node/THIRD_PARTY_NOTICES.txt) and the [WASM license notes](npm/wasm/README.md#license).
+Third-party parsers, queries, themes, and runtimes retain their original licenses.

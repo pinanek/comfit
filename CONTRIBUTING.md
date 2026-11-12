@@ -21,7 +21,7 @@ The npm packages and docs share `pnpm-workspace.yaml` and the root `pnpm-lock.ya
 
 ### Builds
 
-`just build` runs native and WASM development builds concurrently. Use `just build-native` for native npm packages or `just build-wasm` for browser packages. The Python install above also uses the development profile.
+`just build` prepares native and WASM assets serially, then bundles the JavaScript packages concurrently. Use `just build-native` for native npm packages or `just build-wasm` for browser packages. The Python install above also uses the development profile.
 
 Rerun `cargo grammars update` after changing queries or the language registry. It prepares uncompressed inputs that consumer builds compile as needed. Use `cargo grammars build` for a grammar-only build. Before packaging the Rust grammar crate, use `cargo grammars build --release` to compress prebuilt inputs at zstd level 12 and build optimized grammars.
 

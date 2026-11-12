@@ -1,0 +1,110 @@
+name: Publish Rust
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Published component tag to retry
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-rust-${{ inputs.tag || github.event.release.tag_name }}
+  cancel-in-progress: false
+
+env:
+  RELEASE_TAG: ${{ inputs.tag || github.event.release.tag_name }}
+
+jobs:
+  publish:
+    if: >-
+      startsWith(inputs.tag || github.event.release.tag_name, 'comfit-') &&
+      !startsWith(inputs.tag || github.event.release.tag_name, 'comfit-hl-')
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    environment: crates-io
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: refs/tags/${{ env.RELEASE_TAG }}
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "26"
+
+      - uses: actions-rust-lang/setup-rust-toolchain@v2.0.1
+        with:
+          toolchain: stable
+          cache: false
+
+      - name: Validate release
+        id: release
+        run: |
+          gh release view "$RELEASE_TAG" --json isDraft --jq 'if .isDraft then error("Cannot publish a draft") else . end'
+          node .github/scripts/publish.mjs select rust
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Check existing publication
+        id: status
+        run: node .github/scripts/publish.mjs status rust
+
+      - uses: taiki-e/install-action@v2.90.3
+        if: steps.status.outputs.published != 'true'
+        with:
+          tool: tree-sitter-cli@0.27.2
+
+      - name: Prepare package inputs
+        if: steps.status.outputs.published != 'true'
+        run: |
+          cargo grammars update
+          cargo notices build
+
+          if [ "$PACKAGE" = 'comfit-grammars' ]; then
+            cargo grammars build --release
+          fi
+        env:
+          PACKAGE: ${{ steps.release.outputs.name }}
+
+      - name: Wait for local dependencies
+        if: steps.status.outputs.published != 'true'
+        run: node .github/scripts/publish.mjs wait rust
+
+      - name: Verify package
+        if: steps.status.outputs.published != 'true'
+        run: cargo publish --locked --dry-run --allow-dirty --package "$PACKAGE"
+        env:
+          PACKAGE: ${{ steps.release.outputs.name }}
+
+      - name: Check bootstrap credentials
+        id: credentials
+        if: steps.status.outputs.published != 'true'
+        run: |
+          if [ -n "$BOOTSTRAP_TOKEN" ]; then
+            echo 'bootstrap=true' >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          BOOTSTRAP_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+
+      - name: Authenticate with crates.io
+        id: auth
+        if: steps.status.outputs.published != 'true' && steps.credentials.outputs.bootstrap != 'true'
+        uses: rust-lang/crates-io-auth-action@v1.0.6
+
+      - name: Publish crate
+        if: steps.status.outputs.published != 'true'
+        run: cargo publish --locked --allow-dirty --package "$PACKAGE"
+        env:
+          PACKAGE: ${{ steps.release.outputs.name }}
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN || steps.auth.outputs.token }}

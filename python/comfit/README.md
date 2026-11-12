@@ -2,14 +2,15 @@
 
 Comfit bindings for Python.
 
+[![PyPI](https://img.shields.io/pypi/v/comfit-hl.svg)](https://pypi.org/project/comfit-hl/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-[Documentation](https://comfit.pinanek.me) · [PyPI](https://pypi.org/project/comfit/)
+[Documentation](https://comfit.pinanek.me) · [PyPI](https://pypi.org/project/comfit-hl/)
 
 ## Installation
 
 ```sh
-python -m pip install comfit
+python -m pip install comfit-hl
 ```
 
 ## Usage

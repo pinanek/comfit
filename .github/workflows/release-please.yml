@@ -1,0 +1,85 @@
+name: Release Please
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-please-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Prepare releases
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: main
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+
+      - uses: pnpm/action-setup@v6.1.1
+        with:
+          version: 12.18.0
+
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "26"
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - uses: actions-rust-lang/setup-rust-toolchain@v2.0.1
+        with:
+          toolchain: stable
+          cache: false
+
+      - uses: astral-sh/setup-uv@v10.3.3
+        with:
+          python-version: "3.15"
+          enable-cache: true
+          cache-dependency-glob: "**/uv.lock"
+
+      - name: Install release tooling
+        run: pnpm install --frozen-lockfile --ignore-scripts
+
+      - name: Prepare package releases
+        id: release
+        env:
+          RELEASE_PLEASE_TOKEN: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+        run: node .github/scripts/release-please.mjs
+
+      - uses: actions/checkout@v7.0.1
+        if: steps.release.outputs.pr != ''
+        with:
+          ref: ${{ fromJSON(steps.release.outputs.pr).headBranchName }}
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+
+      - name: Refresh release lockfiles
+        if: steps.release.outputs.pr != ''
+        run: |
+          cargo update --workspace
+          uv lock
+          pnpm install --lockfile-only --ignore-scripts
+
+      - name: Commit release lockfiles
+        if: steps.release.outputs.pr != ''
+        run: |
+          git add Cargo.lock uv.lock pnpm-lock.yaml
+
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'chore: refresh release lockfiles'
+            git push
+          fi

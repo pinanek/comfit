@@ -24,7 +24,7 @@ with tempfile.TemporaryDirectory(prefix="comfit-python-") as temporary:
     temporary = Path(temporary)
     if wheel is None:
         wheels = temporary / "wheels"
-        run("uv", "build", "--package", "comfit", "--wheel", "--out-dir", wheels)
+        run("uv", "build", "--package", "comfit-hl", "--wheel", "--out-dir", wheels)
         wheel = next(wheels.glob("*.whl"), None)
         if wheel is None:
             raise RuntimeError("No Python wheel was built")

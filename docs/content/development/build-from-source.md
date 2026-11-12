@@ -100,8 +100,8 @@ Each package writes its output to its own `dist` directory. The engine and gramm
 Build and install the extension into the checkout's Python environment:
 
 ```sh
-uv sync --package comfit --locked
-uv run --package comfit python -c 'import comfit; print(comfit.languages())'
+uv sync --package comfit-hl --locked
+uv run --package comfit-hl python -c 'import comfit; print(comfit.languages())'
 ```
 
 To build and install into an existing Python environment instead, run `python -m pip install ./python/comfit` after preparing the grammars.
@@ -109,5 +109,5 @@ To build and install into an existing Python environment instead, run `python -m
 These Python builds use the development profile. To build a release wheel:
 
 ```sh
-uv build --package comfit --wheel --out-dir dist -C 'maturin.build-args=--profile release'
+uv build --package comfit-hl --wheel --out-dir dist -C 'maturin.build-args=--profile release'
 ```

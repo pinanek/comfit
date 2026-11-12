@@ -1,5 +1,5 @@
 [project]
-name = "comfit"
+name = "comfit-hl"
 version = "0.1.0"
 description = "Comfit bindings for Python"
 readme = "README.md"

@@ -1,0 +1,209 @@
+name: Publish CLI binaries
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Published CLI component tag to retry
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-cli-${{ inputs.tag || github.event.release.tag_name }}
+  cancel-in-progress: false
+
+env:
+  RELEASE_TAG: ${{ inputs.tag || github.event.release.tag_name }}
+
+jobs:
+  prepare:
+    if: startsWith(inputs.tag || github.event.release.tag_name, 'comfit-cli-v')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    outputs:
+      sha: ${{ steps.commit.outputs.sha }}
+
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: refs/tags/${{ env.RELEASE_TAG }}
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "26"
+
+      - uses: actions-rust-lang/setup-rust-toolchain@v2.0.1
+        with:
+          toolchain: stable
+          cache: false
+
+      - uses: taiki-e/install-action@v2.90.3
+        with:
+          tool: tree-sitter-cli@0.27.2
+
+      - name: Validate release
+        run: |
+          gh release view "$RELEASE_TAG" --json isDraft --jq 'if .isDraft then error("Cannot publish a draft") else . end'
+          node .github/scripts/publish.mjs select rust
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Record release commit
+        id: commit
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Prepare package inputs
+        run: |
+          cargo grammars update
+          cargo notices build comfit-cli
+
+          tar -czf cli-inputs.tar.gz \
+            crates/comfit_grammars/data \
+            crates/comfit_cli/LICENSE \
+            crates/comfit_cli/THIRD_PARTY_NOTICES.txt
+
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: cli-inputs
+          path: cli-inputs.tar.gz
+          if-no-files-found: error
+          retention-days: 7
+
+  build:
+    needs: prepare
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: ubuntu-24.04
+            target: x86_64-unknown-linux-gnu
+          - runner: ubuntu-24.04-arm
+            target: aarch64-unknown-linux-gnu
+          - runner: ubuntu-24.04
+            target: x86_64-unknown-linux-musl
+          - runner: ubuntu-24.04-arm
+            target: aarch64-unknown-linux-musl
+          - runner: macos-15-intel
+            target: x86_64-apple-darwin
+          - runner: macos-15
+            target: aarch64-apple-darwin
+          - runner: windows-2025
+            target: x86_64-pc-windows-msvc
+          - runner: windows-11-arm
+            target: aarch64-pc-windows-msvc
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 60
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: ${{ needs.prepare.outputs.sha }}
+          persist-credentials: false
+
+      - uses: actions-rust-lang/setup-rust-toolchain@v2.0.1
+        with:
+          toolchain: stable
+          target: ${{ matrix.target }}
+          cache: false
+
+      - uses: astral-sh/setup-uv@v10.3.3
+        with:
+          python-version: "3.15"
+
+      - uses: mlugg/setup-zig@v2.2.1
+        if: runner.os == 'Linux'
+        with:
+          version: "0.15.2"
+
+      - uses: taiki-e/install-action@v2.90.3
+        if: runner.os == 'Linux'
+        with:
+          tool: cargo-zigbuild@0.24.1
+
+      - uses: actions/download-artifact@v8.0.2
+        with:
+          name: cli-inputs
+
+      - name: Build CLI
+        run: |
+          tar -xzf cli-inputs.tar.gz
+
+          case "$TARGET" in
+            *-linux-gnu)
+              cargo zigbuild --locked --release --package comfit-cli --target "$TARGET.2.28"
+              ;;
+
+            *-linux-musl)
+              RUSTFLAGS="${RUSTFLAGS:-} -C target-feature=+crt-static" \
+                cargo zigbuild --locked --release --package comfit-cli --target "$TARGET"
+              ;;
+
+            *)
+              cargo build --locked --release --package comfit-cli --target "$TARGET"
+              ;;
+          esac
+        env:
+          TARGET: ${{ matrix.target }}
+          MACOSX_DEPLOYMENT_TARGET: "11.0"
+
+      - name: Package and verify CLI
+        run: uv run --no-project python .github/scripts/package-cli.py "$TARGET"
+        env:
+          TARGET: ${{ matrix.target }}
+
+      - name: Verify musl binary on Alpine
+        if: endsWith(matrix.target, '-musl')
+        run: |
+          docker run --rm -v "$PWD/target/$TARGET/release:/cli:ro" alpine:3.23 sh -eu -c '
+            /cli/comfit --version
+            printf "fn main() {}\n" | /cli/comfit html --language rust --theme catppuccin-mocha > /tmp/output.html
+            test -s /tmp/output.html
+          '
+        env:
+          TARGET: ${{ matrix.target }}
+
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: cli-${{ matrix.target }}
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 7
+
+  upload:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: github-release
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/download-artifact@v8.0.2
+        with:
+          pattern: cli-*-*
+          path: dist
+          merge-multiple: true
+
+      - name: Upload release assets
+        run: |
+          cat dist/*.sha256 > dist/SHA256SUMS
+          (cd dist && sha256sum --check SHA256SUMS)
+
+          gh release view "$RELEASE_TAG" --json isDraft --jq 'if .isDraft then error("Cannot publish a draft") else . end'
+          gh release upload "$RELEASE_TAG" dist/*.tar.gz dist/*.zip dist/SHA256SUMS --clobber
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}

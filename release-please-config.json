@@ -1,0 +1,95 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "initial-version": "0.1.0",
+  "bump-minor-pre-major": true,
+  "include-component-in-tag": true,
+  "separate-pull-requests": false,
+  "packages": {
+    "crates/comfit": {
+      "release-type": "rust",
+      "component": "comfit",
+      "extra-files": [
+        {
+          "type": "toml",
+          "path": "/crates/comfit_cli/Cargo.toml",
+          "jsonpath": "$.dependencies.comfit.version"
+        }
+      ]
+    },
+    "crates/comfit_cli": {
+      "release-type": "rust",
+      "component": "comfit-cli"
+    },
+    "crates/comfit_core": {
+      "release-type": "rust",
+      "component": "comfit-core",
+      "extra-files": [
+        {
+          "type": "toml",
+          "path": "/Cargo.toml",
+          "jsonpath": "$.workspace.dependencies['comfit-core'].version"
+        }
+      ]
+    },
+    "crates/comfit_grammars": {
+      "release-type": "rust",
+      "component": "comfit-grammars",
+      "extra-files": [
+        {
+          "type": "toml",
+          "path": "/Cargo.toml",
+          "jsonpath": "$.workspace.dependencies['comfit-grammars'].version"
+        }
+      ]
+    },
+    "crates/comfit_themes": {
+      "release-type": "rust",
+      "component": "comfit-themes",
+      "extra-files": [
+        {
+          "type": "toml",
+          "path": "/Cargo.toml",
+          "jsonpath": "$.workspace.dependencies['comfit-themes'].version"
+        }
+      ]
+    },
+    "npm/css": {
+      "release-type": "node",
+      "component": "css"
+    },
+    "npm/markdown-it": {
+      "release-type": "node",
+      "component": "markdown-it"
+    },
+    "npm/node": {
+      "release-type": "node",
+      "component": "node",
+      "extra-files": [
+        { "type": "toml", "path": "Cargo.toml", "jsonpath": "$.package.version" }
+      ]
+    },
+    "npm/rehype": {
+      "release-type": "node",
+      "component": "rehype"
+    },
+    "npm/wasm": {
+      "release-type": "node",
+      "component": "wasm",
+      "extra-files": [
+        { "type": "toml", "path": "Cargo.toml", "jsonpath": "$.package.version" }
+      ]
+    },
+    "npm/wasm-grammars": {
+      "release-type": "node",
+      "component": "wasm-grammars"
+    },
+    "python/comfit": {
+      "release-type": "python",
+      "component": "comfit-hl",
+      "package-name": "comfit-hl",
+      "extra-files": [
+        { "type": "toml", "path": "Cargo.toml", "jsonpath": "$.package.version" }
+      ]
+    }
+  }
+}

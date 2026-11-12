@@ -2,6 +2,7 @@
 
 Comfit bindings for Node.js.
 
+[![npm](https://img.shields.io/npm/v/@comfit/node.svg)](https://www.npmjs.com/package/@comfit/node)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 [Documentation](https://comfit.pinanek.me) · [npm](https://www.npmjs.com/package/@comfit/node)

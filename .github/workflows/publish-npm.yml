@@ -1,0 +1,350 @@
+name: Publish npm
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Published component tag to retry
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-npm-${{ inputs.tag || github.event.release.tag_name }}
+  cancel-in-progress: false
+
+env:
+  RELEASE_TAG: ${{ inputs.tag || github.event.release.tag_name }}
+
+jobs:
+  prepare:
+    if: >-
+      startsWith(inputs.tag || github.event.release.tag_name, 'css-v') ||
+      startsWith(inputs.tag || github.event.release.tag_name, 'markdown-it-v') ||
+      startsWith(inputs.tag || github.event.release.tag_name, 'node-v') ||
+      startsWith(inputs.tag || github.event.release.tag_name, 'rehype-v') ||
+      startsWith(inputs.tag || github.event.release.tag_name, 'wasm-v') ||
+      startsWith(inputs.tag || github.event.release.tag_name, 'wasm-grammars-v')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    outputs:
+      component: ${{ steps.release.outputs.component }}
+      path: ${{ steps.release.outputs.path }}
+
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: refs/tags/${{ env.RELEASE_TAG }}
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "26"
+
+      - name: Validate release
+        id: release
+        run: |
+          gh release view "$RELEASE_TAG" --json isDraft --jq 'if .isDraft then error("Cannot publish a draft") else . end'
+          node .github/scripts/publish.mjs select node
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - uses: actions-rust-lang/setup-rust-toolchain@v2.0.1
+        if: steps.release.outputs.component == 'node'
+        with:
+          toolchain: stable
+          cache: false
+
+      - uses: taiki-e/install-action@v2.90.3
+        if: steps.release.outputs.component == 'node'
+        with:
+          tool: tree-sitter-cli@0.27.2
+
+      - name: Prepare native grammar inputs
+        if: steps.release.outputs.component == 'node'
+        run: |
+          cargo grammars update
+          tar -czf native-inputs.tar.gz crates/comfit_grammars/data
+
+      - uses: actions/upload-artifact@v7.0.2
+        if: steps.release.outputs.component == 'node'
+        with:
+          name: native-inputs
+          path: native-inputs.tar.gz
+          if-no-files-found: error
+          retention-days: 7
+
+  native:
+    needs: prepare
+    if: needs.prepare.outputs.component == 'node'
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: ubuntu-24.04
+            target: x86_64-unknown-linux-gnu
+          - runner: ubuntu-24.04-arm
+            target: aarch64-unknown-linux-gnu
+          - runner: ubuntu-24.04
+            target: x86_64-unknown-linux-musl
+          - runner: ubuntu-24.04-arm
+            target: aarch64-unknown-linux-musl
+          - runner: macos-15-intel
+            target: x86_64-apple-darwin
+          - runner: macos-15
+            target: aarch64-apple-darwin
+          - runner: windows-2025
+            target: x86_64-pc-windows-msvc
+          - runner: windows-11-arm
+            target: aarch64-pc-windows-msvc
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 60
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: refs/tags/${{ env.RELEASE_TAG }}
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v6.1.1
+        with:
+          version: 12.18.0
+
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "26"
+          cache: pnpm
+
+      - uses: actions-rust-lang/setup-rust-toolchain@v2.0.1
+        with:
+          toolchain: stable
+          target: ${{ matrix.target }}
+          cache: false
+
+      - uses: mlugg/setup-zig@v2.2.1
+        if: endsWith(matrix.target, '-musl')
+        with:
+          version: "0.15.2"
+
+      - uses: taiki-e/install-action@v2.90.3
+        if: endsWith(matrix.target, '-musl')
+        with:
+          tool: cargo-zigbuild@0.24.1
+
+      - uses: actions/download-artifact@v8.0.2
+        with:
+          name: native-inputs
+
+      - name: Build native binding
+        run: |
+          tar -xzf native-inputs.tar.gz
+          pnpm install --frozen-lockfile
+
+          if [[ "$TARGET" == *-musl ]]; then
+            pnpm --dir npm/node build:release --target "$TARGET" --cross-compile
+          elif [ "$RUNNER_OS" = 'Linux' ]; then
+            pnpm --dir npm/node build:release --target "$TARGET" --use-napi-cross
+          else
+            pnpm --dir npm/node build:release --target "$TARGET"
+          fi
+
+          if [[ "$TARGET" != *-musl ]]; then
+            pnpm --dir npm/node test
+          fi
+        env:
+          TARGET: ${{ matrix.target }}
+          MACOSX_DEPLOYMENT_TARGET: "11.0"
+
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: node-binary-${{ matrix.target }}
+          path: npm/node/dist/*.node
+          if-no-files-found: error
+          retention-days: 7
+
+      - uses: actions/upload-artifact@v7.0.2
+        if: matrix.target == 'x86_64-unknown-linux-gnu'
+        with:
+          name: node-loader
+          path: |
+            npm/node/dist/*.js
+            npm/node/dist/*.d.ts
+          if-no-files-found: error
+          retention-days: 7
+
+  package:
+    needs: [prepare, native]
+    if: >-
+      always() && needs.prepare.result == 'success' &&
+      (needs.native.result == 'success' || needs.native.result == 'skipped')
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: refs/tags/${{ env.RELEASE_TAG }}
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v6.1.1
+        with:
+          version: 12.18.0
+
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "26"
+          cache: pnpm
+
+      - uses: actions-rust-lang/setup-rust-toolchain@v2.0.1
+        with:
+          toolchain: stable
+          target: wasm32-unknown-unknown
+          cache: false
+
+      - uses: taiki-e/install-action@v2.90.3
+        if: needs.prepare.outputs.component != 'node'
+        with:
+          tool: |
+            tree-sitter-cli@0.27.2
+            wasm-bindgen-cli@0.2.130
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - uses: actions/download-artifact@v8.0.2
+        if: needs.prepare.outputs.component == 'node'
+        with:
+          pattern: node-*
+          path: npm/node/dist
+          merge-multiple: true
+
+      - name: Build package
+        run: |
+          cargo notices build
+
+          if [ "$COMPONENT" != 'node' ]; then
+            cargo grammars update
+          fi
+
+          case "$COMPONENT" in
+            css)
+              pnpm --dir npm/css build
+              ;;
+
+            rehype|markdown-it)
+              pnpm --dir npm/node build:release
+              pnpm --dir "$PACKAGE_PATH" build
+              pnpm --dir "$PACKAGE_PATH" typecheck
+
+              if [ "$COMPONENT" = 'rehype' ]; then
+                pnpm --dir npm/rehype test
+              fi
+              ;;
+
+            wasm)
+              cargo wasm build --release
+              pnpm --filter @comfit/wasm --filter @comfit/wasm-grammars -r bundle
+              pnpm --dir npm/wasm typecheck
+              pnpm --dir npm/wasm test
+              ;;
+
+            wasm-grammars)
+              cargo wasm build grammars --release
+              pnpm --dir npm/wasm-grammars bundle
+              pnpm --dir npm/wasm-grammars typecheck
+              ;;
+          esac
+
+          node .github/scripts/publish.mjs stage-npm
+
+          if [ "$COMPONENT" = 'node' ]; then
+            node .github/scripts/publish.mjs smoke-node
+          fi
+        env:
+          COMPONENT: ${{ needs.prepare.outputs.component }}
+          PACKAGE_PATH: ${{ needs.prepare.outputs.path }}
+
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: npm-packages
+          path: target/npm-release
+          if-no-files-found: error
+          retention-days: 7
+
+  musl:
+    needs: [prepare, package]
+    if: needs.prepare.outputs.component == 'node'
+
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [ubuntu-24.04, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: refs/tags/${{ env.RELEASE_TAG }}
+          persist-credentials: false
+
+      - uses: actions/download-artifact@v8.0.2
+        with:
+          name: npm-packages
+          path: target/npm-release
+
+      - name: Test installed musl package on Alpine
+        run: |
+          docker run --rm -v "$PWD:/source:ro" -w /source node:26-alpine \
+            node .github/scripts/publish.mjs smoke-node
+
+  publish:
+    needs: [package, musl]
+    if: >-
+      ${{ !cancelled() && needs.package.result == 'success' &&
+          (needs.musl.result == 'success' || needs.musl.result == 'skipped') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: npm
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: refs/tags/${{ env.RELEASE_TAG }}
+          persist-credentials: false
+
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "26"
+
+      - uses: actions/download-artifact@v8.0.2
+        with:
+          name: npm-packages
+          path: target/npm-release
+
+      - name: Wait for local dependencies
+        run: node .github/scripts/publish.mjs wait node
+
+      - name: Publish packages
+        run: |
+          if [ -n "$NODE_AUTH_TOKEN" ]; then
+            echo '//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}' > "$HOME/.npmrc"
+          fi
+
+          node .github/scripts/publish.mjs publish-npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

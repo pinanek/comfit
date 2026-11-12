@@ -2,6 +2,8 @@
 
 Comfit highlighting engine, theme model, and renderers.
 
+[![crates.io](https://img.shields.io/crates/v/comfit-core.svg)](https://crates.io/crates/comfit-core)
+[![docs](https://img.shields.io/docsrs/comfit-core?label=docs)](https://docs.rs/comfit-core)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 [Documentation](https://comfit.pinanek.me) · [crates.io](https://crates.io/crates/comfit-core)

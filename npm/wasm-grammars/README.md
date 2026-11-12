@@ -2,6 +2,7 @@
 
 Comfit grammar assets and queries for WebAssembly, with one import per language.
 
+[![npm](https://img.shields.io/npm/v/@comfit/wasm-grammars.svg)](https://www.npmjs.com/package/@comfit/wasm-grammars)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 [Documentation](https://comfit.pinanek.me) · [npm](https://www.npmjs.com/package/@comfit/wasm-grammars)

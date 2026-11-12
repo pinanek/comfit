@@ -5,7 +5,7 @@ description: "Install Comfit for Python to highlight source code, inspect tokens
 
 # Python
 
-Use the `comfit` package to highlight source with bundled languages and themes. Python 3.11 or later is required.
+Install `comfit-hl` to highlight source with bundled languages and themes. The Python module is named `comfit`. Python 3.11 or later is required.
 
 ## Install
 
@@ -14,14 +14,14 @@ Use the `comfit` package to highlight source with bundled languages and themes. 
 
 ```sh
 # For a new project, run uv init first.
-uv add comfit
+uv add comfit-hl
 ```
 
 </CodeTab>
 <CodeTab label="pip">
 
 ```sh
-python -m pip install comfit
+python -m pip install comfit-hl
 ```
 
 </CodeTab>

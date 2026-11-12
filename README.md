@@ -1,37 +1,42 @@
-# Comfit
+<div align="center">
+  <a href="https://comfit.pinanek.me">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pinanek/comfit/refs/heads/main/logo/comfit-logo-dark.svg">
+      <img src="https://raw.githubusercontent.com/pinanek/comfit/refs/heads/main/logo/comfit-logo-light.svg" alt="Comfit" width="420">
+    </picture>
+  </a>
 
-Tree-sitter syntax highlighting for Rust, JavaScript, and Python.
+  <p><strong>Tree-sitter syntax highlighting for Rust, JavaScript, and Python.</strong></p>
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+  <p>
+    <a href="https://github.com/pinanek/comfit/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/pinanek/comfit/ci.yml?branch=main&amp;label=CI&amp;logo=github" alt="CI status"></a>
+    <a href="https://github.com/pinanek/comfit/actions/workflows/security.yml"><img src="https://img.shields.io/github/actions/workflow/status/pinanek/comfit/security.yml?branch=main&amp;label=security&amp;logo=github" alt="Security audit status"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-16618b" alt="MIT license"></a>
+  </p>
 
-[Documentation](https://comfit.pinanek.me) · [Packages](#packages) · [Getting started](#getting-started)
-
-## Getting started
-
-```sh
-cargo install comfit-cli
-comfit ansi main.rs --theme catppuccin-mocha --line-numbers
-comfit html main.rs --theme catppuccin-mocha -o code.html
-```
-
-Use `--language` when reading stdin. For application code, start with the [Rust](https://comfit.pinanek.me/docs/getting-started/rust), [Node.js](https://comfit.pinanek.me/docs/getting-started/node), [browser](https://comfit.pinanek.me/docs/getting-started/browser), or [Python](https://comfit.pinanek.me/docs/getting-started/python) guide.
+  <p>
+    <a href="https://comfit.pinanek.me"><strong>Documentation</strong></a> ·
+    <a href="https://comfit.pinanek.me/playground">Playground</a> ·
+    <a href="#packages">Packages</a>
+  </p>
+</div>
 
 ## Packages
 
-| Package                                              | Description                                                            |
-| ---------------------------------------------------- | ---------------------------------------------------------------------- |
-| [comfit](crates/comfit/README.md)                    | Comfit syntax highlighting library for Rust                            |
-| [comfit-cli](crates/comfit_cli/README.md)            | Comfit command-line tool for highlighting and VS Code theme conversion |
-| [comfit-core](crates/comfit_core/README.md)          | Comfit highlighting engine, theme model, and renderers                 |
-| [comfit-grammars](crates/comfit_grammars/README.md)  | Comfit parsers and queries for Rust                                    |
-| [comfit-themes](crates/comfit_themes/README.md)      | Comfit themes and VS Code theme conversion                             |
-| [@comfit/node](npm/node/README.md)                   | Comfit bindings for Node.js                                            |
-| [@comfit/markdown-it](npm/markdown-it/README.md)     | Comfit plugin for highlighting fenced code blocks with markdown-it     |
-| [@comfit/rehype](npm/rehype/README.md)               | Comfit plugin for highlighting code blocks with rehype                 |
-| [@comfit/wasm](npm/wasm/README.md)                   | Comfit WebAssembly bindings for browsers and Node.js                   |
-| [@comfit/wasm-grammars](npm/wasm-grammars/README.md) | Comfit grammar assets and queries for WebAssembly                      |
-| [@comfit/css](npm/css/README.md)                     | Comfit theme stylesheets for class-based HTML                          |
-| [comfit for Python](python/comfit/README.md)         | Comfit bindings for Python                                             |
+| Package                                              | Version                                                                                                               | Description                                                            |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [comfit](crates/comfit/README.md)                    | [![crates.io](https://img.shields.io/crates/v/comfit.svg)](https://crates.io/crates/comfit)                           | Comfit syntax highlighting library for Rust                            |
+| [comfit-cli](crates/comfit_cli/README.md)            | [![crates.io](https://img.shields.io/crates/v/comfit-cli.svg)](https://crates.io/crates/comfit-cli)                   | Comfit command-line tool for highlighting and VS Code theme conversion |
+| [comfit-core](crates/comfit_core/README.md)          | [![crates.io](https://img.shields.io/crates/v/comfit-core.svg)](https://crates.io/crates/comfit-core)                 | Comfit highlighting engine, theme model, and renderers                 |
+| [comfit-grammars](crates/comfit_grammars/README.md)  | [![crates.io](https://img.shields.io/crates/v/comfit-grammars.svg)](https://crates.io/crates/comfit-grammars)         | Comfit parsers and queries for Rust                                    |
+| [comfit-themes](crates/comfit_themes/README.md)      | [![crates.io](https://img.shields.io/crates/v/comfit-themes.svg)](https://crates.io/crates/comfit-themes)             | Comfit themes and VS Code theme conversion                             |
+| [@comfit/node](npm/node/README.md)                   | [![npm](https://img.shields.io/npm/v/@comfit/node.svg)](https://www.npmjs.com/package/@comfit/node)                   | Comfit bindings for Node.js                                            |
+| [@comfit/markdown-it](npm/markdown-it/README.md)     | [![npm](https://img.shields.io/npm/v/@comfit/markdown-it.svg)](https://www.npmjs.com/package/@comfit/markdown-it)     | Comfit plugin for highlighting fenced code blocks with markdown-it     |
+| [@comfit/rehype](npm/rehype/README.md)               | [![npm](https://img.shields.io/npm/v/@comfit/rehype.svg)](https://www.npmjs.com/package/@comfit/rehype)               | Comfit plugin for highlighting code blocks with rehype                 |
+| [@comfit/wasm](npm/wasm/README.md)                   | [![npm](https://img.shields.io/npm/v/@comfit/wasm.svg)](https://www.npmjs.com/package/@comfit/wasm)                   | Comfit WebAssembly bindings for browsers and Node.js                   |
+| [@comfit/wasm-grammars](npm/wasm-grammars/README.md) | [![npm](https://img.shields.io/npm/v/@comfit/wasm-grammars.svg)](https://www.npmjs.com/package/@comfit/wasm-grammars) | Comfit grammar assets and queries for WebAssembly                      |
+| [@comfit/css](npm/css/README.md)                     | [![npm](https://img.shields.io/npm/v/@comfit/css.svg)](https://www.npmjs.com/package/@comfit/css)                     | Comfit theme stylesheets for class-based HTML                          |
+| [comfit-hl for Python](python/comfit/README.md)      | [![PyPI](https://img.shields.io/pypi/v/comfit-hl.svg)](https://pypi.org/project/comfit-hl/)                           | Comfit bindings for Python                                             |
 
 ## Contributing
 

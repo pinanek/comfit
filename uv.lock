@@ -4,7 +4,7 @@ requires-python = ">=3.11"
 
 [manifest]
 members = [
-    "comfit",
+    "comfit-hl",
 ]
 
 [manifest.dependency-groups]
@@ -12,7 +12,7 @@ dev = [{ name = "maturin", specifier = ">=1.16,<2" }]
 docs = [{ name = "griffe2md", specifier = ">=1.5.1" }]
 
 [[package]]
-name = "comfit"
+name = "comfit-hl"
 version = "0.1.0"
 source = { editable = "python/comfit" }
 

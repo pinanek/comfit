@@ -44,7 +44,7 @@ console.log(renderHtml("fn main() {}", "rust", "catppuccin-mocha", config));
   <CodeTab label="Python">
 
 ```sh title="Install"
-python -m pip install comfit
+python -m pip install comfit-hl
 ```
 
 ```python title="example.py"

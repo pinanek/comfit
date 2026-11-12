@@ -2,6 +2,9 @@
 
 Comfit plugin for highlighting fenced code blocks with markdown-it, backed by [@comfit/node](../node/README.md).
 
+[![npm](https://img.shields.io/npm/v/@comfit/markdown-it.svg)](https://www.npmjs.com/package/@comfit/markdown-it)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 [Documentation](https://comfit.pinanek.me/docs/guides/markdown#use-with-markdown-it) · [npm](https://www.npmjs.com/package/@comfit/markdown-it)
 
 ## Installation

@@ -1,0 +1,14 @@
+{
+  "crates/comfit": "0.0.0",
+  "crates/comfit_cli": "0.0.0",
+  "crates/comfit_core": "0.0.0",
+  "crates/comfit_grammars": "0.0.0",
+  "crates/comfit_themes": "0.0.0",
+  "npm/css": "0.0.0",
+  "npm/markdown-it": "0.0.0",
+  "npm/node": "0.0.0",
+  "npm/rehype": "0.0.0",
+  "npm/wasm": "0.0.0",
+  "npm/wasm-grammars": "0.0.0",
+  "python/comfit": "0.0.0"
+}

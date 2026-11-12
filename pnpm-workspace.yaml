@@ -38,6 +38,7 @@ catalog:
   react-server-dom-webpack: ~19.3.1
   rehype-katex: ^7.0.1
   rehype-slug: ^6.0.0
+  release-please: 17.11.2
   remark-definition-list: ^2.0.1
   remark-frontmatter: ^5.0.0
   remark-gfm: ^4.0.1
@@ -58,6 +59,7 @@ catalog:
   web-tree-sitter: 0.27.2
 
 overrides:
+  "@google-automations/git-file-utils>minimatch": ^11.0.1
   typedoc>minimatch: ^11.0.1
   katex: "catalog:"
 

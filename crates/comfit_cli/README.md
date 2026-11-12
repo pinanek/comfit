@@ -2,6 +2,7 @@
 
 Comfit command-line tool for highlighting and VS Code theme conversion.
 
+[![crates.io](https://img.shields.io/crates/v/comfit-cli.svg)](https://crates.io/crates/comfit-cli)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 [Documentation](https://comfit.pinanek.me) · [crates.io](https://crates.io/crates/comfit-cli)

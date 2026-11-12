@@ -2,6 +2,8 @@
 
 Comfit parsers and queries for Rust, selected through Cargo features.
 
+[![crates.io](https://img.shields.io/crates/v/comfit-grammars.svg)](https://crates.io/crates/comfit-grammars)
+[![docs](https://img.shields.io/docsrs/comfit-grammars?label=docs)](https://docs.rs/comfit-grammars)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 [Documentation](https://comfit.pinanek.me) · [crates.io](https://crates.io/crates/comfit-grammars)

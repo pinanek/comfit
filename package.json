@@ -11,6 +11,7 @@
     "@playwright/test": "catalog:",
     "oxfmt": "catalog:",
     "oxlint": "catalog:",
+    "release-please": "catalog:",
     "typedoc": "catalog:",
     "typedoc-plugin-markdown": "catalog:"
   }

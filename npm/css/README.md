@@ -2,6 +2,7 @@
 
 Comfit theme stylesheets for class-based HTML.
 
+[![npm](https://img.shields.io/npm/v/@comfit/css.svg)](https://www.npmjs.com/package/@comfit/css)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 [Documentation](https://comfit.pinanek.me) · [npm](https://www.npmjs.com/package/@comfit/css)

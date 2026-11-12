@@ -2,6 +2,8 @@
 
 Comfit syntax highlighting library for Rust.
 
+[![crates.io](https://img.shields.io/crates/v/comfit.svg)](https://crates.io/crates/comfit)
+[![docs](https://img.shields.io/docsrs/comfit?label=docs)](https://docs.rs/comfit)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 [Documentation](https://comfit.pinanek.me) · [crates.io](https://crates.io/crates/comfit)

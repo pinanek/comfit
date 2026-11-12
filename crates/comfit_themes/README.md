@@ -2,6 +2,8 @@
 
 Comfit themes and optional VS Code theme conversion.
 
+[![crates.io](https://img.shields.io/crates/v/comfit-themes.svg)](https://crates.io/crates/comfit-themes)
+[![docs](https://img.shields.io/docsrs/comfit-themes?label=docs)](https://docs.rs/comfit-themes)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 [Documentation](https://comfit.pinanek.me) · [crates.io](https://crates.io/crates/comfit-themes)

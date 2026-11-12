@@ -73,6 +73,8 @@ async function published(ecosystem, name, version) {
     : `${name.slice(0, 2)}/${name.slice(2, 4)}/${name}`;
   const url = ecosystem === "rust"
     ? `https://index.crates.io/${index}`
+    : ecosystem === "python"
+    ? `https://pypi.org/pypi/${encodeURIComponent(name)}/${version}/json`
     : `https://registry.npmjs.org/${encodeURIComponent(name)}/${version}`;
 
   const response = await fetch(url, {
@@ -94,6 +96,25 @@ async function published(ecosystem, name, version) {
   }
 
   const entry = await response.json();
+
+  if (ecosystem === "python") {
+    // A partial upload must remain retryable until the sdist and all seven wheel targets exist.
+    const files = entry.urls.filter(file => !file.yanked);
+    const platforms = [
+      "manylinux_2_28_x86_64",
+      "manylinux_2_28_aarch64",
+      "musllinux_1_2_x86_64",
+      "musllinux_1_2_aarch64",
+      "macosx_\\d+_\\d+_x86_64",
+      "macosx_\\d+_\\d+_arm64",
+      "win_amd64",
+    ];
+
+    return files.some(file => file.packagetype === "sdist")
+      && platforms.every(platform =>
+        files.some(file => new RegExp(`-cp311-abi3-[\\w.]*${platform}[\\w.]*\\.whl$`).test(file.filename))
+      );
+  }
 
   return entry.name === name && entry.version === version;
 }
@@ -228,7 +249,14 @@ if (command === "select") {
 } else if (command === "status") {
   const selected = release(ecosystem);
 
-  output("published", await published(ecosystem, selected.name, selected.version));
+  const names = [selected.name];
+
+  if (ecosystem === "node" && selected.component === "node") {
+    names.push(...nodePlatforms().map(platform => `${selected.name}-${platform.suffix}`));
+  }
+
+  const statuses = await Promise.all(names.map(name => published(ecosystem, name, selected.version)));
+  output("published", statuses.every(Boolean));
 } else if (command === "wait") {
   const selected = release(ecosystem);
   const dependencies = [];

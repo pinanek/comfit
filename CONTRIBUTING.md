@@ -50,6 +50,8 @@ On Linux, use `pnpm exec playwright install --with-deps chromium`.
 
 Use `just` to list focused checks such as `test-rust`, `test-node`, `test-python`, `test-wasm`, and `test-grammar-features`.
 
+GitHub runs CI and security checks on pull requests and pushes to `main`; use a manual workflow run to check a branch without a pull request.
+
 `just check` runs independent checks concurrently, while serializing Cargo checks and Python extension builds to reuse build outputs. Clippy uses `COMFIT_CHECK_ONLY=1` to generate grammar bindings without compiling native parsers; builds and tests still compile them. Use `just --jobs 1 check` to run sequentially.
 
 ### Package validation
@@ -121,7 +123,9 @@ Node's eight-target matrix covers macOS, Windows, and glibc/musl Linux on x86_64
 
 Python wheels are built from the release sdist and tested on Python 3.15. The ABI3 wheels support CPython 3.11 or later. Wheels cover Linux and macOS on x86_64 and ARM64, plus Windows x86_64. Linux baselines are manylinux 2.28 and musllinux 1.2; macOS targets 11.0 or later. Musllinux wheels are tested in Alpine. The sdist includes prepared grammars, so installation does not require grammar-generation tools.
 
-Each workflow accepts a `tag` input for manual retries. Rust and npm wait up to 20 minutes for local dependencies to appear in the registry; fix failed prerequisites before retrying. Existing versions are skipped. PyPI skips existing distribution files and uploads missing ones.
+Publishing jobs cache Rust dependencies by job and target; Python wheel builds use sccache.
+
+Each workflow accepts a `tag` input for manual retries. Rust and npm wait up to 20 minutes for local dependencies to appear in the registry; fix failed prerequisites before retrying. npm skips builds only when all packages for that release exist, including Node platform packages. Python skips builds only when its sdist and all seven wheel targets exist. Partial uploads remain retryable; publishers skip existing versions or files.
 
 ## Git hooks
 

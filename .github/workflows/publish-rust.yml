@@ -46,7 +46,7 @@ jobs:
       - uses: actions-rust-lang/setup-rust-toolchain@v2.0.1
         with:
           toolchain: stable
-          cache: false
+          cache-key: rust-publish
 
       - name: Validate release
         id: release
@@ -61,15 +61,22 @@ jobs:
         run: node .github/scripts/publish.mjs status rust
 
       - uses: taiki-e/install-action@v2.90.3
-        if: steps.status.outputs.published != 'true'
+        if: >-
+          steps.status.outputs.published != 'true' &&
+          (steps.release.outputs.name == 'comfit-grammars' || steps.release.outputs.name == 'comfit-cli')
         with:
           tool: tree-sitter-cli@0.27.2
+
+      - name: Prepare grammars
+        if: >-
+          steps.status.outputs.published != 'true' &&
+          (steps.release.outputs.name == 'comfit-grammars' || steps.release.outputs.name == 'comfit-cli')
+        run: cargo grammars update
 
       - name: Prepare package inputs
         if: steps.status.outputs.published != 'true'
         run: |
-          cargo grammars update
-          cargo notices build
+          cargo notices build "$PACKAGE"
 
           if [ "$PACKAGE" = 'comfit-grammars' ]; then
             cargo grammars build --release

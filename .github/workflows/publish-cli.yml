@@ -42,11 +42,7 @@ jobs:
       - uses: actions-rust-lang/setup-rust-toolchain@v2.0.1
         with:
           toolchain: stable
-          cache: false
-
-      - uses: taiki-e/install-action@v2.90.3
-        with:
-          tool: tree-sitter-cli@0.27.2
+          cache-key: cli-prepare
 
       - name: Validate release
         run: |
@@ -58,6 +54,10 @@ jobs:
       - name: Record release commit
         id: commit
         run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - uses: taiki-e/install-action@v2.90.3
+        with:
+          tool: tree-sitter-cli@0.27.2
 
       - name: Prepare package inputs
         run: |
@@ -116,7 +116,7 @@ jobs:
         with:
           toolchain: stable
           target: ${{ matrix.target }}
-          cache: false
+          cache-key: cli-release-${{ matrix.target }}
 
       - uses: astral-sh/setup-uv@v10.3.3
         with:

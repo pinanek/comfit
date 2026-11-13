@@ -128,6 +128,10 @@ async function main() {
 
   const graph = buildReleaseGraph();
   const github = await GitHub.create({ owner, repo, token });
+  const releases = github.getGitHubApi().octokitAPIs.octokit.repos;
+  // Only the CLI upload workflow promotes a release to Latest once binaries are ready.
+  releases.createRelease = releases.createRelease.defaults({ make_latest: "false" });
+
   const commits = github.mergeCommitIterator.bind(github);
 
   // Route shared inputs before splitting commits, preserving each package's release boundary.

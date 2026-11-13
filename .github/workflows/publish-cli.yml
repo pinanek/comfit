@@ -202,6 +202,7 @@ jobs:
 
           gh release view "$RELEASE_TAG" --json isDraft --jq 'if .isDraft then error("Cannot publish a draft") else . end'
           gh release upload "$RELEASE_TAG" dist/*.tar.gz dist/*.zip dist/SHA256SUMS --clobber
+          gh release edit "$RELEASE_TAG" --latest
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}

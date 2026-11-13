@@ -5,7 +5,7 @@ description: "Install and configure @comfit/markdown-it to highlight fenced code
 
 # markdown-it
 
-Use `@comfit/markdown-it` to highlight fenced code blocks when rendering Markdown with markdown-it. It runs on Node.js 22 or later and bundles languages and themes. For rehype or MDX pipelines, use [the rehype plugin](markdown.md) instead.
+Use `@comfit/markdown-it` to highlight fenced code blocks when rendering Markdown with markdown-it. It runs on Node.js 22 or later and bundles languages and themes. For rehype or MDX pipelines, use [the rehype plugin](rehype.md) instead.
 
 This differs from [highlighting Markdown source](embedded-languages.md), which preserves headings, fence markers, and other Markdown syntax as source text.
 

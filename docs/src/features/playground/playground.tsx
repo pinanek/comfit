@@ -25,7 +25,7 @@ export function Playground({ themes }: { themes: PlaygroundTheme[] }) {
   const [sources, setSources] = useState(() =>
     Object.fromEntries(languages.map(({ id, sample }) => [id, sample])) as Record<LanguageId, string>
   );
-  const [themeId, setThemeId] = useState("catppuccin-mocha");
+  const [themeId, setThemeId] = useState("catppina-dark");
   const [rainbow, setRainbow] = useState(true);
   const [highlightedLines, setHighlightedLines] = useState<number[]>([]);
   const [view, setView] = useState("html");

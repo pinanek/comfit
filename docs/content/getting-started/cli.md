@@ -11,7 +11,7 @@ The `comfit` command highlights files or standard input as terminal text or HTML
 
 ### Download a prebuilt binary
 
-Open [GitHub Releases](https://github.com/pinanek/comfit/releases) and choose a CLI archive for your operating system and CPU architecture. Extract it and place `comfit` (`comfit.exe` on Windows) in a directory on your `PATH`.
+Open the [latest CLI release](https://github.com/pinanek/comfit/releases/latest) and choose an archive for your operating system and CPU architecture. Extract it and place `comfit` (`comfit.exe` on Windows) in a directory on your `PATH`.
 
 Check the installation:
 

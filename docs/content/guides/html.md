@@ -88,7 +88,7 @@ html = comfit.render_html(
 </CodeTab>
 <CodeTab label="rehype">
 
-Add this configuration to your framework's `rehypePlugins`. See [rehype and MDX](markdown.md) to set up a pipeline.
+Add this configuration to your framework's `rehypePlugins`. See [rehype and MDX](rehype.md) to set up a pipeline.
 
 ```javascript
 import rehypeComfit from "@comfit/rehype";
@@ -237,7 +237,7 @@ html = comfit.render_html(
 </CodeTab>
 <CodeTab label="rehype">
 
-Add this configuration to your framework's `rehypePlugins`. See [rehype and MDX](markdown.md) to set up a pipeline.
+Add this configuration to your framework's `rehypePlugins`. See [rehype and MDX](rehype.md) to set up a pipeline.
 
 ```javascript
 import rehypeComfit from "@comfit/rehype";
@@ -337,7 +337,7 @@ html = comfit.render_html(
 </CodeTab>
 <CodeTab label="rehype">
 
-Add this configuration to your framework's `rehypePlugins`. See [rehype and MDX](markdown.md) to set up a pipeline.
+Add this configuration to your framework's `rehypePlugins`. See [rehype and MDX](rehype.md) to set up a pipeline.
 
 ```javascript
 import rehypeComfit from "@comfit/rehype";
@@ -435,7 +435,7 @@ config = comfit.RenderHtmlConfig(pre_tag="div", line_tag="div")
 </CodeTab>
 <CodeTab label="rehype">
 
-Add this configuration to your framework's `rehypePlugins`. See [rehype and MDX](markdown.md) to set up a pipeline.
+Add this configuration to your framework's `rehypePlugins`. See [rehype and MDX](rehype.md) to set up a pipeline.
 
 ```javascript
 import rehypeComfit from "@comfit/rehype";

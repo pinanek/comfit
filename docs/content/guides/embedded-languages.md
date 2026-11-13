@@ -7,7 +7,7 @@ description: "Highlight embedded languages with Comfit, including source code in
 
 Comfit can highlight one language inside another, such as Rust inside a Markdown fence or JavaScript inside an HTML script block. These embedded regions are called injections. Tree-sitter injection queries identify each region and its language, then Comfit highlights it with a loaded grammar.
 
-This guide covers highlighting the source itself. To turn Markdown into a web page with highlighted code blocks, use [Markdown and MDX](markdown.md).
+This guide covers highlighting the source itself. To turn Markdown into a web page with highlighted code blocks, use [rehype and MDX](markdown.md) or [markdown-it](markdown-it.md).
 
 ## Load the inner language
 

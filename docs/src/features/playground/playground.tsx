@@ -25,7 +25,7 @@ export function Playground({ themes }: { themes: PlaygroundTheme[] }) {
   const [sources, setSources] = useState(() =>
     Object.fromEntries(languages.map(({ id, sample }) => [id, sample])) as Record<LanguageId, string>
   );
-  const [themeId, setThemeId] = useState("site");
+  const [themeId, setThemeId] = useState("catppuccin-mocha");
   const [rainbow, setRainbow] = useState(true);
   const [highlightedLines, setHighlightedLines] = useState<number[]>([]);
   const [view, setView] = useState("html");
@@ -80,10 +80,7 @@ export function Playground({ themes }: { themes: PlaygroundTheme[] }) {
             <SelectField
               compact
               label="Theme"
-              items={[
-                { value: "site", label: "Site theme" },
-                ...themes.map(({ id, theme }) => ({ value: id, label: theme.name ?? id })),
-              ]}
+              items={themes.map(({ id, theme }) => ({ value: id, label: theme.name ?? id }))}
               value={themeId}
               onValueChange={setThemeId}
             />

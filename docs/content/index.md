@@ -43,7 +43,7 @@ For individual snippets, use the one-shot highlighting or rendering functions. F
 
 ## Integrate Markdown and MDX
 
-Follow [Markdown and MDX](guides/markdown.md) to install the rehype plugin, connect it to your pipeline, and configure highlighted code blocks. Use this integration for code blocks in rendered pages, rather than for highlighting Markdown source itself.
+Use [rehype and MDX](guides/markdown.md) or [markdown-it](guides/markdown-it.md) to highlight fenced code blocks in your Markdown pipeline. These integrations highlight code blocks in rendered pages, rather than highlighting Markdown source itself.
 
 ## Look up an API
 

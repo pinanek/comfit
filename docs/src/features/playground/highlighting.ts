@@ -39,6 +39,11 @@ export function highlightingFromHtml(html: string, source: Text): Highlighting {
   // Reuse Comfit's CSS resolution, including capture inheritance and rainbow colors.
   const template = document.createElement("template");
   template.innerHTML = html;
+  // Use the editor's medium weight for normal theme text, retaining bold accents.
+  for (const element of template.content.querySelectorAll<HTMLElement>("[style]")) {
+    if (element.style.fontWeight === "normal") element.style.fontWeight = "500";
+  }
+
   const pre = template.content.querySelector("pre");
   const style = pre?.style;
   if (style?.color) {

@@ -33,7 +33,8 @@ export const sections: Group[] = [
   {
     label: "Integrations",
     items: [
-      { label: "Markdown and MDX", href: "/docs/guides/markdown" },
+      { label: "rehype and MDX", href: "/docs/guides/markdown" },
+      { label: "markdown-it", href: "/docs/guides/markdown-it" },
     ],
   },
   {

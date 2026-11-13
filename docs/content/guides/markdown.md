@@ -1,11 +1,11 @@
 ---
-title: "Markdown and MDX"
+title: "rehype and MDX"
 description: "Install and configure @comfit/rehype to highlight code blocks in Markdown and MDX sites."
 ---
 
-# Markdown and MDX
+# rehype and MDX
 
-Use `@comfit/rehype` to highlight code blocks when rendering Markdown or MDX. It runs on Node.js 22 or later and bundles languages and themes.
+Use `@comfit/rehype` to highlight code blocks when rendering Markdown or MDX. It runs on Node.js 22 or later and bundles languages and themes. For markdown-it pipelines, use [the markdown-it plugin](markdown-it.md) instead.
 
 This differs from [highlighting Markdown source](embedded-languages.md), which preserves headings, fence markers, and other Markdown syntax as source text.
 
@@ -63,28 +63,6 @@ console.log(String(file));
 Run `node render-markdown.mjs`. The result contains highlighted code blocks with inline colors.
 
 Place Comfit after `remark-rehype` and before `rehype-stringify`. For class-based output, use a [theme stylesheet](html.md#classes).
-
-## Use with markdown-it
-
-For a markdown-it pipeline, install `@comfit/markdown-it` and `markdown-it`:
-
-```sh
-npm install @comfit/markdown-it markdown-it
-```
-
-````javascript
-import markdownItComfit from "@comfit/markdown-it";
-import MarkdownIt from "markdown-it";
-
-const md = new MarkdownIt().use(markdownItComfit, {
-  theme: "catppuccin-mocha",
-});
-console.log(md.render("```rust\nfn main() {}\n```\n"));
-````
-
-This plugin highlights fenced code blocks, preserves token attributes and language classes, and uses the previous fence renderer for unknown languages. Inline and indented code are unchanged. Fence metadata after the language name is ignored; use `highlightedLines` to select lines.
-
-See the [markdown-it API reference](../api-references/javascript/markdown-it/index.md) for options.
 
 ## Use with MDX
 

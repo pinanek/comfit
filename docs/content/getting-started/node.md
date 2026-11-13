@@ -73,7 +73,7 @@ Language IDs and aliases are accepted, such as `rust` or `rs`. An unknown root l
 
 ## Choose another output
 
-`highlight(source, language)` returns [lines and tokens](../guides/tokens.md). `renderAnsi(source, language, theme)` returns styled terminal text. For class-based HTML, use `renderHtmlClasses` with a [CSS theme](../guides/html.md#classes). For Markdown or MDX code blocks, use [rehype](../guides/markdown.md).
+`highlight(source, language)` returns [lines and tokens](../guides/tokens.md). `renderAnsi(source, language, theme)` returns styled terminal text. For class-based HTML, use `renderHtmlClasses` with a [CSS theme](../guides/html.md#classes). For Markdown or MDX code blocks, use [rehype](../guides/markdown.md) or [markdown-it](../guides/markdown-it.md).
 
 Calls reuse a cached highlighter and block the calling JavaScript thread. Use a Node worker for large inputs. For repeated edits to one source, use a [document session](../guides/documents.md).
 

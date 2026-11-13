@@ -2,7 +2,7 @@
 
 # Interface: CreateDocumentOptions
 
-Defined in: [types.ts:151](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L151)
+Defined in: [types.ts:151](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L151)
 
 Initial source and a loaded language ID or alias.
 
@@ -12,7 +12,7 @@ Initial source and a loaded language ID or alias.
 
 > **language**: `string`
 
-Defined in: [types.ts:152](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L152)
+Defined in: [types.ts:152](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L152)
 
 ---
 
@@ -20,4 +20,4 @@ Defined in: [types.ts:152](https://github.com/pinanek/comfit/blob/cce2d25a263a45
 
 > **source**: `string`
 
-Defined in: [types.ts:153](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L153)
+Defined in: [types.ts:153](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L153)

@@ -2,7 +2,7 @@
 
 # Interface: HtmlOptions
 
-Defined in: [types.ts:81](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L81)
+Defined in: [types.ts:81](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L81)
 
 Element classes and rainbow wrapping shared by all HTML style modes.
 
@@ -16,7 +16,7 @@ Element classes and rainbow wrapping shared by all HTML style modes.
 
 > `optional` **classPrefix?**: `string`
 
-Defined in: [types.ts:89](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L89)
+Defined in: [types.ts:89](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L89)
 
 Prefix for token, rainbow, and line classes. Defaults to an empty string.
 
@@ -26,7 +26,7 @@ Prefix for token, rainbow, and line classes. Defaults to an empty string.
 
 > `optional` **highlightedLines?**: readonly `number`[]
 
-Defined in: [types.ts:30](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L30)
+Defined in: [types.ts:30](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L30)
 
 One-based source lines to emphasize. Defaults to an empty list.
 
@@ -40,7 +40,7 @@ One-based source lines to emphasize. Defaults to an empty list.
 
 > `optional` **lineTag?**: `string`
 
-Defined in: [types.ts:85](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L85)
+Defined in: [types.ts:85](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L85)
 
 Line tag name. Defaults to "span".
 
@@ -50,7 +50,7 @@ Line tag name. Defaults to "span".
 
 > `optional` **preClass?**: `string`
 
-Defined in: [types.ts:87](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L87)
+Defined in: [types.ts:87](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L87)
 
 Optional class on the outer element, escaped as attribute text.
 
@@ -60,7 +60,7 @@ Optional class on the outer element, escaped as attribute text.
 
 > `optional` **preTag?**: `string`
 
-Defined in: [types.ts:83](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L83)
+Defined in: [types.ts:83](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L83)
 
 Outer tag name. Defaults to "pre".
 
@@ -70,7 +70,7 @@ Outer tag name. Defaults to "pre".
 
 > `optional` **rainbow?**: `boolean`
 
-Defined in: [types.ts:32](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L32)
+Defined in: [types.ts:32](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L32)
 
 Collect bracket depths. Defaults to true.
 
@@ -84,6 +84,6 @@ Collect bracket depths. Defaults to true.
 
 > `optional` **rainbowColors?**: `number`
 
-Defined in: [types.ts:91](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L91)
+Defined in: [types.ts:91](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L91)
 
 Wrap class/variable depths at this count. Zero preserves depth. Inline themes use their palettes.

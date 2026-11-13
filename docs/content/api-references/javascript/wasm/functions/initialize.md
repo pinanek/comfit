@@ -4,7 +4,7 @@
 
 > **initialize**(`options`): `Promise`\<`void`\>
 
-Defined in: [index.ts:68](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/index.ts#L68)
+Defined in: [index.ts:68](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/index.ts#L68)
 
 Initialize Comfit and web-tree-sitter from WASM URLs or bytes.
 

@@ -161,7 +161,7 @@ For a page without a bundler, use a `link` element.
 ```html
 <link
   rel="stylesheet"
-  href="https://esm.sh/@comfit/css@0.1.0/dist/catppuccin-mocha.css"
+  href="https://esm.sh/@comfit/css@0.1.2/dist/catppuccin-mocha.css"
 >
 ```
 

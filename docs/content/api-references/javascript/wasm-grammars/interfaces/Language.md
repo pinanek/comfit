@@ -2,7 +2,7 @@
 
 # Interface: Language
 
-Defined in: [types.ts:10](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm-grammars/src/types.ts#L10)
+Defined in: [types.ts:10](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm-grammars/src/types.ts#L10)
 
 A language's parser asset, ID, aliases, and Tree-sitter queries.
 
@@ -12,7 +12,7 @@ A language's parser asset, ID, aliases, and Tree-sitter queries.
 
 > `readonly` `optional` **aliases?**: readonly `string`[]
 
-Defined in: [types.ts:14](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm-grammars/src/types.ts#L14)
+Defined in: [types.ts:14](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm-grammars/src/types.ts#L14)
 
 Additional names accepted by the highlighter. Aliases and IDs share one namespace.
 
@@ -22,7 +22,7 @@ Additional names accepted by the highlighter. Aliases and IDs share one namespac
 
 > `readonly` **highlights**: `string`
 
-Defined in: [types.ts:18](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm-grammars/src/types.ts#L18)
+Defined in: [types.ts:18](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm-grammars/src/types.ts#L18)
 
 Token capture query. An empty string disables this pass.
 
@@ -32,7 +32,7 @@ Token capture query. An empty string disables this pass.
 
 > `readonly` **id**: `string`
 
-Defined in: [types.ts:12](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm-grammars/src/types.ts#L12)
+Defined in: [types.ts:12](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm-grammars/src/types.ts#L12)
 
 Canonical language ID, unique within one highlighter.
 
@@ -42,7 +42,7 @@ Canonical language ID, unique within one highlighter.
 
 > `readonly` `optional` **injections?**: `string`
 
-Defined in: [types.ts:20](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm-grammars/src/types.ts#L20)
+Defined in: [types.ts:20](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm-grammars/src/types.ts#L20)
 
 Embedded-language query. Omitted or empty queries disable this pass.
 
@@ -52,7 +52,7 @@ Embedded-language query. Omitted or empty queries disable this pass.
 
 > `readonly` `optional` **locals?**: `string`
 
-Defined in: [types.ts:22](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm-grammars/src/types.ts#L22)
+Defined in: [types.ts:22](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm-grammars/src/types.ts#L22)
 
 Lexical scope, definition, and reference query.
 
@@ -62,7 +62,7 @@ Lexical scope, definition, and reference query.
 
 > `readonly` `optional` **rainbows?**: `string`
 
-Defined in: [types.ts:24](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm-grammars/src/types.ts#L24)
+Defined in: [types.ts:24](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm-grammars/src/types.ts#L24)
 
 Query for brackets and nesting scopes, used to calculate bracket depths.
 
@@ -72,6 +72,6 @@ Query for brackets and nesting scopes, used to calculate bracket depths.
 
 > `readonly` **wasm**: [`WasmSource`](../type-aliases/WasmSource.md)
 
-Defined in: [types.ts:16](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm-grammars/src/types.ts#L16)
+Defined in: [types.ts:16](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm-grammars/src/types.ts#L16)
 
 Parser WASM URL or bytes. Languages can share the same parser asset.

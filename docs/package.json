@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "predev": "cargo notices build docs && pnpm --dir .. --filter @comfit/node --filter @comfit/rehype --filter @comfit/wasm --filter @comfit/wasm-grammars -r build",
+    "predev": "cargo notices build docs",
     "dev": "waku dev",
-    "prebuild": "cargo notices build docs && pnpm --dir .. --filter @comfit/node --filter @comfit/rehype --filter @comfit/wasm --filter @comfit/wasm-grammars -r build",
+    "prebuild": "cargo notices build docs",
     "build": "waku build && pagefind --site dist/public --glob '{docs,api-references}/**/*.html'",
     "start": "waku start",
     "typegen": "waku router typegen"
@@ -15,8 +15,8 @@
     "@base-ui/react": "catalog:",
     "@codemirror/state": "catalog:",
     "@codemirror/view": "catalog:",
-    "@comfit/wasm": "workspace:^",
-    "@comfit/wasm-grammars": "workspace:^",
+    "@comfit/wasm": "^0.1.2",
+    "@comfit/wasm-grammars": "^0.1.2",
     "@mdx-js/rollup": "catalog:",
     "@react-spring/web": "catalog:",
     "codemirror": "catalog:",
@@ -34,7 +34,7 @@
     "waku": "catalog:"
   },
   "devDependencies": {
-    "@comfit/rehype": "workspace:^",
+    "@comfit/rehype": "^0.1.2",
     "@rolldown/plugin-babel": "catalog:",
     "@types/hast": "catalog:",
     "@types/mdx": "catalog:",

@@ -4,7 +4,7 @@
 
 > **default**(`options?`): `Transformer`\<`Root`\>
 
-Defined in: [index.ts:67](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/rehype/src/index.ts#L67)
+Defined in: [index.ts:67](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/rehype/src/index.ts#L67)
 
 Highlight text-only pre/code blocks, preserving their attributes and source text.
 

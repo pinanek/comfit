@@ -106,6 +106,7 @@ Before publishing, confirm ownership of the Rust crate names, the `@comfit` npm 
 | `publish-cli.yml`    | `github-release` | Eight CLI archives and a `SHA256SUMS` file attached to the CLI release         |
 | `publish-npm.yml`    | `npm`            | The matching npm package; Node releases include eight native platform packages |
 | `publish-python.yml` | `pypi`           | One `comfit-hl` sdist and seven ABI3 wheels                                    |
+| `deploy-pages.yml`   | `pages`          | Documentation site deployed to Cloudflare Pages project `comfit`               |
 
 Configure trusted publishers with this repository, the exact workflow filename, and its environment:
 
@@ -124,6 +125,14 @@ Merging the release PR triggers publishing automatically. Each workflow validate
 To retry, open the matching workflow in GitHub Actions, choose **Run workflow**, and enter the component `tag`, such as `node-v0.1.0`. Fix failed dependencies first. Rust waits up to 20 minutes for them to appear in the registry; npm waits until they appear or the publishing job times out.
 
 Publishers skip existing versions or files. npm and Python skip builds only when the entire release is already published, so partial uploads remain retryable.
+
+### Documentation deployment
+
+Create the Cloudflare Pages project `comfit` and add `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` as secrets in the GitHub `pages` environment. The API token needs permission to deploy to that Pages project. Allow component release tags and `main` in the environment's deployment rules.
+
+`deploy-pages.yml` runs when a GitHub release is published, checking out its tag. To deploy `main` manually, open **Actions → Deploy Pages → Run workflow**.
+
+The workflow builds the site using published npm packages and deploys `docs/dist/public` to the project's `main` branch. It uses the committed API references without regenerating them. Run `just docs-api` and include any generated changes before releasing when the API changes.
 
 ## Git hooks
 

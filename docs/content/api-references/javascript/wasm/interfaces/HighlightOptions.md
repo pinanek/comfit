@@ -2,7 +2,7 @@
 
 # Interface: HighlightOptions
 
-Defined in: [types.ts:28](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L28)
+Defined in: [types.ts:28](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L28)
 
 Options for line emphasis and bracket-depth collection.
 
@@ -16,7 +16,7 @@ Options for line emphasis and bracket-depth collection.
 
 > `optional` **highlightedLines?**: readonly `number`[]
 
-Defined in: [types.ts:30](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L30)
+Defined in: [types.ts:30](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L30)
 
 One-based source lines to emphasize. Defaults to an empty list.
 
@@ -26,6 +26,6 @@ One-based source lines to emphasize. Defaults to an empty list.
 
 > `optional` **rainbow?**: `boolean`
 
-Defined in: [types.ts:32](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L32)
+Defined in: [types.ts:32](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L32)
 
 Collect bracket depths. Defaults to true.

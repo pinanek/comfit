@@ -2,7 +2,7 @@
 
 # Interface: ThemeStyle
 
-Defined in: [types.ts:50](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L50)
+Defined in: [types.ts:50](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L50)
 
 Optional colors, font modifiers, and underline settings for one capture.
 
@@ -12,7 +12,7 @@ Optional colors, font modifiers, and underline settings for one capture.
 
 > `readonly` `optional` **bg?**: [`ThemeColor`](../type-aliases/ThemeColor.md)
 
-Defined in: [types.ts:54](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L54)
+Defined in: [types.ts:54](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L54)
 
 Background color. Inherits the parent value if omitted.
 
@@ -22,7 +22,7 @@ Background color. Inherits the parent value if omitted.
 
 > `readonly` `optional` **fg?**: [`ThemeColor`](../type-aliases/ThemeColor.md)
 
-Defined in: [types.ts:52](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L52)
+Defined in: [types.ts:52](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L52)
 
 Foreground color. Inherits the parent value if omitted.
 
@@ -32,7 +32,7 @@ Foreground color. Inherits the parent value if omitted.
 
 > `readonly` `optional` **modifiers?**: readonly [`ThemeModifier`](../type-aliases/ThemeModifier.md)[]
 
-Defined in: [types.ts:56](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L56)
+Defined in: [types.ts:56](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L56)
 
 An omitted or empty list clears inherited modifiers on matching captures.
 
@@ -42,7 +42,7 @@ An omitted or empty list clears inherited modifiers on matching captures.
 
 > `readonly` `optional` **underline?**: `object`
 
-Defined in: [types.ts:58](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L58)
+Defined in: [types.ts:58](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L58)
 
 Underline settings. Inherits the parent settings if omitted.
 

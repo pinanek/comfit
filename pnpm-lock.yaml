@@ -367,11 +367,11 @@ importers:
         specifier: 'catalog:'
         version: 6.43.15
       '@comfit/wasm':
-        specifier: workspace:^
-        version: link:../npm/wasm
+        specifier: ^0.1.2
+        version: 0.1.2
       '@comfit/wasm-grammars':
-        specifier: workspace:^
-        version: link:../npm/wasm-grammars
+        specifier: ^0.1.2
+        version: 0.1.2
       '@mdx-js/rollup':
         specifier: 'catalog:'
         version: 3.1.1(rollup@4.68.2)(supports-color@8.1.1)
@@ -419,8 +419,8 @@ importers:
         version: 1.0.0-rc.5(@rolldown/plugin-babel@0.3.1(@babel/core@8.1.0)(@babel/runtime@8.1.0)(rolldown@1.3.2)(vite@8.3.8(@types/node@26.6.6)(terser@5.51.2)(yaml@2.9.1)))(@types/node@26.6.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react-server-dom-webpack@19.3.1(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(webpack@5.112.2(lightningcss@1.33.0)(postcss@8.5.32)(uglify-js@3.19.3)))(react@19.3.1)(terser@5.51.2)(yaml@2.9.1)
     devDependencies:
       '@comfit/rehype':
-        specifier: workspace:^
-        version: link:../npm/rehype
+        specifier: ^0.1.2
+        version: 0.1.2
       '@rolldown/plugin-babel':
         specifier: 'catalog:'
         version: 0.3.1(@babel/core@8.1.0)(@babel/runtime@8.1.0)(rolldown@1.3.2)(vite@8.3.8(@types/node@26.6.6)(terser@5.51.2)(yaml@2.9.1))
@@ -709,6 +709,72 @@ packages:
 
   '@codemirror/view@6.43.15':
     resolution: {integrity: sha512-HHsfpqFeHyXLs983pSRe38Xajs0vFWZQ2BuX0m7Ki8w3jZ5iD8cuR3lBz2/5/X53Dhf32SBHKh6rtSTB6tKeGw==}
+
+  '@comfit/node-darwin-arm64@0.1.2':
+    resolution: {integrity: sha512-7/Yas2OM3EdxIUGX3OjE1H8av3/7m7+PJP3iVduDVARq2WrnZ+mU5we7CV/rWX1ry0fcN3U0A6jBIJL3y62ENQ==}
+    engines: {node: '>=22'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@comfit/node-darwin-x64@0.1.2':
+    resolution: {integrity: sha512-1tnta+FoYTq0tfFxfOcUeFWF8JtjvY/ZGsfjxjbunsaGwvuKxr2/3gFvJ6yZYX0iUCtpbpFdw+zx+1nl/kh4cQ==}
+    engines: {node: '>=22'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@comfit/node-linux-arm64-gnu@0.1.2':
+    resolution: {integrity: sha512-bpwrm0FS6B3YgDzFVUwSnVj7rA50qToW4yRn83+7K6TAezovVdh5KdviPdSz4onf0x9HneyFMUOtX6nT0IyIbA==}
+    engines: {node: '>=22'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@comfit/node-linux-arm64-musl@0.1.2':
+    resolution: {integrity: sha512-S5Z/guLslsPK8DjDMn+5K9n75xNhJ1SZYQrvFwPutZBE9xYkJVd9kiO6LNJh3QeJHlzAkb4kOWiY57+zlF9BAQ==}
+    engines: {node: '>=22'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@comfit/node-linux-x64-gnu@0.1.2':
+    resolution: {integrity: sha512-Mrwq8rtWPHCcOduKh/z1FvAJvftzjjMnwb56FykyTgaIIJmMduYGDhxMXaOS6sWs/4oyzy2nmdpQdIPcRDX0jQ==}
+    engines: {node: '>=22'}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@comfit/node-linux-x64-musl@0.1.2':
+    resolution: {integrity: sha512-Th4Epdwp/AUMPtvT4q4H4d648CVFAorShk7qNgV6ZC8dW+pGYs9ijVPualXdz1jrQWl3o9W/FgUF5A3yygvPvQ==}
+    engines: {node: '>=22'}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@comfit/node-win32-arm64-msvc@0.1.2':
+    resolution: {integrity: sha512-ZVmwiqObn7CfGkrgfohpZdn4N/Ju0r5XMFvTpHrEq7VkzRp4EP/iiJTPKfyeJ0vMNgSoH1zGBEeH3CVVeNJuOg==}
+    engines: {node: '>=22'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@comfit/node-win32-x64-msvc@0.1.2':
+    resolution: {integrity: sha512-6tx689qm1DlLT5HUIgyQyP97qQo/gmElBj6I79Qyfj+pSPqWEAbLalNsbFAfhA/96ZSXFtxtrnzPhnhC6HghTA==}
+    engines: {node: '>=22'}
+    cpu: [x64]
+    os: [win32]
+
+  '@comfit/node@0.1.2':
+    resolution: {integrity: sha512-vEtKg8kTHpUIe2NjxQgnka5hu7tGvqVbpcLOYyXGczfGqrQwStVM2VZkNLDd7/pLeEJp3dHQ5lrY7dn15S6WjQ==}
+    engines: {node: '>=22'}
+
+  '@comfit/rehype@0.1.2':
+    resolution: {integrity: sha512-ooXaGmKetgEGOgxqCbAAENS5SscUc3dnmMZc4s9h5ah4L+lFzwUKSZATEnKxuKKhGh8ICeqvYn0JqD31/zKUpA==}
+    engines: {node: '>=22'}
+
+  '@comfit/wasm-grammars@0.1.2':
+    resolution: {integrity: sha512-BeV7pA48dhZi2M/PpslMPJWSRc12vod/tNRtnBOS9+8mndTrFWOH+O5mSPUMxr5YtBCPnFRukONklcKiXwrTNA==}
+
+  '@comfit/wasm@0.1.2':
+    resolution: {integrity: sha512-H+LNX7vginHVS7TrSrwKmksw6KXJLmDDPtY0+0smb4hBZzRdIK2JNHHB5Mq+Fnkp/r5x2KneZdU0K2ylohBItw==}
 
   '@conventional-commits/parser@0.4.1':
     resolution: {integrity: sha512-H2ZmUVt6q+KBccXfMBhbBF14NlANeqHTXL4qCL6QGbMzrc4HDXyzWuxPxPNbz71f/5UkR5DrycP5VO9u7crahg==}
@@ -4644,6 +4710,55 @@ snapshots:
       crelt: 1.0.7
       style-mod: 4.1.4
       w3c-keyname: 2.2.8
+
+  '@comfit/node-darwin-arm64@0.1.2':
+    optional: true
+
+  '@comfit/node-darwin-x64@0.1.2':
+    optional: true
+
+  '@comfit/node-linux-arm64-gnu@0.1.2':
+    optional: true
+
+  '@comfit/node-linux-arm64-musl@0.1.2':
+    optional: true
+
+  '@comfit/node-linux-x64-gnu@0.1.2':
+    optional: true
+
+  '@comfit/node-linux-x64-musl@0.1.2':
+    optional: true
+
+  '@comfit/node-win32-arm64-msvc@0.1.2':
+    optional: true
+
+  '@comfit/node-win32-x64-msvc@0.1.2':
+    optional: true
+
+  '@comfit/node@0.1.2':
+    optionalDependencies:
+      '@comfit/node-darwin-arm64': 0.1.2
+      '@comfit/node-darwin-x64': 0.1.2
+      '@comfit/node-linux-arm64-gnu': 0.1.2
+      '@comfit/node-linux-arm64-musl': 0.1.2
+      '@comfit/node-linux-x64-gnu': 0.1.2
+      '@comfit/node-linux-x64-musl': 0.1.2
+      '@comfit/node-win32-arm64-msvc': 0.1.2
+      '@comfit/node-win32-x64-msvc': 0.1.2
+
+  '@comfit/rehype@0.1.2':
+    dependencies:
+      '@comfit/node': 0.1.2
+      '@types/hast': 3.0.5
+      hast-util-from-html: 2.1.0
+      unified: 11.0.5
+      unist-util-visit: 5.2.0
+
+  '@comfit/wasm-grammars@0.1.2': {}
+
+  '@comfit/wasm@0.1.2':
+    dependencies:
+      web-tree-sitter: 0.27.2
 
   '@conventional-commits/parser@0.4.1':
     dependencies:

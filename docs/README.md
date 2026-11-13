@@ -40,7 +40,7 @@ pnpm exec oxlint -c docs/oxlint.config.ts docs
 pnpm --dir docs build
 ```
 
-The `dev` and `build` scripts build the local Node, rehype, WASM, and grammar packages first. The production build also generates the Pagefind search index. Search requires that generated index.
+The site uses published Comfit packages from the npm registry, not local workspace packages. The `dev` and `build` scripts refresh third-party notices first. The production build also generates the Pagefind search index. Search requires that generated index.
 
 Use `just fmt` and `just lint` for workspace formatting and Rust/package checks.
 

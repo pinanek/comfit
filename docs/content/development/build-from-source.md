@@ -80,7 +80,7 @@ Install the WebAssembly target and pinned build tools:
 
 ```sh
 rustup target add wasm32-unknown-unknown
-cargo install wasm-bindgen-cli --version 0.2.129 --locked
+cargo install wasm-bindgen-cli --version 0.2.130 --locked
 cargo install wasm-opt --version 0.116.1
 ```
 

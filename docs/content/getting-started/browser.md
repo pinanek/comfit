@@ -105,29 +105,29 @@ Save this as `index.html`:
     <title>Comfit CDN example</title>
     <link
       rel="stylesheet"
-      href="https://esm.sh/@comfit/css@0.1.0/dist/catppuccin-mocha.css"
+      href="https://esm.sh/@comfit/css@0.1.2/dist/catppuccin-mocha.css"
     >
   </head>
   <body>
     <div id="code"></div>
 
     <script type="module">
-    import rust from "https://esm.sh/@comfit/wasm-grammars@0.1.0/rust";
+    import rust from "https://esm.sh/@comfit/wasm-grammars@0.1.2/rust";
     import {
       createHighlighter,
       initialize,
-    } from "https://esm.sh/@comfit/wasm@0.1.0";
+    } from "https://esm.sh/@comfit/wasm@0.1.2";
 
     await initialize({
-      engine: "https://esm.sh/@comfit/wasm@0.1.0/dist/comfit_bg.wasm",
-      treeSitter: "https://esm.sh/@comfit/wasm@0.1.0/dist/web-tree-sitter.wasm",
+      engine: "https://esm.sh/@comfit/wasm@0.1.2/dist/comfit_bg.wasm",
+      treeSitter: "https://esm.sh/@comfit/wasm@0.1.2/dist/web-tree-sitter.wasm",
     });
 
     const highlighter = await createHighlighter({
       languages: [{
         ...rust,
         wasm:
-          "https://esm.sh/@comfit/wasm-grammars@0.1.0/dist/tree-sitter-rust.wasm",
+          "https://esm.sh/@comfit/wasm-grammars@0.1.2/dist/tree-sitter-rust.wasm",
       }],
     });
 

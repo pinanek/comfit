@@ -58,6 +58,20 @@ catalog:
   waku: 1.0.0-rc.5
   web-tree-sitter: 0.27.2
 
+minimumReleaseAgeExclude:
+  - "@comfit/node-darwin-arm64@0.1.2"
+  - "@comfit/node-darwin-x64@0.1.2"
+  - "@comfit/node-linux-arm64-gnu@0.1.2"
+  - "@comfit/node-linux-arm64-musl@0.1.2"
+  - "@comfit/node-linux-x64-gnu@0.1.2"
+  - "@comfit/node-linux-x64-musl@0.1.2"
+  - "@comfit/node-win32-arm64-msvc@0.1.2"
+  - "@comfit/node-win32-x64-msvc@0.1.2"
+  - "@comfit/node@0.1.2"
+  - "@comfit/rehype@0.1.2"
+  - "@comfit/wasm-grammars@0.1.2"
+  - "@comfit/wasm@0.1.2"
+
 overrides:
   "@google-automations/git-file-utils>minimatch": ^11.0.1
   typedoc>minimatch: ^11.0.1

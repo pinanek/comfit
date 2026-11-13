@@ -2,7 +2,7 @@
 
 # Interface: Highlighter
 
-Defined in: [types.ts:180](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L180)
+Defined in: [types.ts:180](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L180)
 
 A parser and language registry. Call dispose() when no longer needed.
 
@@ -12,7 +12,7 @@ A parser and language registry. Call dispose() when no longer needed.
 
 > **createDocument**(`options`): [`Document`](Document.md)
 
-Defined in: [types.ts:182](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L182)
+Defined in: [types.ts:182](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L182)
 
 Create an independent document sharing the currently loaded language queries.
 
@@ -32,7 +32,7 @@ Create an independent document sharing the currently loaded language queries.
 
 > **dispose**(): `void`
 
-Defined in: [types.ts:195](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L195)
+Defined in: [types.ts:195](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L195)
 
 Release runtime resources. Repeated calls are harmless. Later rendering calls throw.
 
@@ -46,7 +46,7 @@ Release runtime resources. Repeated calls are harmless. Later rendering calls th
 
 > **highlight**(`source`, `language`, `options?`): readonly [`Line`](Line.md)[]
 
-Defined in: [types.ts:188](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L188)
+Defined in: [types.ts:188](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L188)
 
 Highlight source into owned lines and tokens using a registered ID or alias.
 Empty sources produce one line. A trailing newline produces a final empty line.
@@ -79,7 +79,7 @@ If the registry is disposed, options are invalid, or highlighting fails.
 
 > **renderHtml**(`source`, `language`, `options?`): `string`
 
-Defined in: [types.ts:193](https://github.com/pinanek/comfit/blob/cce2d25a263a457dfebafc1502356a1de9f3952f/npm/wasm/js/types.ts#L193)
+Defined in: [types.ts:193](https://github.com/pinanek/comfit/blob/9b5f953f31c4b250bc9e9a1adca09a2f1304f4bd/npm/wasm/js/types.ts#L193)
 
 Render an escaped HTML fragment with capture classes, inline themes, or CSS variables.
 

@@ -26,7 +26,7 @@ catalog:
   hast-util-to-string: ^3.0.1
   katex: ^0.19.1
   lightningcss: ^1.33.0
-  lucide-react: ^1.72.0
+  lucide-react: ^1.73.0
   markdown-it: ^15.0.3
   mdast-util-mdx-jsx: ^3.2.1
   mdast-util-mdxjs-esm: ^2.0.1

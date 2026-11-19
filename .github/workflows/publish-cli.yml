@@ -55,7 +55,7 @@ jobs:
         id: commit
         run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-      - uses: taiki-e/install-action@v2.90.3
+      - uses: taiki-e/install-action@v2.90.5
         with:
           tool: tree-sitter-cli@0.27.2
 
@@ -125,7 +125,7 @@ jobs:
       - uses: mlugg/setup-zig@v2
         if: runner.os == 'Linux'
 
-      - uses: taiki-e/install-action@v2.90.3
+      - uses: taiki-e/install-action@v2.90.5
         if: runner.os == 'Linux'
         with:
           tool: cargo-zigbuild@0.24.1

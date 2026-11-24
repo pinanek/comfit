@@ -9,7 +9,7 @@ repository = "https://github.com/pinanek/comfit"
 edition = "2024"
 
 [workspace.dependencies]
-anyhow = "1.0.104"
+anyhow = "1.0.105"
 cc = "1.11"
 clap = { version = "4.6", features = ["derive"] }
 streaming-iterator = "0.1.9"
@@ -34,7 +34,7 @@ rayon = "1.12"
 prettyplease = "0.3"
 quote = "1"
 syn = { version = "3", features = ["full"] }
-toml = "1.2.1"
+toml = "1.2.2"
 toml_edit = "0.25"
 
 terminal_size = "0.4"

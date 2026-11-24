@@ -366,6 +366,17 @@
   (shebang_directive)
 ] @keyword.directive
 
+(ignored_directive
+  "#:" @keyword.directive)
+
+(directive_kind) @keyword.directive
+
+(directive_name) @variable
+
+(directive_separator) @punctuation.delimiter
+
+(directive_value) @string
+
 [
   (preproc_line)
   (preproc_pragma)

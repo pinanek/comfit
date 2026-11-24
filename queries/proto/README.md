@@ -7,4 +7,4 @@ dots use `[\\s\\S]` to preserve Lua matching behavior.
 
 ## Rainbow brackets
 
-`rainbows.scm` follows [Helix’s rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/coder3101/tree-sitter-proto/tree/18366491f37d43d6d5d02cbb1e79b650b5728145/.).
+`rainbows.scm` follows [Helix’s rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/coder3101/tree-sitter-proto/tree/68a898a1715f1b0fce0d21ae6d1f4e24c60fcb2c/.).

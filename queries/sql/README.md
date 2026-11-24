@@ -4,4 +4,4 @@ Adapted from [Neovim (nvim-treesitter)](https://github.com/nvim-treesitter/nvim-
 
 ## Rainbow brackets
 
-`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/derekstride/tree-sitter-sql/tree/49a4357df5e89832c2d2808074e6c22a1ad7d857/.).
+`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/derekstride/tree-sitter-sql/tree/4cd7224bfcf1fee23227c4d626760341c9b26772/.).

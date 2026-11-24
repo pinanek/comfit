@@ -8,4 +8,4 @@ Generic function captures precede call and builtin captures so they do not overr
 
 ## Rainbow brackets
 
-`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/tree-sitter-perl/tree-sitter-perl/tree/80781e3dd98108199a3a1b5860f00fac22088b79/.).
+`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/tree-sitter-perl/tree-sitter-perl/tree/b5093852a9403eefd1ff87ea932bae141737d57c/.).

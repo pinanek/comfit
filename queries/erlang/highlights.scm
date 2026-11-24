@@ -54,6 +54,7 @@
   "=>"
   "|"
   "?="
+  (dyn_pattern_marker)
 ] @operator
 
 [

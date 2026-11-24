@@ -78,10 +78,6 @@
   "(" @rainbow.bracket
   ")" @rainbow.bracket) @rainbow.scope
 
-(entry_statement
-  "(" @rainbow.bracket
-  ")" @rainbow.bracket) @rainbow.scope
-
 (equivalence_set
   "(" @rainbow.bracket
   ")" @rainbow.bracket) @rainbow.scope
@@ -99,10 +95,6 @@
   ")" @rainbow.bracket) @rainbow.scope
 
 (function_result
-  "(" @rainbow.bracket
-  ")" @rainbow.bracket) @rainbow.scope
-
-(function_statement
   "(" @rainbow.bracket
   ")" @rainbow.bracket) @rainbow.scope
 
@@ -199,10 +191,6 @@
   ")" @rainbow.bracket) @rainbow.scope
 
 (submodule_statement
-  "(" @rainbow.bracket
-  ")" @rainbow.bracket) @rainbow.scope
-
-(subroutine_statement
   "(" @rainbow.bracket
   ")" @rainbow.bracket) @rainbow.scope
 

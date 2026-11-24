@@ -44,7 +44,7 @@ symbol = "tree_sitter_c3"
 repository = "https://github.com/tree-sitter/tree-sitter-c-sharp"
 path = "."
 symbol = "tree_sitter_c_sharp"
-revision = "8c0abe0b84a3681d3e6852ce2e2a1eecb4f731c5"
+revision = "e3971fcb53bf5573a7e0d4ff6db46d2a77a4bf71"
 prebuilt = true
 
 [grammars.cmake]
@@ -131,7 +131,7 @@ revision = "cb32ccbe17c67037b09e31bf9beb22cdae6ed8e9"
 repository = "https://github.com/WhatsApp/tree-sitter-erlang"
 path = "."
 symbol = "tree_sitter_erlang"
-revision = "62c82e67b73e13f3ef06e4c8c07ff035a8235d30"
+revision = "d40106aa0d6077beea08c5e14b901d98ab79d224"
 
 [grammars.fish]
 repository = "https://github.com/ram02z/tree-sitter-fish"
@@ -143,14 +143,14 @@ revision = "b7f1d682941e0c62dfcd6bf9ef481638351bab16"
 repository = "https://github.com/stadelmanma/tree-sitter-fortran"
 path = "."
 symbol = "tree_sitter_fortran"
-revision = "72f8759dea28ff6671e0868a9ed5ad4a18413917"
+revision = "d05165a6f0bd044ba1f89865927a752dd5168e66"
 prebuilt = true
 
 [grammars.fsharp]
 repository = "https://github.com/ionide/tree-sitter-fsharp"
 path = "fsharp"
 symbol = "tree_sitter_fsharp"
-revision = "aefd0c8741bdf3aeb827a228aa4a996a6536697e"
+revision = "a19412828aec9150b8696cb6597396092b36336e"
 
 [grammars.gdscript]
 repository = "https://github.com/PrestonKnopp/tree-sitter-gdscript"
@@ -368,11 +368,11 @@ symbol = "tree_sitter_nasm"
 repository = "https://github.com/nix-community/tree-sitter-nix"
 path = "."
 symbol = "tree_sitter_nix"
-revision = "21daff7ec37b01539eddd1e0ac468d2070c2ed5c"
+revision = "0645c95c47b272f23d15c1e83446973401bd1a53"
 
 [grammars.nu]
 repository = "https://github.com/nushell/tree-sitter-nu"
-revision = "4f577aaa735154f934594b598a69ed7b1b707cf6"
+revision = "0c3f6dfbc30d7713dcbb15b10954f2dee86ef63c"
 prebuilt = true
 path = "."
 symbol = "tree_sitter_nu"
@@ -408,14 +408,14 @@ symbol = "tree_sitter_passwd"
 repository = "https://github.com/tree-sitter-perl/tree-sitter-perl"
 path = "."
 symbol = "tree_sitter_perl"
-revision = "80781e3dd98108199a3a1b5860f00fac22088b79"
+revision = "b5093852a9403eefd1ff87ea932bae141737d57c"
 prebuilt = true
 
 [grammars.php]
 repository = "https://github.com/tree-sitter/tree-sitter-php"
 path = "php"
 symbol = "tree_sitter_php"
-revision = "58d5643086ae60e93a3746cca648363ee97c8761"
+revision = "c1e13490bd656b8869cd47e6f74997ed46750a08"
 
 [grammars.phpdoc]
 repository = "https://github.com/claytonrcarter/tree-sitter-phpdoc"
@@ -455,7 +455,7 @@ symbol = "tree_sitter_promql"
 
 [grammars.proto]
 repository = "https://github.com/coder3101/tree-sitter-proto"
-revision = "18366491f37d43d6d5d02cbb1e79b650b5728145"
+revision = "68a898a1715f1b0fce0d21ae6d1f4e24c60fcb2c"
 path = "."
 symbol = "tree_sitter_proto"
 
@@ -524,7 +524,7 @@ revision = "77a3747266f4d621d0757825e6b11edcbf991ca5"
 repository = "https://github.com/tree-sitter/tree-sitter-scala"
 path = "."
 symbol = "tree_sitter_scala"
-revision = "ce959c63a66bf10c82eebf1c42d755ea11950c09"
+revision = "c73ee9d3c89f5c93e407eef3e11ee610be2ec831"
 prebuilt = true
 
 [grammars.scss]
@@ -535,13 +535,13 @@ symbol = "tree_sitter_scss"
 
 [grammars.slint]
 repository = "https://github.com/slint-ui/tree-sitter-slint"
-revision = "b494447aeb10e540b9f0fbde08748c052859e42d"
+revision = "b22bb31bd1cf1dfc47e7432197a9474b62d05b14"
 path = "."
 symbol = "tree_sitter_slint"
 
 [grammars.sql]
 repository = "https://github.com/derekstride/tree-sitter-sql"
-revision = "49a4357df5e89832c2d2808074e6c22a1ad7d857"
+revision = "4cd7224bfcf1fee23227c4d626760341c9b26772"
 path = "."
 symbol = "tree_sitter_sql"
 prebuilt = true
@@ -568,7 +568,7 @@ revision = "ae5199db47757f785e43a14b332118a5474de1a2"
 repository = "https://github.com/alex-pinkus/tree-sitter-swift"
 path = "."
 symbol = "tree_sitter_swift"
-revision = "9e3b87f66f1fd2f3b931376fd3723ab788e337c3"
+revision = "91a4e36948b46231caf264b4ece62d8d66622a43"
 prebuilt = true
 
 [grammars.terraform]

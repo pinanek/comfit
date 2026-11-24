@@ -698,7 +698,7 @@ SOFTWARE.
 
 Component: tree-sitter-c-sharp
 Source: https://github.com/tree-sitter/tree-sitter-c-sharp
-Revision: 8c0abe0b84a3681d3e6852ce2e2a1eecb4f731c5
+Revision: e3971fcb53bf5573a7e0d4ff6db46d2a77a4bf71
 License: MIT
 Included material: Tree-sitter parsers for grammars: c_sharp
 
@@ -1348,7 +1348,7 @@ limitations under the License.
 
 Component: tree-sitter-erlang
 Source: https://github.com/WhatsApp/tree-sitter-erlang
-Revision: 62c82e67b73e13f3ef06e4c8c07ff035a8235d30
+Revision: d40106aa0d6077beea08c5e14b901d98ab79d224
 License: Apache-2.0
 Included material: Tree-sitter parsers for grammars: erlang
 
@@ -1591,7 +1591,7 @@ For more information, please refer to <https://unlicense.org>
 
 Component: tree-sitter-fortran
 Source: https://github.com/stadelmanma/tree-sitter-fortran
-Revision: 72f8759dea28ff6671e0868a9ed5ad4a18413917
+Revision: d05165a6f0bd044ba1f89865927a752dd5168e66
 License: MIT
 Included material: Tree-sitter parsers for grammars: fortran
 
@@ -1619,7 +1619,7 @@ SOFTWARE.
 
 Component: tree-sitter-fsharp
 Source: https://github.com/ionide/tree-sitter-fsharp
-Revision: aefd0c8741bdf3aeb827a228aa4a996a6536697e
+Revision: a19412828aec9150b8696cb6597396092b36336e
 License: MIT
 Included material: Tree-sitter parsers for grammars: fsharp
 
@@ -3488,7 +3488,7 @@ SOFTWARE.
 
 Component: tree-sitter-nix
 Source: https://github.com/nix-community/tree-sitter-nix
-Revision: 21daff7ec37b01539eddd1e0ac468d2070c2ed5c
+Revision: 0645c95c47b272f23d15c1e83446973401bd1a53
 License: MIT
 Included material: Tree-sitter parsers for grammars: nix
 
@@ -3518,7 +3518,7 @@ SOFTWARE.
 
 Component: tree-sitter-nu
 Source: https://github.com/nushell/tree-sitter-nu
-Revision: 4f577aaa735154f934594b598a69ed7b1b707cf6
+Revision: 0c3f6dfbc30d7713dcbb15b10954f2dee86ef63c
 License: MIT
 Included material: Tree-sitter parsers for grammars: nu
 
@@ -3641,7 +3641,7 @@ For more information, please refer to <https://unlicense.org>
 
 Component: tree-sitter-perl
 Source: https://github.com/tree-sitter-perl/tree-sitter-perl
-Revision: 80781e3dd98108199a3a1b5860f00fac22088b79
+Revision: b5093852a9403eefd1ff87ea932bae141737d57c
 License: MIT
 Included material: Tree-sitter parsers for grammars: perl
 
@@ -3657,7 +3657,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 Component: tree-sitter-php
 Source: https://github.com/tree-sitter/tree-sitter-php
-Revision: 58d5643086ae60e93a3746cca648363ee97c8761
+Revision: c1e13490bd656b8869cd47e6f74997ed46750a08
 License: MIT
 Included material: Tree-sitter parsers for grammars: php
 
@@ -4209,7 +4209,7 @@ Included material: Tree-sitter parsers for grammars: promql
 
 Component: tree-sitter-proto
 Source: https://github.com/coder3101/tree-sitter-proto
-Revision: 18366491f37d43d6d5d02cbb1e79b650b5728145
+Revision: 68a898a1715f1b0fce0d21ae6d1f4e24c60fcb2c
 License: MIT
 Included material: Tree-sitter parsers for grammars: proto
 
@@ -4706,7 +4706,7 @@ SOFTWARE.
 
 Component: tree-sitter-scala
 Source: https://github.com/tree-sitter/tree-sitter-scala
-Revision: ce959c63a66bf10c82eebf1c42d755ea11950c09
+Revision: c73ee9d3c89f5c93e407eef3e11ee610be2ec831
 License: MIT
 Included material: Tree-sitter parsers for grammars: scala
 
@@ -4766,7 +4766,7 @@ SOFTWARE.
 
 Component: tree-sitter-slint
 Source: https://github.com/slint-ui/tree-sitter-slint
-Revision: b494447aeb10e540b9f0fbde08748c052859e42d
+Revision: b22bb31bd1cf1dfc47e7432197a9474b62d05b14
 License: MIT
 Included material: Tree-sitter parsers for grammars: slint
 
@@ -4776,7 +4776,7 @@ The MIT License (MIT)
 
 Component: tree-sitter-sql
 Source: https://github.com/derekstride/tree-sitter-sql
-Revision: 49a4357df5e89832c2d2808074e6c22a1ad7d857
+Revision: 4cd7224bfcf1fee23227c4d626760341c9b26772
 License: MIT
 Included material: Tree-sitter parsers for grammars: sql
 
@@ -4870,7 +4870,7 @@ SOFTWARE.
 
 Component: tree-sitter-swift
 Source: https://github.com/alex-pinkus/tree-sitter-swift
-Revision: 9e3b87f66f1fd2f3b931376fd3723ab788e337c3
+Revision: 91a4e36948b46231caf264b4ece62d8d66622a43
 License: MIT
 Included material: Tree-sitter parsers for grammars: swift
 
@@ -5472,7 +5472,7 @@ Adapted from [Neovim (nvim-treesitter)](https://github.com/nvim-treesitter/nvim-
 
 ## Rainbow brackets
 
-`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/tree-sitter/tree-sitter-c-sharp/tree/8c0abe0b84a3681d3e6852ce2e2a1eecb4f731c5/.).
+`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/tree-sitter/tree-sitter-c-sharp/tree/e3971fcb53bf5573a7e0d4ff6db46d2a77a4bf71/.).
 
 --- queries/cmake/README.md ---
 
@@ -5617,7 +5617,7 @@ Adapted from [Neovim (nvim-treesitter)](https://github.com/nvim-treesitter/nvim-
 
 ## Rainbow brackets
 
-`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/WhatsApp/tree-sitter-erlang/tree/62c82e67b73e13f3ef06e4c8c07ff035a8235d30/.).
+`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/WhatsApp/tree-sitter-erlang/tree/d40106aa0d6077beea08c5e14b901d98ab79d224/.).
 
 --- queries/fish/README.md ---
 
@@ -5637,7 +5637,7 @@ Adapted from [Neovim (nvim-treesitter)](https://github.com/nvim-treesitter/nvim-
 
 ## Rainbow brackets
 
-`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/stadelmanma/tree-sitter-fortran/tree/72f8759dea28ff6671e0868a9ed5ad4a18413917/.).
+`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/stadelmanma/tree-sitter-fortran/tree/d05165a6f0bd044ba1f89865927a752dd5168e66/.).
 
 --- queries/fsharp/README.md ---
 
@@ -5647,7 +5647,7 @@ Adapted from [Neovim (nvim-treesitter)](https://github.com/nvim-treesitter/nvim-
 
 ## Rainbow brackets
 
-`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/ionide/tree-sitter-fsharp/tree/aefd0c8741bdf3aeb827a228aa4a996a6536697e/fsharp).
+`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/ionide/tree-sitter-fsharp/tree/a19412828aec9150b8696cb6597396092b36336e/fsharp).
 
 --- queries/gdscript/README.md ---
 
@@ -6048,7 +6048,7 @@ Adapted from [Neovim (nvim-treesitter)](https://github.com/nvim-treesitter/nvim-
 
 ## Rainbow brackets
 
-`rainbows.scm` follows [Helix’s rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/nushell/tree-sitter-nu/tree/4f577aaa735154f934594b598a69ed7b1b707cf6/.).
+`rainbows.scm` follows [Helix’s rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/nushell/tree-sitter-nu/tree/0c3f6dfbc30d7713dcbb15b10954f2dee86ef63c/.).
 
 --- queries/ocaml/README.md ---
 
@@ -6098,7 +6098,7 @@ Generic function captures precede call and builtin captures so they do not overr
 
 ## Rainbow brackets
 
-`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/tree-sitter-perl/tree-sitter-perl/tree/80781e3dd98108199a3a1b5860f00fac22088b79/.).
+`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/tree-sitter-perl/tree-sitter-perl/tree/b5093852a9403eefd1ff87ea932bae141737d57c/.).
 
 --- queries/php/README.md ---
 
@@ -6108,7 +6108,7 @@ Adapted from [Neovim (nvim-treesitter)](https://github.com/nvim-treesitter/nvim-
 
 ## Rainbow brackets
 
-`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/tree-sitter/tree-sitter-php/tree/58d5643086ae60e93a3746cca648363ee97c8761/php).
+`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/tree-sitter/tree-sitter-php/tree/c1e13490bd656b8869cd47e6f74997ed46750a08/php).
 
 --- queries/php_only/README.md ---
 
@@ -6183,7 +6183,7 @@ dots use `[\\s\\S]` to preserve Lua matching behavior.
 
 ## Rainbow brackets
 
-`rainbows.scm` follows [Helix’s rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/coder3101/tree-sitter-proto/tree/18366491f37d43d6d5d02cbb1e79b650b5728145/.).
+`rainbows.scm` follows [Helix’s rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/coder3101/tree-sitter-proto/tree/68a898a1715f1b0fce0d21ae6d1f4e24c60fcb2c/.).
 
 --- queries/pug/README.md ---
 
@@ -6317,7 +6317,7 @@ Adapted from [Neovim (nvim-treesitter)](https://github.com/nvim-treesitter/nvim-
 
 ## Rainbow brackets
 
-`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/slint-ui/tree-sitter-slint/tree/b494447aeb10e540b9f0fbde08748c052859e42d/.).
+`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/slint-ui/tree-sitter-slint/tree/b22bb31bd1cf1dfc47e7432197a9474b62d05b14/.).
 
 --- queries/sql/README.md ---
 
@@ -6327,7 +6327,7 @@ Adapted from [Neovim (nvim-treesitter)](https://github.com/nvim-treesitter/nvim-
 
 ## Rainbow brackets
 
-`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/derekstride/tree-sitter-sql/tree/49a4357df5e89832c2d2808074e6c22a1ad7d857/.).
+`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/derekstride/tree-sitter-sql/tree/4cd7224bfcf1fee23227c4d626760341c9b26772/.).
 
 --- queries/styled/README.md ---
 
@@ -6367,7 +6367,7 @@ Adapted from [Neovim (nvim-treesitter)](https://github.com/nvim-treesitter/nvim-
 
 ## Rainbow brackets
 
-`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/alex-pinkus/tree-sitter-swift/tree/9e3b87f66f1fd2f3b931376fd3723ab788e337c3/.).
+`rainbows.scm` follows [Helix's rainbow query model](https://github.com/helix-editor/helix/blob/ba40e547426b0f9896c8bdc699a4ab11f2b37dbc/book/src/guides/rainbow_bracket_queries.md), using the [pinned grammar](https://github.com/alex-pinkus/tree-sitter-swift/tree/91a4e36948b46231caf264b4ece62d8d66622a43/.).
 
 --- queries/terraform/README.md ---
 

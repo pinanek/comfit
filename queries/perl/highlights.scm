@@ -124,6 +124,7 @@
 [
   (string_literal)
   (interpolated_string_literal)
+  (unterminated_quote)
   (quoted_word_list)
   (command_string)
   (heredoc_content)

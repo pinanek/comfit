@@ -37,6 +37,8 @@
 
 (property_visibility) @keyword.modifier
 
+(testable) @attribute
+
 (builtin_type_identifier) @type.builtin
 
 (reference_identifier) @variable.builtin
@@ -211,10 +213,10 @@
   "callback" @keyword)
 
 (component_definition
-  [
-    "component"
-    "inherits"
-  ] @keyword)
+  "component" @keyword)
+
+(component_modifier
+  "inherits" @keyword)
 
 (enum_definition
   "enum" @keyword.type)

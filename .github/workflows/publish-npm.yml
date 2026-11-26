@@ -65,7 +65,7 @@ jobs:
           toolchain: stable
           cache-key: npm-prepare
 
-      - uses: taiki-e/install-action@v2.90.3
+      - uses: taiki-e/install-action@v2.90.8
         if: steps.release.outputs.component == 'node' && steps.status.outputs.published != 'true'
         with:
           tool: tree-sitter-cli@0.27.2
@@ -139,7 +139,7 @@ jobs:
       - uses: mlugg/setup-zig@v2
         if: endsWith(matrix.target, '-musl')
 
-      - uses: taiki-e/install-action@v2.90.3
+      - uses: taiki-e/install-action@v2.90.8
         if: endsWith(matrix.target, '-musl')
         with:
           tool: cargo-zigbuild@0.24.1
@@ -214,12 +214,12 @@ jobs:
           target: ${{ startsWith(needs.prepare.outputs.component, 'wasm') && 'wasm32-unknown-unknown' || '' }}
           cache-key: npm-package-${{ needs.prepare.outputs.component }}
 
-      - uses: taiki-e/install-action@v2.90.3
+      - uses: taiki-e/install-action@v2.90.8
         if: needs.prepare.outputs.component != 'node' && needs.prepare.outputs.component != 'css'
         with:
           tool: tree-sitter-cli@0.27.2
 
-      - uses: taiki-e/install-action@v2.90.3
+      - uses: taiki-e/install-action@v2.90.8
         if: needs.prepare.outputs.component == 'wasm'
         with:
           tool: wasm-bindgen-cli@0.2.130
